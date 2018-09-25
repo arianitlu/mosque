@@ -6,7 +6,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.WindowManager;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     private TextView textView;
 
