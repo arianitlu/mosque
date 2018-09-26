@@ -33,10 +33,10 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:fontFamily="@font/lato_semibold"
             android:text="Spendenkonto"
             android:textAllCaps="true"
             android:textColor="@android:color/black"
-            android:fontFamily="@font/lato_semibold"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="@+id/image_btn_1"
             app:layout_constraintStart_toStartOf="@+id/image_btn_1"
@@ -48,17 +48,29 @@
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
             android:gravity="center_horizontal"
-            android:letterSpacing="0.01"
+            android:fontFamily="@font/lato_semibold"
             android:textColor="#ffffff"
             android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="@+id/image_btn_1"
             app:layout_constraintEnd_toEndOf="@+id/image_btn_1"
             app:layout_constraintStart_toStartOf="@+id/image_btn_1"
-            tools:text="Islamischer Verein Wil
-SWIFT-Nr: KBSGCH22
-Clearing: 78119
-IBAN: CH81 0078 1195 5346 9840 8" />
+            app:layout_constraintTop_toBottomOf="@+id/text_view_don_1"
+            android:text="Islamischer Verein Wil\nSWIFT-Nr: KBSGCH22\nClearing: 78119\nIBAN: CH81 0078 1195 5346 9840 8" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/image_btn_1"
+            app:layout_constraintVertical_bias="0.873"
+            app:srcCompat="@drawable/don_figure1" />
 
     </android.support.constraint.ConstraintLayout>
 
@@ -98,6 +110,7 @@ IBAN: CH81 0078 1195 5346 9840 8" />
             app:layout_constraintTop_toTopOf="@+id/image_btn_2" />
 
         <TextView
+            android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -105,18 +118,27 @@ IBAN: CH81 0078 1195 5346 9840 8" />
             android:layout_marginStart="8dp"
             android:gravity="center_horizontal"
             android:letterSpacing="0.01"
+            android:text="Um telefonisch zu spenden rufen\nSie folgende Nummer an:\n\n0900 10 20 10"
             android:textColor="#ffffff"
             android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="@+id/image_btn_2"
             app:layout_constraintEnd_toEndOf="@+id/image_btn_2"
-            app:layout_constraintStart_toStartOf="@+id/image_btn_2"
-            tools:text="
+            app:layout_constraintStart_toStartOf="@+id/image_btn_2" />
 
-Um telefonisch zu spenden rufen
-Sie folgende Nummer an:
-
-0900 10 20 10
-" />
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView3"
+            app:layout_constraintTop_toTopOf="@+id/image_btn_2"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/don_figure2" />
 
     </android.support.constraint.ConstraintLayout>
 
@@ -170,8 +192,7 @@ Sie folgende Nummer an:
             app:layout_constraintEnd_toEndOf="@+id/image_btn_3"
             app:layout_constraintStart_toStartOf="@+id/image_btn_3"
             app:layout_constraintTop_toBottomOf="@+id/text_view_don_3"
-            tools:text="Sie haben die Möglichkeit über
-Paypal zu spenden:" />
+            android:text="Sie haben die Möglichkeit über\nPaypal zu spenden:" />
 
         <ImageView
             android:id="@+id/imageView3"
@@ -186,6 +207,21 @@ Paypal zu spenden:" />
             app:layout_constraintStart_toStartOf="@+id/image_btn_3"
             app:layout_constraintTop_toBottomOf="@+id/textView5"
             app:srcCompat="@drawable/don_payment" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView5"
+            app:layout_constraintTop_toTopOf="@+id/image_btn_3"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/don_figure3" />
 
     </android.support.constraint.ConstraintLayout>
 

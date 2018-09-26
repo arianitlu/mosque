@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AboutActivity">
+    tools:context=".Islaminewil_Activity">
 
     <ImageView
-        android:id="@+id/image_view_about_background"
+        android:id="@+id/image_view_islami_background"
         android:layout_width="match_parent"
         android:layout_height="264dp"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/about_background" />
+        app:srcCompat="@drawable/islami_background" />
 
     <TextView
         android:id="@+id/text_view_about"
@@ -23,8 +23,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/lato_regular"
-        android:lineSpacingExtra="-7.8sp"
-        android:text="Rreth Nesh"
+        android:text="Islami ne Wil"
         android:textColor="@android:color/black"
         android:textSize="17.5sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,7 +52,7 @@
         android:textColor="#343434"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_view_about_background" />
+        app:layout_constraintTop_toBottomOf="@+id/image_view_islami_background" />
 
     <ImageButton
         android:id="@+id/imageView8"
