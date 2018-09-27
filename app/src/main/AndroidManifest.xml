@@ -10,11 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/HiddenTitleTheme">
         <activity android:name=".LoginActivity" />
-        <activity android:name=".AboutActivity">
-
-        </activity>
+        <activity android:name=".AboutActivity"></activity>
         <activity android:name=".NavigationActivity" />
-        <activity android:name=".DonacionetActivity" >
+        <activity android:name=".DonacionetActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,9 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Islaminewil_Activity" />
-        <activity android:name=".AnetaresiaActivity">
-
-        </activity>
+        <activity android:name=".AnetaresiaActivity"></activity>
+        <activity android:name=".NewsActivity"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/news_image_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/news_photo1" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/news_image_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/news_shadow" />
+
+    <TextView
+        android:id="@+id/news_text_view_lajmi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/lato_regular"
+        android:text="Pervjetori i hapjes se xhamise"
+        android:textColor="#ffffff"
+        android:textSize="20.2sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView15"
+        app:layout_constraintStart_toStartOf="@+id/imageView15" />
+
+    <ImageView
+        android:id="@+id/news_image_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/news_text_view_lajmi"
+        app:layout_constraintStart_toStartOf="@+id/news_text_view_lajmi"
+        app:srcCompat="@drawable/news_circle_green" />
+
+    <TextView
+        android:id="@+id/news_text_view_kategoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Perurime Evente"
+        android:textColor="#ffffff"
+        android:textSize="12.2sp"
+        app:layout_constraintBottom_toTopOf="@+id/news_text_view_lajmi"
+        app:layout_constraintStart_toEndOf="@+id/news_image_small" />
+</android.support.constraint.ConstraintLayout>
