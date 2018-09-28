@@ -19,17 +19,18 @@
             android:name=".NewsActivity"
             android:label="News"
             android:theme="@style/AppTheme">
+        </activity>
+        <activity
+            android:name=".SinglenewsActivity"
+            android:label="Single News"
+            android:theme="@style/AppTheme"></activity>
+        <activity android:name=".PanoramaActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".SinglenewsActivity"
-            android:label="Single News"
-            android:theme="@style/AppTheme"></activity>
-        <activity android:name=".PanoramaActivity"></activity>
     </application>
 
 </manifest>
