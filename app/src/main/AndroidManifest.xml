@@ -10,18 +10,26 @@
         android:supportsRtl="true"
         android:theme="@style/HiddenTitleTheme">
         <activity android:name=".LoginActivity" />
-        <activity android:name=".AboutActivity"></activity>
+        <activity android:name=".AboutActivity" />
         <activity android:name=".NavigationActivity" />
-        <activity android:name=".DonacionetActivity">
+        <activity android:name=".DonacionetActivity" />
+        <activity android:name=".IslaminewilActivity" />
+        <activity android:name=".AnetaresiaActivity" />
+        <activity
+            android:name=".NewsActivity"
+            android:label="News"
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Islaminewil_Activity" />
-        <activity android:name=".AnetaresiaActivity"></activity>
-        <activity android:name=".NewsActivity"></activity>
+        <activity
+            android:name=".SinglenewsActivity"
+            android:label="Single News"
+            android:theme="@style/AppTheme"></activity>
+        <activity android:name=".PanoramaActivity"></activity>
     </application>
 
 </manifest>

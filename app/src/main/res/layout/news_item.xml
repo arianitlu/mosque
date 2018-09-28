@@ -27,7 +27,7 @@
         app:srcCompat="@drawable/news_shadow" />
 
     <TextView
-        android:id="@+id/news_text_view_lajmi"
+        android:id="@+id/news_text_view_titulli"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -44,8 +44,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/news_text_view_lajmi"
-        app:layout_constraintStart_toStartOf="@+id/news_text_view_lajmi"
+        app:layout_constraintBottom_toTopOf="@+id/news_text_view_titulli"
+        app:layout_constraintStart_toStartOf="@+id/news_text_view_titulli"
         app:srcCompat="@drawable/news_circle_green" />
 
     <TextView
@@ -57,6 +57,6 @@
         android:text="Perurime Evente"
         android:textColor="#ffffff"
         android:textSize="12.2sp"
-        app:layout_constraintBottom_toTopOf="@+id/news_text_view_lajmi"
+        app:layout_constraintBottom_toTopOf="@+id/news_text_view_titulli"
         app:layout_constraintStart_toEndOf="@+id/news_image_small" />
 </android.support.constraint.ConstraintLayout>
