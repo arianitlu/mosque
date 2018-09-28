@@ -16,8 +16,7 @@ public class PanoramaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_panorama);
 
         gyroscopeObserver = new GyroscopeObserver();
-        //gyroscopeObserver.setMaxRotateRadian(Math.PI/9);
-        gyroscopeObserver.setMaxRotateRadian(1);
+        gyroscopeObserver.setMaxRotateRadian(Math.PI/9);
 
         PanoramaImageView panoramaImageView = findViewById(R.id.panorama_image_view);
         panoramaImageView.setGyroscopeObserver(gyroscopeObserver);
