@@ -10,14 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/HiddenTitleTheme">
         <activity android:name=".LoginActivity" >
+        </activity>
+        <activity android:name=".AboutActivity" />
+        <activity android:name=".NavigationActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AboutActivity" />
-        <activity android:name=".NavigationActivity" />
         <activity android:name=".DonacionetActivity" />
         <activity android:name=".IslaminewilActivity" />
         <activity android:name=".AnetaresiaActivity" />

@@ -12,18 +12,24 @@
         android:paddingBottom="10dp"
         android:paddingTop="10dp">
 
-        <Button
-            android:id="@+id/nav_button_aboutUs"
+        <FrameLayout
+            android:id="@+id/nav_button_aboutUs_frame"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
-            android:background="@drawable/nav_item_bg"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/nav_button_njoftimet"
+            app:layout_constraintEnd_toStartOf="@+id/nav_button_njoftimet_frame"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/nav_button_aboutUs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/nav_item_bg" />
+        </FrameLayout>
 
         <ImageView
             android:id="@+id/image_view_1"
@@ -32,9 +38,10 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
-            app:layout_constraintEnd_toEndOf="@+id/nav_button_aboutUs"
-            app:layout_constraintStart_toStartOf="@+id/nav_button_aboutUs"
-            app:layout_constraintTop_toTopOf="@+id/nav_button_aboutUs"
+            android:elevation="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/nav_button_aboutUs_frame"
+            app:layout_constraintStart_toStartOf="@+id/nav_button_aboutUs_frame"
+            app:layout_constraintTop_toTopOf="@+id/nav_button_aboutUs_frame"
             app:srcCompat="@drawable/nav_ic_about" />
 
         <TextView
@@ -45,24 +52,32 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:text="Rreth nesh"
+            android:elevation="20dp"
             android:textColor="@android:color/white"
             android:textSize="11.3sp"
-            app:layout_constraintEnd_toEndOf="@+id/nav_button_aboutUs"
-            app:layout_constraintStart_toStartOf="@+id/nav_button_aboutUs"
+            app:layout_constraintEnd_toEndOf="@+id/nav_button_aboutUs_frame"
+            app:layout_constraintStart_toStartOf="@+id/nav_button_aboutUs_frame"
             app:layout_constraintTop_toBottomOf="@+id/image_view_1" />
 
-        <Button
-            android:id="@+id/nav_button_njoftimet"
+        <FrameLayout
+            android:id="@+id/nav_button_njoftimet_frame"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/nav_item_bg"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/nav_button_islamiNeWil"
+            app:layout_constraintEnd_toStartOf="@+id/nav_button_islamiNeWil_frame"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/nav_button_aboutUs"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toEndOf="@+id/nav_button_aboutUs_frame"
+            app:layout_constraintTop_toTopOf="parent" >
+
+            <Button
+                android:id="@+id/nav_button_njoftimet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/nav_item_bg" />
+        </FrameLayout>
 
         <ImageView
             android:id="@+id/image_view_2"
@@ -71,9 +86,9 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
-            app:layout_constraintEnd_toEndOf="@+id/nav_button_njoftimet"
-            app:layout_constraintStart_toStartOf="@+id/nav_button_njoftimet"
-            app:layout_constraintTop_toTopOf="@+id/nav_button_njoftimet"
+            app:layout_constraintEnd_toEndOf="@+id/nav_button_njoftimet_frame"
+            app:layout_constraintStart_toStartOf="@+id/nav_button_njoftimet_frame"
+            app:layout_constraintTop_toTopOf="@+id/nav_button_njoftimet_frame"
             app:srcCompat="@drawable/nav_njoftimet" />
 
         <TextView
@@ -86,12 +101,12 @@
             android:text="Njoftimet"
             android:textColor="@android:color/white"
             android:textSize="11.3sp"
-            app:layout_constraintEnd_toEndOf="@+id/nav_button_njoftimet"
-            app:layout_constraintStart_toStartOf="@+id/nav_button_njoftimet"
+            app:layout_constraintEnd_toEndOf="@+id/nav_button_njoftimet_frame"
+            app:layout_constraintStart_toStartOf="@+id/nav_button_njoftimet_frame"
             app:layout_constraintTop_toBottomOf="@+id/image_view_2" />
 
-        <Button
-            android:id="@+id/nav_button_islamiNeWil"
+        <FrameLayout
+            android:id="@+id/nav_button_islamiNeWil_frame"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -101,8 +116,15 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/nav_button_njoftimet"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toEndOf="@+id/nav_button_njoftimet_frame"
+            app:layout_constraintTop_toTopOf="parent" >
+
+            <Button
+                android:id="@+id/nav_button_islamiNeWil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/nav_item_bg" />
+        </FrameLayout>
 
         <ImageView
             android:id="@+id/image_view_3"
@@ -111,9 +133,9 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
-            app:layout_constraintEnd_toEndOf="@+id/nav_button_islamiNeWil"
-            app:layout_constraintStart_toStartOf="@+id/nav_button_islamiNeWil"
-            app:layout_constraintTop_toTopOf="@+id/nav_button_islamiNeWil"
+            app:layout_constraintEnd_toEndOf="@+id/nav_button_islamiNeWil_frame"
+            app:layout_constraintStart_toStartOf="@+id/nav_button_islamiNeWil_frame"
+            app:layout_constraintTop_toTopOf="@+id/nav_button_islamiNeWil_frame"
             app:srcCompat="@drawable/nav_islami" />
 
         <TextView
@@ -126,8 +148,8 @@
             android:text="Islami ne Wil"
             android:textColor="@android:color/white"
             android:textSize="11.3sp"
-            app:layout_constraintEnd_toEndOf="@+id/nav_button_islamiNeWil"
-            app:layout_constraintStart_toStartOf="@+id/nav_button_islamiNeWil"
+            app:layout_constraintEnd_toEndOf="@+id/nav_button_islamiNeWil_frame"
+            app:layout_constraintStart_toStartOf="@+id/nav_button_islamiNeWil_frame"
             app:layout_constraintTop_toBottomOf="@+id/image_view_3" />
     </android.support.constraint.ConstraintLayout>
 
@@ -137,18 +159,25 @@
         android:paddingBottom="10dp"
         android:paddingTop="10dp">
 
-        <Button
-            android:id="@+id/nav_button_meetings"
+        <FrameLayout
+            android:id="@+id/nav_button_meetings_frame"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/nav_item_bg"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/nav_button_panorama"
+            app:layout_constraintEnd_toStartOf="@+id/nav_button_panorama_frame"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent" >
+
+            <Button
+                android:id="@+id/nav_button_meetings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/nav_item_bg" />
+        </FrameLayout>
 
         <ImageView
             android:id="@+id/image_view_4"
@@ -157,9 +186,9 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
-            app:layout_constraintEnd_toEndOf="@+id/nav_button_meetings"
-            app:layout_constraintStart_toStartOf="@+id/nav_button_meetings"
-            app:layout_constraintTop_toTopOf="@+id/nav_button_meetings"
+            app:layout_constraintEnd_toEndOf="@+id/nav_button_meetings_frame"
+            app:layout_constraintStart_toStartOf="@+id/nav_button_meetings_frame"
+            app:layout_constraintTop_toTopOf="@+id/nav_button_meetings_frame"
             app:srcCompat="@drawable/nav_meetings" />
 
         <TextView
@@ -172,22 +201,29 @@
             android:text="Meetings"
             android:textColor="@android:color/white"
             android:textSize="11.3sp"
-            app:layout_constraintEnd_toEndOf="@+id/nav_button_meetings"
-            app:layout_constraintStart_toStartOf="@+id/nav_button_meetings"
+            app:layout_constraintEnd_toEndOf="@+id/nav_button_meetings_frame"
+            app:layout_constraintStart_toStartOf="@+id/nav_button_meetings_frame"
             app:layout_constraintTop_toBottomOf="@+id/image_view_4" />
 
-        <Button
-            android:id="@+id/nav_button_panorama"
+        <FrameLayout
+            android:id="@+id/nav_button_panorama_frame"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/nav_item_bg"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/nav_button_arkitektura"
+            app:layout_constraintEnd_toStartOf="@+id/nav_button_arkitektura_frame"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/nav_button_meetings"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toEndOf="@+id/nav_button_meetings_frame"
+            app:layout_constraintTop_toTopOf="parent" >
+
+            <Button
+                android:id="@+id/nav_button_panorama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/nav_item_bg" />
+        </FrameLayout>
 
         <ImageView
             android:id="@+id/image_view_5"
@@ -196,9 +232,9 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
-            app:layout_constraintEnd_toEndOf="@+id/nav_button_panorama"
-            app:layout_constraintStart_toStartOf="@+id/nav_button_panorama"
-            app:layout_constraintTop_toTopOf="@+id/nav_button_panorama"
+            app:layout_constraintEnd_toEndOf="@+id/nav_button_panorama_frame"
+            app:layout_constraintStart_toStartOf="@+id/nav_button_panorama_frame"
+            app:layout_constraintTop_toTopOf="@+id/nav_button_panorama_frame"
             app:srcCompat="@drawable/nav_360" />
 
         <TextView
@@ -211,12 +247,12 @@
             android:text="Virtual Tour"
             android:textColor="@android:color/white"
             android:textSize="11.3sp"
-            app:layout_constraintEnd_toEndOf="@+id/nav_button_panorama"
-            app:layout_constraintStart_toStartOf="@+id/nav_button_panorama"
+            app:layout_constraintEnd_toEndOf="@+id/nav_button_panorama_frame"
+            app:layout_constraintStart_toStartOf="@+id/nav_button_panorama_frame"
             app:layout_constraintTop_toBottomOf="@+id/image_view_5" />
 
-        <Button
-            android:id="@+id/nav_button_arkitektura"
+        <FrameLayout
+            android:id="@+id/nav_button_arkitektura_frame"
             android:layout_width="84dp"
             android:layout_height="84dp"
             android:layout_marginBottom="8dp"
@@ -225,8 +261,15 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/nav_button_panorama"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toEndOf="@+id/nav_button_panorama_frame"
+            app:layout_constraintTop_toTopOf="parent" >
+
+            <Button
+                android:id="@+id/nav_button_arkitektura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/nav_item_bg" />
+        </FrameLayout>
 
         <ImageView
             android:id="@+id/image_view_6"
@@ -235,9 +278,9 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
-            app:layout_constraintEnd_toEndOf="@+id/nav_button_arkitektura"
-            app:layout_constraintStart_toStartOf="@+id/nav_button_arkitektura"
-            app:layout_constraintTop_toTopOf="@+id/nav_button_arkitektura"
+            app:layout_constraintEnd_toEndOf="@+id/nav_button_arkitektura_frame"
+            app:layout_constraintStart_toStartOf="@+id/nav_button_arkitektura_frame"
+            app:layout_constraintTop_toTopOf="@+id/nav_button_arkitektura_frame"
             app:srcCompat="@drawable/nav_arkitektura" />
 
         <TextView
@@ -250,8 +293,8 @@
             android:text="Arkitektura"
             android:textColor="@android:color/white"
             android:textSize="11.3sp"
-            app:layout_constraintEnd_toEndOf="@+id/nav_button_arkitektura"
-            app:layout_constraintStart_toStartOf="@+id/nav_button_arkitektura"
+            app:layout_constraintEnd_toEndOf="@+id/nav_button_arkitektura_frame"
+            app:layout_constraintStart_toStartOf="@+id/nav_button_arkitektura_frame"
             app:layout_constraintTop_toBottomOf="@+id/image_view_6" />
 
     </android.support.constraint.ConstraintLayout>
@@ -262,18 +305,25 @@
         android:paddingBottom="10dp"
         android:paddingTop="10dp">
 
-        <Button
-            android:id="@+id/nav_button_donacionet"
+        <FrameLayout
+            android:id="@+id/nav_button_donacionet_frame"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/nav_item_bg"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/nav_button_anetaresia"
+            app:layout_constraintEnd_toStartOf="@+id/nav_button_anetaresia_frame"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent" >
+
+            <Button
+                android:id="@+id/nav_button_donacionet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/nav_item_bg" />
+        </FrameLayout>
 
         <ImageView
             android:id="@+id/image_view_7"
@@ -282,9 +332,9 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
-            app:layout_constraintEnd_toEndOf="@+id/nav_button_donacionet"
-            app:layout_constraintStart_toStartOf="@+id/nav_button_donacionet"
-            app:layout_constraintTop_toTopOf="@+id/nav_button_donacionet"
+            app:layout_constraintEnd_toEndOf="@+id/nav_button_donacionet_frame"
+            app:layout_constraintStart_toStartOf="@+id/nav_button_donacionet_frame"
+            app:layout_constraintTop_toTopOf="@+id/nav_button_donacionet_frame"
             app:srcCompat="@drawable/nav_donacionet" />
 
         <TextView
@@ -297,22 +347,29 @@
             android:text="Donacionet"
             android:textColor="@android:color/white"
             android:textSize="11.3sp"
-            app:layout_constraintEnd_toEndOf="@+id/nav_button_donacionet"
-            app:layout_constraintStart_toStartOf="@+id/nav_button_donacionet"
+            app:layout_constraintEnd_toEndOf="@+id/nav_button_donacionet_frame"
+            app:layout_constraintStart_toStartOf="@+id/nav_button_donacionet_frame"
             app:layout_constraintTop_toBottomOf="@+id/image_view_7" />
 
-        <Button
-            android:id="@+id/nav_button_anetaresia"
+        <FrameLayout
+            android:id="@+id/nav_button_anetaresia_frame"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/nav_item_bg"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/nav_button_kontakti"
+            app:layout_constraintEnd_toStartOf="@+id/nav_button_kontakti_frame"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/nav_button_donacionet"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toEndOf="@+id/nav_button_donacionet_frame"
+            app:layout_constraintTop_toTopOf="parent" >
+
+            <Button
+                android:id="@+id/nav_button_anetaresia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/nav_item_bg" />
+        </FrameLayout>
 
         <ImageView
             android:id="@+id/image_view_8"
@@ -321,9 +378,9 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
-            app:layout_constraintEnd_toEndOf="@+id/nav_button_anetaresia"
-            app:layout_constraintStart_toStartOf="@+id/nav_button_anetaresia"
-            app:layout_constraintTop_toTopOf="@+id/nav_button_anetaresia"
+            app:layout_constraintEnd_toEndOf="@+id/nav_button_anetaresia_frame"
+            app:layout_constraintStart_toStartOf="@+id/nav_button_anetaresia_frame"
+            app:layout_constraintTop_toTopOf="@+id/nav_button_anetaresia_frame"
             app:srcCompat="@drawable/nav_anetaresia" />
 
         <TextView
@@ -336,12 +393,12 @@
             android:text="Anetaresia"
             android:textColor="@android:color/white"
             android:textSize="11.3sp"
-            app:layout_constraintEnd_toEndOf="@+id/nav_button_anetaresia"
-            app:layout_constraintStart_toStartOf="@+id/nav_button_anetaresia"
+            app:layout_constraintEnd_toEndOf="@+id/nav_button_anetaresia_frame"
+            app:layout_constraintStart_toStartOf="@+id/nav_button_anetaresia_frame"
             app:layout_constraintTop_toBottomOf="@+id/image_view_8" />
 
-        <Button
-            android:id="@+id/nav_button_kontakti"
+        <FrameLayout
+            android:id="@+id/nav_button_kontakti_frame"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -350,8 +407,15 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/nav_button_anetaresia"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toEndOf="@+id/nav_button_anetaresia_frame"
+            app:layout_constraintTop_toTopOf="parent" >
+
+            <Button
+                android:id="@+id/nav_button_kontakti"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/nav_item_bg" />
+        </FrameLayout>
 
         <ImageView
             android:id="@+id/image_view_9"
@@ -360,9 +424,9 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
-            app:layout_constraintEnd_toEndOf="@+id/nav_button_kontakti"
-            app:layout_constraintStart_toStartOf="@+id/nav_button_kontakti"
-            app:layout_constraintTop_toTopOf="@+id/nav_button_kontakti"
+            app:layout_constraintEnd_toEndOf="@+id/nav_button_kontakti_frame"
+            app:layout_constraintStart_toStartOf="@+id/nav_button_kontakti_frame"
+            app:layout_constraintTop_toTopOf="@+id/nav_button_kontakti_frame"
             app:srcCompat="@drawable/nav_kontakti" />
 
         <TextView
@@ -375,8 +439,8 @@
             android:text="Kontakti"
             android:textColor="@android:color/white"
             android:textSize="11.3sp"
-            app:layout_constraintEnd_toEndOf="@+id/nav_button_kontakti"
-            app:layout_constraintStart_toStartOf="@+id/nav_button_kontakti"
+            app:layout_constraintEnd_toEndOf="@+id/nav_button_kontakti_frame"
+            app:layout_constraintStart_toStartOf="@+id/nav_button_kontakti_frame"
             app:layout_constraintTop_toBottomOf="@+id/image_view_9" />
 
     </android.support.constraint.ConstraintLayout>
