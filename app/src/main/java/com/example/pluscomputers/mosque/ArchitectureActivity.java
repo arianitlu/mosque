@@ -1,14 +1,18 @@
 package com.example.pluscomputers.mosque;
 
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageButton;
 
+import com.example.pluscomputers.mosque.adapters.MyCustomPagerAdapter;
+
 public class ArchitectureActivity extends AppCompatActivity {
 
     private ImageButton buttonBack;
+    private ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,5 +31,13 @@ public class ArchitectureActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
         );
+
+        int images[] = {R.drawable.about_background, R.drawable.don_background,
+                R.drawable.islami_background};
+        MyCustomPagerAdapter myCustomPagerAdapter;
+            viewPager = (ViewPager)findViewById(R.id.image_view_islami_background);
+
+            myCustomPagerAdapter = new MyCustomPagerAdapter(ArchitectureActivity.this, images);
+            viewPager.setAdapter(myCustomPagerAdapter);
     }
 }
