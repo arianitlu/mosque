@@ -22,6 +22,11 @@ public class MeetingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_meetings);
 
+        getWindow().setFlags(
+                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
+        );
+
         recyclerView = findViewById(R.id.meetings_recyclerview);
 
         AnetaresiaAdapter adapter = new AnetaresiaAdapter(this);

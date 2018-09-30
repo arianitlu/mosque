@@ -2,7 +2,9 @@ package com.example.pluscomputers.mosque;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,6 +17,11 @@ public class SinglenewsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_singlenews);
+
+        getWindow().setFlags(
+                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
+        );
 
         txtTitle = findViewById(R.id.single_news_text_view_titulli);
         txtCategory = findViewById(R.id.single_news_text_view_kategoria);
@@ -36,7 +43,7 @@ public class SinglenewsActivity extends AppCompatActivity {
 
             txtTitle.setText(title);
             txtCategory.setText(category);
-            txtDescription.setText(describtion);
+            txtDescription.setText(Html.fromHtml(describtion));
 
             imgImage.setImageResource(image);
             imgColor.setImageResource(color);

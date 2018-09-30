@@ -90,6 +90,10 @@ public class LajmiAdapter extends RecyclerView.Adapter<LajmiAdapter.MyViewHolder
 
     @Override
     public int getItemCount() {
+        if(mLajmiList == null)
+            return 0;
+        else {
         return mLajmiList.size();
+        }
     }
 }

@@ -19,6 +19,11 @@ public class ArchitectureActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_architecture);
 
+        getWindow().setFlags(
+                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
+        );
+
         buttonBack = findViewById(R.id.architecture_back_button);
         buttonBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,11 +31,6 @@ public class ArchitectureActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
-
-        getWindow().setFlags(
-                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
-                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
-        );
 
         int images[] = {R.drawable.about_background, R.drawable.don_background,
                 R.drawable.islami_background};
