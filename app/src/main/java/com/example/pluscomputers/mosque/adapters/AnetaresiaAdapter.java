@@ -65,6 +65,6 @@ public class AnetaresiaAdapter extends RecyclerView.Adapter<AnetaresiaAdapter.My
 
     @Override
     public int getItemCount() {
-        return 2;
+        return mAnetaresiaList.size();
     }
 }

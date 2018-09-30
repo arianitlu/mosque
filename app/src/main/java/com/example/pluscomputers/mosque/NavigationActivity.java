@@ -54,8 +54,8 @@ public class NavigationActivity extends AppCompatActivity {
         btnMeetings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(NavigationActivity.this,AboutActivity.class);
-//                startActivity(intent);
+                Intent intent = new Intent(NavigationActivity.this,MeetingsActivity.class);
+                startActivity(intent);
             }
         });
         btnPanorama.setOnClickListener(new View.OnClickListener() {
@@ -68,8 +68,8 @@ public class NavigationActivity extends AppCompatActivity {
         btnArkitektura.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(NavigationActivity.this,AboutActivity.class);
-//                startActivity(intent);
+                Intent intent = new Intent(NavigationActivity.this,ArchitectureActivity.class);
+                startActivity(intent);
             }
         });
         btnDonacionet.setOnClickListener(new View.OnClickListener() {
@@ -86,7 +86,13 @@ public class NavigationActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        btnKontakti.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(NavigationActivity.this,ContactActivity.class);
+                startActivity(intent);
+            }
+        });
 
         getWindow().setFlags(
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,

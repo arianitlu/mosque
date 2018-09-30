@@ -39,8 +39,10 @@ public class AnetaresiaActivity extends AppCompatActivity {
 
         Anetaresia obj1 = new Anetaresia("Arianit","Lubishtani",R.mipmap.mosque);
         anetaresiaList.add(obj1);
-        Anetaresia obj2 = new Anetaresia("Xhemajl","Prekorogja",R.mipmap.ic_launcher);
+        Anetaresia obj2 = new Anetaresia("Xhemajl","Prekorogja",R.mipmap.mosque);
         anetaresiaList.add(obj2);
+        Anetaresia obj3 = new Anetaresia("Enis","Jusufi",R.mipmap.mosque);
+        anetaresiaList.add(obj3);
 
         return anetaresiaList;
     }

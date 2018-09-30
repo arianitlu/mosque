@@ -9,43 +9,40 @@
         android:roundIcon="@mipmap/mosque"
         android:supportsRtl="true"
         android:theme="@style/HiddenTitleTheme">
-
-        <activity android:name=".LoginActivity" ></activity>
-
+        <activity android:name=".LoginActivity" />
         <activity android:name=".AboutActivity" />
-
-        <activity android:name=".NavigationActivity" >
+        <activity android:name=".NavigationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".DonacionetActivity" />
-
         <activity android:name=".IslaminewilActivity" />
-
-        <activity android:name=".AnetaresiaActivity"
+        <activity
+            android:name=".AnetaresiaActivity"
+            android:label="Anetaresia"
             android:parentActivityName=".NavigationActivity"
-            android:theme="@style/AppTheme"
-            android:label="Anetaresia"/>
-
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".NewsActivity"
             android:label="News"
-            android:theme="@style/AppTheme"
-            android:parentActivityName=".NavigationActivity">
-        </activity>
-
+            android:parentActivityName=".NavigationActivity"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".SinglenewsActivity"
             android:label="Single News"
-            android:theme="@style/AppTheme"
-            android:parentActivityName=".NewsActivity"></activity>
-
-        <activity android:name=".PanoramaActivity">
-        </activity>
+            android:parentActivityName=".NewsActivity"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".PanoramaActivity" />
+        <activity android:name=".ContactActivity" />
+        <activity
+            android:name=".MeetingsActivity"
+            android:label="Contact"
+            android:parentActivityName=".NavigationActivity"
+            android:theme="@style/AppTheme"></activity>
+        <activity android:name=".ArchitectureActivity"></activity>
     </application>
 
 </manifest>
