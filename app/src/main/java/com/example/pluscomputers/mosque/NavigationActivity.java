@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.pluscomputers.mosque.model.Lajmi;
 import com.onesignal.OneSignal;
@@ -14,6 +15,8 @@ public class NavigationActivity extends AppCompatActivity {
 
     Button btnAbout, btnNjoftimet, btnIslami, btnMeetings, btnPanorama,
     btnArkitektura, btnDonacionet, btnAnetaresia, btnKontakti;
+
+    TextView txtCopyright;
 
 
     @Override
@@ -25,6 +28,16 @@ public class NavigationActivity extends AppCompatActivity {
                 .inFocusDisplaying(OneSignal.OSInFocusDisplayOption.Notification)
                 .unsubscribeWhenNotificationsAreDisabled(true)
                 .init();
+
+        txtCopyright = findViewById(R.id.nav_copyright_text_view);
+
+        txtCopyright.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(NavigationActivity.this,CopyrightActivity.class);
+                startActivity(intent);
+            }
+        });
 
         btnAbout = findViewById(R.id.nav_button_aboutUs);
         btnNjoftimet = findViewById(R.id.nav_button_njoftimet);
@@ -101,8 +114,7 @@ public class NavigationActivity extends AppCompatActivity {
         });
 
         getWindow().setFlags(
-                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
-                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
-        );
+                WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 }

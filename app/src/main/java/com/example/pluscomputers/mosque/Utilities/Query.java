@@ -11,14 +11,26 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
+
 public final class Query {
+
+
+//    public Lajmi(String title, String category, int image, int color, String description) {
+
+    private static String titleString;
+    private static String categoriesString;
+    private static String contentString;
+
+    private static Lajmi lajmi;
+    private static ArrayList<Lajmi> listLajmeve = new ArrayList<>();
+
 
     private Query() {
     }
 
     public static ArrayList<Lajmi> shfaqLajmet(JSONArray response) {
 
-        ArrayList<Lajmi> listLajmeve = new ArrayList<>();
+//        ArrayList<Lajmi> listLajmeve = new ArrayList<>();
 
         try {
 
@@ -28,22 +40,22 @@ public final class Query {
 
                 JSONObject titleObj = lajmiAktualObj.getJSONObject("title");
 
-                String titleString = titleObj.getString("rendered");
+                titleString = titleObj.getString("rendered");
 
                 JSONObject contentObj = lajmiAktualObj.getJSONObject("content");
 
-                String contentString = contentObj.getString("rendered");
+                contentString = contentObj.getString("rendered");
 
                 JSONArray categoriesArray = lajmiAktualObj.getJSONArray("categories");
 
                 double categoriesValue = categoriesArray.getDouble(0);
 
-                String categoriesString = String.valueOf(categoriesValue);
+                categoriesString = String.valueOf(categoriesValue);
 
-                Lajmi lajmi = new Lajmi(titleString,categoriesString, R.drawable.news_photo1
-                ,R.drawable.news_circle_green,contentString);
-
-                listLajmeve.add(lajmi);
+//                Lajmi lajmi = new Lajmi(titleString,categoriesString, R.drawable.news_photo1
+//                ,R.drawable.news_circle_green,contentString);
+//
+//                listLajmeve.add(lajmi);
             }
 
         } catch (JSONException e) {

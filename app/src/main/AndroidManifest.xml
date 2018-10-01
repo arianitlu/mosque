@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.pluscomputers.mosque">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,14 +11,16 @@
         android:roundIcon="@mipmap/mosque"
         android:supportsRtl="true"
         android:theme="@style/HiddenTitleTheme">
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".AboutActivity" />
-        <activity android:name=".NavigationActivity">
+        <activity android:name=".LoginActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".AboutActivity" />
+        <activity android:name=".NavigationActivity">
+
         </activity>
         <activity android:name=".DonacionetActivity" />
         <activity android:name=".IslaminewilActivity" />
@@ -43,8 +45,9 @@
             android:name=".MeetingsActivity"
             android:label="Meetings"
             android:parentActivityName=".NavigationActivity"
-            android:theme="@style/AppTheme"></activity>
-        <activity android:name=".ArchitectureActivity"></activity>
+            android:theme="@style/AppTheme" />
+        <activity android:name=".ArchitectureActivity" />
+        <activity android:name=".CopyrightActivity"></activity>
     </application>
 
 </manifest>

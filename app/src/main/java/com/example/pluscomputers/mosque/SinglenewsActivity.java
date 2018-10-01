@@ -19,9 +19,8 @@ public class SinglenewsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_singlenews);
 
         getWindow().setFlags(
-                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
-                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
-        );
+                WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         txtTitle = findViewById(R.id.single_news_text_view_titulli);
         txtCategory = findViewById(R.id.single_news_text_view_kategoria);

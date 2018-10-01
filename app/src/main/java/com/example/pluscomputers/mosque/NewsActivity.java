@@ -19,6 +19,7 @@ import com.example.pluscomputers.mosque.adapters.AnetaresiaAdapter;
 import com.example.pluscomputers.mosque.adapters.LajmiAdapter;
 import com.example.pluscomputers.mosque.model.Anetaresia;
 import com.example.pluscomputers.mosque.model.Lajmi;
+import com.jaeger.library.StatusBarUtil;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -41,10 +42,9 @@ public class NewsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
 
-        getWindow().setFlags(
-                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
-                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
-        );
+//        getWindow().setFlags(
+//                WindowManager.LayoutParams.FLAG_FULLSCREEN,
+//                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         recyclerView = findViewById(R.id.news_recyclerview);
 

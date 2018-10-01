@@ -5,7 +5,7 @@ android {
     defaultConfig {
 
         manifestPlaceholders = [
-                onesignal_app_id: 'bda3fdff-be18-4175-ac4c-b17c0ca1aee2',
+                onesignal_app_id               : 'bda3fdff-be18-4175-ac4c-b17c0ca1aee2',
                 // Project number pulled from dashboard, local value is ignored.
                 onesignal_google_project_number: 'REMOTE']
 
@@ -40,6 +40,8 @@ dependencies {
 
     implementation 'com.onesignal:OneSignal:3.10.1'
     implementation 'com.android.support:customtabs:27.1.1'
+
+    implementation 'com.jaeger.statusbarutil:library:1.5.1'
 
 
 }

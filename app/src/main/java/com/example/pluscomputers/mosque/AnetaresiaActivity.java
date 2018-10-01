@@ -23,9 +23,8 @@ public class AnetaresiaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_anetaresia);
 
         getWindow().setFlags(
-                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
-                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
-        );
+                WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         recyclerView = findViewById(R.id.ant_recyclerview);
 

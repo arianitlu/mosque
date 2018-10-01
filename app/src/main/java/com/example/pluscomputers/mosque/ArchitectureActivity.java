@@ -20,9 +20,8 @@ public class ArchitectureActivity extends AppCompatActivity {
         setContentView(R.layout.activity_architecture);
 
         getWindow().setFlags(
-                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
-                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
-        );
+                WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         buttonBack = findViewById(R.id.architecture_back_button);
         buttonBack.setOnClickListener(new View.OnClickListener() {

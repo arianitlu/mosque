@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DonacionetActivity">
+
+    <ImageView
+        android:id="@+id/image_view_donation_backg"
+        android:layout_width="match_parent"
+        android:layout_height="178dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/copyright_background" />
+
+    <ImageView
+        android:id="@+id/image_view_donation_fig"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/image_view_donation_backg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/nav_copyright" />
+
+    <TextView
+        android:id="@+id/text_view_don"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:text="Ownership and Design"
+        android:textColor="@android:color/white"
+        android:textSize="17.5sp"
+        app:layout_constraintEnd_toEndOf="@+id/image_view_donation_fig"
+        app:layout_constraintStart_toStartOf="@+id/image_view_donation_fig"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/copyright_button_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:background="?android:selectableItemBackground"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_view_don"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text_view_don"
+        app:srcCompat="@drawable/don_back_btn" />
+
+    <include
+        layout="@layout/layout_copyright"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_view_donation_backg" />
+
+    <!--<TextView-->
+        <!--android:id="@+id/textView13"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="26dp"-->
+        <!--android:layout_marginTop="16dp"-->
+        <!--android:fontFamily="@font/lato_semibold"-->
+        <!--android:text="Copyright and Ownership"-->
+        <!--android:textColor="@android:color/black"-->
+        <!--android:textSize="16.7sp"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/image_view_donation_backg" />-->
+
+    <!--<ImageView-->
+        <!--android:id="@+id/imageView14"-->
+        <!--android:layout_width="264dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:layout_constraintStart_toStartOf="@+id/textView13"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/textView13"-->
+        <!--app:srcCompat="@drawable/login_logo" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/textView14"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:fontFamily="@font/lato_regular"-->
+        <!--android:text="Islamische Gemeinschaft Wil-->
+<!--Rosenstrasse 45, 9500 Wil SG-->
+<!--Email: info@moschee-wil.ch-->
+<!--Tel.: +41 (0) 71 911 59 59-->
+<!--"-->
+        <!--android:textColor="#3c3c3c"-->
+        <!--android:textSize="11.7sp"-->
+        <!--app:layout_constraintStart_toStartOf="@+id/imageView14"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/imageView14" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/textView15"-->
+        <!--android:layout_width="233dp"-->
+        <!--android:layout_height="19dp"-->
+        <!--android:layout_marginTop="2dp"-->
+        <!--android:fontFamily="@font/lato_semibold"-->
+        <!--android:text="DESIGN AND DEVELOPMENT"-->
+        <!--android:textColor="#000000"-->
+        <!--android:textSize="16.7sp"-->
+        <!--app:layout_constraintStart_toStartOf="@+id/textView14"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/textView14" />-->
+
+    <!--<ImageView-->
+        <!--android:id="@+id/imageView16"-->
+        <!--android:layout_width="66dp"-->
+        <!--android:layout_height="66dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--app:layout_constraintStart_toStartOf="@+id/textView15"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/textView15"-->
+        <!--app:srcCompat="@drawable/copyright_logo" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/textView16"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="8dp"-->
+        <!--android:text="RROKULLIA"-->
+        <!--android:fontFamily="@font/gothic_bold"-->
+        <!--android:textSize="34sp"-->
+        <!--android:textColor="#7e8082"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/imageView16"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/textView15" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/textView17"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="0dp"-->
+        <!--android:textSize="13.3sp"-->
+        <!--android:textColor="#7e8082"-->
+        <!--android:text="Web Development-->
+                   <!--Agency"-->
+        <!--app:layout_constraintEnd_toEndOf="@+id/textView16"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/textView16" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/textView18"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:text="RROKULLIA WEB AGENCY-->
+<!--10000 Prishtinë, Republika e Kosovës-->
+<!--Email: rrokullia@gmail.com-->
+<!--Tel.: +381 (0)62 164 14 99-->
+<!--Tel.: +386 (0)49 802 206"-->
+        <!--app:layout_constraintStart_toStartOf="@+id/imageView16"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/textView17" />-->
+
+
+</android.support.constraint.ConstraintLayout>

@@ -23,9 +23,8 @@ public class MeetingsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_meetings);
 
         getWindow().setFlags(
-                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
-                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
-        );
+                WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         recyclerView = findViewById(R.id.meetings_recyclerview);
 
