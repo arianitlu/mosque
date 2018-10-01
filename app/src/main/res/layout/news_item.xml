@@ -9,12 +9,12 @@
     <ImageView
         android:id="@+id/news_image_main"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scaleType="fitXY"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@android:color/holo_blue_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/news_photo1" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView15"

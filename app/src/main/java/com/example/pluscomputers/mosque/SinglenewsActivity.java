@@ -8,6 +8,8 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 public class SinglenewsActivity extends AppCompatActivity {
 
     TextView txtTitle,txtCategory,txtDescription;
@@ -18,9 +20,9 @@ public class SinglenewsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_singlenews);
 
-        getWindow().setFlags(
-                WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+//        getWindow().setFlags(
+//                WindowManager.LayoutParams.FLAG_FULLSCREEN,
+//                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         txtTitle = findViewById(R.id.single_news_text_view_titulli);
         txtCategory = findViewById(R.id.single_news_text_view_kategoria);
@@ -37,14 +39,19 @@ public class SinglenewsActivity extends AppCompatActivity {
             String category = extras.getString("category");
             String describtion = extras.getString("description");
 
-            int image = extras.getInt("image");
+            String image = extras.getString("image");
             int color = extras.getInt("color");
 
             txtTitle.setText(title);
             txtCategory.setText(category);
             txtDescription.setText(Html.fromHtml(describtion));
 
-            imgImage.setImageResource(image);
+            //imgImage.setImageResource(image);
+            Picasso.get()
+                    .load(image)
+                    //.placeholder(R.drawable.news_photo1)
+                    //.error(R.drawable.news_photo1)
+                    .into(imgImage);
             imgColor.setImageResource(color);
         }
     }

@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.example.pluscomputers.mosque.R;
 import com.example.pluscomputers.mosque.SinglenewsActivity;
 import com.example.pluscomputers.mosque.model.Lajmi;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -76,11 +77,13 @@ public class LajmiAdapter extends RecyclerView.Adapter<LajmiAdapter.MyViewHolder
         holder.mTitle.setText(lajmi.getTitle());
         holder.mCategory.setText(lajmi.getCategory());
 
-        holder.mImage.setImageResource(lajmi.getImage());
+        //holder.mImage.setImageResource(lajmi.getDefaultImage());
         holder.mColor.setImageResource(lajmi.getColor());
-//        Picasso.with(ctx)
-//                .load(list.getImg())
-//                .into(holder.mImageViewMain);
+        Picasso.get()
+                .load(lajmi.getImage())
+                //.placeholder(R.drawable.news_photo1)
+                //.error(R.drawable.news_photo1)
+                .into(holder.mImage);
     }
 
     public void setLajmi(List<Lajmi> lajmiList) {

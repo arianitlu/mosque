@@ -2,18 +2,27 @@ package com.example.pluscomputers.mosque.model;
 
 public class Lajmi {
 
+    private int featureMedia;
     private String title;
     private String category;
-    private int image;
+    private String image;
     private int color;
     private String description;
 
-    public Lajmi(String title, String category, int image, int color, String description) {
+    public Lajmi(int featureMedia,String title, String category,int color, String description) {
+        this.featureMedia = featureMedia;
         this.title = title;
         this.category = category;
-        this.image = image;
         this.color = color;
         this.description = description;
+    }
+
+    public int getFeatureMedia() {
+        return featureMedia;
+    }
+
+    public void setFeatureMedia(int featureMedia) {
+        this.featureMedia = featureMedia;
     }
 
     public String getTitle() {
@@ -32,11 +41,11 @@ public class Lajmi {
         this.category = category;
     }
 
-    public int getImage() {
+    public String getImage() {
         return image;
     }
 
-    public void setImage(int image) {
+    public void setImage(String image) {
         this.image = image;
     }
 

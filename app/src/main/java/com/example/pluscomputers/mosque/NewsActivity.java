@@ -33,6 +33,9 @@ public class NewsActivity extends AppCompatActivity {
     private static final String NEWS_REQUEST_URL =
             "http://1.lagjaledina.com/wp-json/wp/v2/posts";
 
+    private static final String IMAGE_REQUEST_URL =
+            "http://1.lagjaledina.com/wp-json/wp/v2/media";
+
     private RecyclerView recyclerView;
     private List<Lajmi> listLajmet = new ArrayList<>();
     LajmiAdapter mAdapter = new LajmiAdapter(this);
@@ -57,6 +60,7 @@ public class NewsActivity extends AppCompatActivity {
     }
 
     public void merrLajmet(){
+
         Uri baseUri = Uri.parse(NEWS_REQUEST_URL);
         Uri.Builder uriBuilder = baseUri.buildUpon();
 
@@ -66,6 +70,11 @@ public class NewsActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(JSONArray response) {
                         listLajmet = Query.shfaqLajmet(response);
+
+                        for (Lajmi lajmi : listLajmet){
+                            merrFoton(lajmi);
+                        }
+
                         mAdapter.setLajmi(listLajmet);
                     }
                 }, new Response.ErrorListener() {
@@ -76,6 +85,33 @@ public class NewsActivity extends AppCompatActivity {
                                 error.networkResponse.toString(), Toast.LENGTH_SHORT).show();
                     }
                 });
+
+        MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest);
+    }
+
+    public void merrFoton(final Lajmi lajmi){
+
+        Uri baseUri = Uri.parse(IMAGE_REQUEST_URL);
+        Uri.Builder uriBuilder = baseUri.buildUpon();
+        uriBuilder.appendPath(String.valueOf(lajmi.getFeatureMedia()));
+
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
+                Request.Method.GET, uriBuilder.toString(), null, new Response.Listener<JSONObject>() {
+
+            @Override
+            public void onResponse(JSONObject response) {
+                String imageUrl = Query.shfaqFoton(response);
+                lajmi.setImage(imageUrl);
+                mAdapter.setLajmi(listLajmet);
+            }
+        }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(NewsActivity.this, "Nuk ka te image " +
+                        error.networkResponse.toString(), Toast.LENGTH_SHORT).show();
+            }
+        });
 
         MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest);
     }
