@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "41697577976",
+    "firebase_url": "https://mosque-6201d.firebaseio.com",
+    "project_id": "mosque-6201d",
+    "storage_bucket": "mosque-6201d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:41697577976:android:6d8684880baac14e",
+        "android_client_info": {
+          "package_name": "com.example.pluscomputers.mosque"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "41697577976-sg9kphr7bggu83uhnkc1unf0ktfjdpch.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.pluscomputers.mosque",
+            "certificate_hash": "92668705e2a97d0b6ce49ed736c60758b1bd4a5a"
+          }
+        },
+        {
+          "client_id": "41697577976-hq4osls238rp0m8meg3cr0vuuacqigt2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVvNAWfwhTHvZDW38NrZbkiHlYGMYDzkk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "41697577976-hq4osls238rp0m8meg3cr0vuuacqigt2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

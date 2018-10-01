@@ -47,7 +47,7 @@ public final class Query {
             }
 
         } catch (JSONException e) {
-            Log.e("QueryUtils", "Problem parsing the earthquake JSON results", e);
+            Log.e("QueryUtils", "Problem parsing the JSON results", e);
         }
 
         return listLajmeve;

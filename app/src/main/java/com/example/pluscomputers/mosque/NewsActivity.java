@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -29,7 +30,7 @@ public class NewsActivity extends AppCompatActivity {
 
 
     private static final String NEWS_REQUEST_URL =
-            "http://www.blueappsoftware.in/android/wp-json/wp/v2/posts";
+            "http://1.lagjaledina.com/wp-json/wp/v2/posts";
 
     private RecyclerView recyclerView;
     private List<Lajmi> listLajmet = new ArrayList<>();
@@ -71,7 +72,8 @@ public class NewsActivity extends AppCompatActivity {
 
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        // TODO: Handle error
+                        Toast.makeText(NewsActivity.this, "Nuk ka te dhena " +
+                                error.networkResponse.toString(), Toast.LENGTH_SHORT).show();
                     }
                 });
 

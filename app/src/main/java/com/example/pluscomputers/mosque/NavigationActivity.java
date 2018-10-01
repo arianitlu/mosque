@@ -8,6 +8,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 
 import com.example.pluscomputers.mosque.model.Lajmi;
+import com.onesignal.OneSignal;
 
 public class NavigationActivity extends AppCompatActivity {
 
@@ -19,6 +20,11 @@ public class NavigationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation);
+
+        OneSignal.startInit(this)
+                .inFocusDisplaying(OneSignal.OSInFocusDisplayOption.Notification)
+                .unsubscribeWhenNotificationsAreDisabled(true)
+                .init();
 
         btnAbout = findViewById(R.id.nav_button_aboutUs);
         btnNjoftimet = findViewById(R.id.nav_button_njoftimet);
