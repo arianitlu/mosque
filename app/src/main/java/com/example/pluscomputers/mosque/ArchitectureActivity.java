@@ -8,6 +8,7 @@ import android.view.WindowManager;
 import android.widget.ImageButton;
 
 import com.example.pluscomputers.mosque.adapters.MyCustomPagerAdapter;
+import com.github.barteksc.pdfviewer.PDFView;
 
 public class ArchitectureActivity extends AppCompatActivity {
 
@@ -22,6 +23,9 @@ public class ArchitectureActivity extends AppCompatActivity {
         getWindow().setFlags(
                 WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        PDFView p = (PDFView)findViewById(R.id.pdfView);
+        p.fromAsset("cv.pdf").load();
 
         buttonBack = findViewById(R.id.architecture_back_button);
         buttonBack.setOnClickListener(new View.OnClickListener() {

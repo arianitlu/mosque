@@ -3,6 +3,7 @@ package com.example.pluscomputers.mosque;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageButton;
 
 import com.gjiazhe.panoramaimageview.GyroscopeObserver;
@@ -17,6 +18,10 @@ public class PanoramaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_panorama);
+
+        getWindow().setFlags(
+                WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         gyroscopeObserver = new GyroscopeObserver();
         gyroscopeObserver.setMaxRotateRadian(Math.PI/9);

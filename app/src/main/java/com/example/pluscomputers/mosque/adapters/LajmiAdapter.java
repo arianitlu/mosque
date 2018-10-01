@@ -75,7 +75,7 @@ public class LajmiAdapter extends RecyclerView.Adapter<LajmiAdapter.MyViewHolder
         Lajmi lajmi = mLajmiList.get(position);
 
         holder.mTitle.setText(lajmi.getTitle());
-        holder.mCategory.setText(lajmi.getCategory());
+        holder.mCategory.setText("Wil Mosque");
 
         //holder.mImage.setImageResource(lajmi.getDefaultImage());
         holder.mColor.setImageResource(lajmi.getColor());

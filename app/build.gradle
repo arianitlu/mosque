@@ -5,7 +5,7 @@ android {
     defaultConfig {
 
         manifestPlaceholders = [
-                onesignal_app_id               : 'bda3fdff-be18-4175-ac4c-b17c0ca1aee2',
+                onesignal_app_id:'e7948129-af16-49f7-9980-16bc86003b70',
                 // Project number pulled from dashboard, local value is ignored.
                 onesignal_google_project_number: 'REMOTE']
 
@@ -45,7 +45,7 @@ dependencies {
 
     implementation 'com.squareup.picasso:picasso:2.71828'
 
-
+    implementation 'com.github.barteksc:android-pdf-viewer:2.6.1'
 
 }
 
