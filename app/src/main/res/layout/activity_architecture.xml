@@ -14,18 +14,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/islami_background" />
+
     <ImageButton
         android:id="@+id/architecture_back_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
         android:background="?android:selectableItemBackground"
         android:padding="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/text_view_about"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/text_view_about"
+        app:layout_constraintTop_toTopOf="@+id/image_view_islami_background"
         app:srcCompat="@drawable/don_back_btn" />
 
     <com.github.barteksc.pdfviewer.PDFView

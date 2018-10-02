@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.example.pluscomputers.mosque.R;
 import com.example.pluscomputers.mosque.model.Anetaresia;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AnetaresiaAdapter extends RecyclerView.Adapter<AnetaresiaAdapter.MyViewHolder> {
@@ -59,6 +60,8 @@ public class AnetaresiaAdapter extends RecyclerView.Adapter<AnetaresiaAdapter.My
     }
 
     public void setAnetaresia(List<Anetaresia> anetaresiaList){
+        List<Anetaresia> mAntarsia = new ArrayList<>();
+        this.mAnetaresiaList = mAntarsia;
         this.mAnetaresiaList = anetaresiaList;
         notifyDataSetChanged();
     }
