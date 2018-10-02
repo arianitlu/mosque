@@ -15,6 +15,9 @@ public class DonacionetActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_donacionet);
 
+        overridePendingTransition(0, 0);
+
+
         buttonBack = findViewById(R.id.donacionet_button_back);
 
         buttonBack.setOnClickListener(new View.OnClickListener() {

@@ -15,6 +15,9 @@ public class IslaminewilActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_islaminewil);
 
+        overridePendingTransition(0, 0);
+
+
         buttonBack = findViewById(R.id.islami_button_back);
         buttonBack.setOnClickListener(new View.OnClickListener() {
             @Override

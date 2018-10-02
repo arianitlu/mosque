@@ -24,6 +24,9 @@ public class SinglenewsActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+        overridePendingTransition(0, 0);
+
+
         txtTitle = findViewById(R.id.single_news_text_view_titulli);
         txtCategory = findViewById(R.id.single_news_text_view_kategoria);
         txtDescription = findViewById(R.id.single_news_text_view_description);

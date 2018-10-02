@@ -23,6 +23,9 @@ public class PanoramaActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+        overridePendingTransition(0, 0);
+
+
         gyroscopeObserver = new GyroscopeObserver();
         gyroscopeObserver.setMaxRotateRadian(Math.PI/9);
 

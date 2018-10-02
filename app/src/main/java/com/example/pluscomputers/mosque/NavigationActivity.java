@@ -18,16 +18,10 @@ public class NavigationActivity extends AppCompatActivity {
 
     TextView txtCopyright;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation);
-
-        OneSignal.startInit(this)
-                .inFocusDisplaying(OneSignal.OSInFocusDisplayOption.Notification)
-                .unsubscribeWhenNotificationsAreDisabled(true)
-                .init();
 
         txtCopyright = findViewById(R.id.nav_copyright_text_view);
 
@@ -38,6 +32,9 @@ public class NavigationActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        overridePendingTransition(0, 0);
+
 
         btnAbout = findViewById(R.id.nav_button_aboutUs);
         btnNjoftimet = findViewById(R.id.nav_button_njoftimet);

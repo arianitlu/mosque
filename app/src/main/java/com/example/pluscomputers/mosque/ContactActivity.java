@@ -15,6 +15,9 @@ public class ContactActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact);
 
+        overridePendingTransition(0, 0);
+
+
         buttonBack = findViewById(R.id.contact_button_back);
 
         buttonBack.setOnClickListener(new View.OnClickListener() {
