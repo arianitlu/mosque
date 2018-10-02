@@ -13,6 +13,7 @@ import android.widget.TextView;
 public class LoginActivity extends AppCompatActivity {
 
     private ImageButton btnLogin;
+    private TextView txtMarquee;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,10 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        txtMarquee = findViewById(R.id.login_marquee_text_view);
+        txtMarquee.setSelected(true);
+        txtMarquee.setSingleLine();
 
         getWindow().setFlags(
                 WindowManager.LayoutParams.FLAG_FULLSCREEN,
