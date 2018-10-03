@@ -58,13 +58,13 @@ public class MeetingsActivity extends AppCompatActivity {
 
     public List<Anetaresia> listMeetings() {
 
-        Anetaresia obj1 = new Anetaresia("E Hene","12:30",R.mipmap.mosque);
+        Anetaresia obj1 = new Anetaresia("Monday","12:30",R.mipmap.mosque);
         meetingsList.add(obj1);
-        Anetaresia obj2 = new Anetaresia("E Merkure","14:30",R.mipmap.mosque);
+        Anetaresia obj2 = new Anetaresia("Tuesday","14:30",R.mipmap.mosque);
         meetingsList.add(obj2);
-        Anetaresia obj3 = new Anetaresia("E Enjte","10:30",R.mipmap.mosque);
+        Anetaresia obj3 = new Anetaresia("Thursday","10:30",R.mipmap.mosque);
         meetingsList.add(obj3);
-        Anetaresia obj4 = new Anetaresia("E Shtune","9:30",R.mipmap.mosque);
+        Anetaresia obj4 = new Anetaresia("Saturday","9:30",R.mipmap.mosque);
         meetingsList.add(obj4);
 
         return meetingsList;
