@@ -60,8 +60,7 @@ public class AnetaresiaAdapter extends RecyclerView.Adapter<AnetaresiaAdapter.My
     }
 
     public void setAnetaresia(List<Anetaresia> anetaresiaList){
-        List<Anetaresia> mAntarsia = new ArrayList<>();
-        this.mAnetaresiaList = mAntarsia;
+
         this.mAnetaresiaList = anetaresiaList;
         notifyDataSetChanged();
     }

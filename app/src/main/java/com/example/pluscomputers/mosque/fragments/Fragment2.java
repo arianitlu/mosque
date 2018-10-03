@@ -50,6 +50,8 @@ public class Fragment2 extends Fragment {
 
     public List<Anetaresia> listAnetaresia() {
 
+        anetaresiaList.clear();
+
         Anetaresia obj1 = new Anetaresia("Sami Mustafa", "Kommisionsleiter", R.drawable.about_background);
         anetaresiaList.add(obj1);
         Anetaresia obj2 = new Anetaresia("Xhemasi Abazi", "Member", R.drawable.news_photo1);

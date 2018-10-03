@@ -47,10 +47,11 @@ public class Fragment1 extends Fragment {
 
         return rootView;
 
-
     }
 
     public List<Anetaresia> listAnetaresia() {
+
+        anetaresiaList.clear();
 
         Anetaresia obj1 = new Anetaresia("Bekim Alimi","Projektmanager",R.mipmap.ic_launcher);
         anetaresiaList.add(obj1);

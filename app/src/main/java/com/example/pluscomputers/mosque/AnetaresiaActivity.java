@@ -39,7 +39,6 @@ public class AnetaresiaActivity extends AppCompatActivity {
 
         overridePendingTransition(0, 0);
 
-
         getWindow().setFlags(
                 WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
