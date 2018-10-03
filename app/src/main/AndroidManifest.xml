@@ -12,7 +12,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/mosque"
         android:supportsRtl="true"
-        android:theme="@style/HiddenTitleTheme">
+        android:theme="@style/AppTheme">
         <activity android:name=".LoginActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,35 +21,17 @@
             </intent-filter>
         </activity>
         <activity android:name=".AboutActivity" />
-        <activity android:name=".NavigationActivity">
-
-        </activity>
+        <activity android:name=".NavigationActivity"/>
         <activity android:name=".DonacionetActivity" />
         <activity android:name=".IslaminewilActivity" />
-        <activity
-            android:name=".AnetaresiaActivity"
-            android:label="Anetaresia"
-            android:parentActivityName=".NavigationActivity"
-            android:theme="@style/AppTheme" />
-        <activity
-            android:name=".NewsActivity"
-            android:label="News"
-            android:parentActivityName=".NavigationActivity"
-            android:theme="@style/AppTheme" />
-        <activity
-            android:name=".SinglenewsActivity"
-            android:label="Single News"
-            android:parentActivityName=".NewsActivity"
-            android:theme="@style/AppTheme" />
+        <activity android:name=".AnetaresiaActivity" />
+        <activity android:name=".NewsActivity"/>
+        <activity android:name=".SinglenewsActivity"/>
         <activity android:name=".PanoramaActivity" />
         <activity android:name=".ContactActivity" />
-        <activity
-            android:name=".MeetingsActivity"
-            android:label="Meetings"
-            android:parentActivityName=".NavigationActivity"
-            android:theme="@style/AppTheme" />
+        <activity android:name=".MeetingsActivity"/>
         <activity android:name=".ArchitectureActivity" />
-        <activity android:name=".CopyrightActivity"></activity>
+        <activity android:name=".CopyrightActivity"/>
     </application>
 
 </manifest>

@@ -19,6 +19,7 @@ public class Fragment1 extends Fragment {
 
     private RecyclerView recyclerView;
     private List<Anetaresia> anetaresiaList = new ArrayList<>();
+    AnetaresiaAdapter adapter;
 
     public Fragment1() {
     }
@@ -36,13 +37,13 @@ public class Fragment1 extends Fragment {
 
         recyclerView = rootView.findViewById(R.id.recyclerView1);
 
-        AnetaresiaAdapter adapter = new AnetaresiaAdapter(getContext());
-
-        adapter.setAnetaresia(listAnetaresia());
+        adapter = new AnetaresiaAdapter(getContext());
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
+
+        adapter.setAnetaresia(listAnetaresia());
 
         return rootView;
 

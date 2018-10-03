@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.pluscomputers.mosque.model.Lajmi;
@@ -13,7 +14,7 @@ import com.onesignal.OneSignal;
 
 public class NavigationActivity extends AppCompatActivity {
 
-    Button btnAbout, btnNjoftimet, btnIslami, btnMeetings, btnPanorama,
+    ImageButton btnAbout,btnNjoftimet, btnIslami, btnMeetings, btnPanorama,
     btnArkitektura, btnDonacionet, btnAnetaresia, btnKontakti;
 
     TextView txtCopyright;
