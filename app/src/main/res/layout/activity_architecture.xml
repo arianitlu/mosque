@@ -27,8 +27,64 @@
         app:layout_constraintTop_toTopOf="@+id/image_view_islami_background"
         app:srcCompat="@drawable/don_back_btn" />
 
-    <com.github.barteksc.pdfviewer.PDFView
-        android:id="@+id/pdfView"
+    <TextView
+        android:id="@+id/text_view_about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/lato_regular"
+        android:text="Architecture"
+        android:textColor="@android:color/black"
+        android:textSize="17.5sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="Anpassung an die Umgebung"
+        android:textColor="#343434"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_view_islami_background" />
+
+    <ImageButton
+        android:id="@+id/imageView8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="?android:selectableItemBackground"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView4"
+        app:layout_constraintEnd_toStartOf="@+id/imageView9"
+        app:layout_constraintTop_toTopOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.629"
+        app:srcCompat="@drawable/about_heart" />
+
+    <ImageButton
+        android:id="@+id/imageView9"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="?android:selectableItemBackground"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView8"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/about_share" />
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
@@ -37,94 +93,22 @@
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_view_islami_background">
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
 
-    </com.github.barteksc.pdfviewer.PDFView>
-
-
-    <!--<TextView-->
-        <!--android:id="@+id/text_view_about"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginEnd="8dp"-->
-        <!--android:layout_marginStart="8dp"-->
-        <!--android:layout_marginTop="32dp"-->
-        <!--android:fontFamily="@font/lato_regular"-->
-        <!--android:text="Architecture"-->
-        <!--android:textColor="@android:color/black"-->
-        <!--android:textSize="17.5sp"-->
-        <!--app:layout_constraintEnd_toEndOf="parent"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintTop_toTopOf="parent" />-->
-
-
-
-    <!--<TextView-->
-        <!--android:id="@+id/textView4"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginStart="16dp"-->
-        <!--android:layout_marginTop="8dp"-->
-        <!--android:fontFamily="@font/lato_bold"-->
-        <!--android:text="Anpassung an die Umgebung"-->
-        <!--android:textColor="#343434"-->
-        <!--android:textSize="15sp"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintTop_toBottomOf="@+id/image_view_islami_background" />-->
-
-    <!--<ImageButton-->
-        <!--android:id="@+id/imageView8"-->
-        <!--android:layout_width="0dp"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginTop="8dp"-->
-        <!--android:background="?android:selectableItemBackground"-->
-        <!--android:padding="8dp"-->
-        <!--app:layout_constraintBottom_toBottomOf="@+id/textView4"-->
-        <!--app:layout_constraintEnd_toStartOf="@+id/imageView9"-->
-        <!--app:layout_constraintTop_toTopOf="@+id/textView4"-->
-        <!--app:layout_constraintVertical_bias="0.629"-->
-        <!--app:srcCompat="@drawable/about_heart" />-->
-
-    <!--<ImageButton-->
-        <!--android:id="@+id/imageView9"-->
-        <!--android:layout_width="0dp"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginBottom="8dp"-->
-        <!--android:layout_marginEnd="16dp"-->
-        <!--android:background="?android:selectableItemBackground"-->
-        <!--android:padding="8dp"-->
-        <!--app:layout_constraintBottom_toBottomOf="@+id/imageView8"-->
-        <!--app:layout_constraintEnd_toEndOf="parent"-->
-        <!--app:layout_constraintTop_toTopOf="@+id/imageView8"-->
-        <!--app:layout_constraintVertical_bias="0.0"-->
-        <!--app:srcCompat="@drawable/about_share" />-->
-
-    <!--<ScrollView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="0dp"-->
-        <!--android:layout_marginBottom="8dp"-->
-        <!--android:layout_marginEnd="8dp"-->
-        <!--android:layout_marginStart="8dp"-->
-        <!--android:layout_marginTop="8dp"-->
-        <!--app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--app:layout_constraintEnd_toEndOf="parent"-->
-        <!--app:layout_constraintHorizontal_bias="0.0"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintTop_toBottomOf="@+id/textView4">-->
-
-        <!--<TextView-->
-            <!--android:id="@+id/textView6"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:layout_marginEnd="8dp"-->
-            <!--android:layout_marginStart="8dp"-->
-            <!--android:layout_marginTop="8dp"-->
-            <!--android:fontFamily="@font/lato_regular"-->
-            <!--android:text="Das geplante Begegnungszentrum besteht aus einem unterirdischen Geschoss, das als Tiefgarage genutzt werden soll, sowie vier weiteren oberirdischen Geschossen.-->
-<!--Die architektonische Herausforderung lag darin, verschiedene und vielfältige Elemente harmonisch in das Objekt zu integrieren. In weiterer Folge sollte die islamische Prägung zum Vorschein kommen und somit das islamische Begegnungszentrum als solches unverkennbar werden zu lassen. Die Kuppel im süd-östlichen Trakt, sowie die integrierten kreisförmig gegen Mekka ausgerichteten Gebetsräume sollen dem Gebäude seinen speziellen Charakter verleihen. Die geplante Anordnung dieser Räume soll dem Besucher ein Gefühl von Besinnlichkeit in einem angenehmen Ambiente vermitteln. Durch die offene Kuppelkonstruktion, welche sich über alle vier oberen Etagen erstreckt, soll viel Raum für die Begegnung mit dem islamischen Glauben geboten werden. Des Weiteren sollen die speziellen Verzierungen und Inschriften in der Kuppel die islamische Prägung des Gebäudes hervorheben.-->
-<!--Bei der Planung vom islamischen Begegnungszentrum mussten die kommunalen und kantonalen Bauvorschriften eingehalten werden. Dies beinhaltete u.a. die Berücksichtigung der architektonischen Baukunst."-->
-            <!--tools:layout_editor_absoluteY="388dp"></TextView>-->
-    <!--</ScrollView>-->
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/lato_regular"
+            android:text="Das geplante Begegnungszentrum besteht aus einem unterirdischen Geschoss, das als Tiefgarage genutzt werden soll, sowie vier weiteren oberirdischen Geschossen.
+Die architektonische Herausforderung lag darin, verschiedene und vielfältige Elemente harmonisch in das Objekt zu integrieren. In weiterer Folge sollte die islamische Prägung zum Vorschein kommen und somit das islamische Begegnungszentrum als solches unverkennbar werden zu lassen. Die Kuppel im süd-östlichen Trakt, sowie die integrierten kreisförmig gegen Mekka ausgerichteten Gebetsräume sollen dem Gebäude seinen speziellen Charakter verleihen. Die geplante Anordnung dieser Räume soll dem Besucher ein Gefühl von Besinnlichkeit in einem angenehmen Ambiente vermitteln. Durch die offene Kuppelkonstruktion, welche sich über alle vier oberen Etagen erstreckt, soll viel Raum für die Begegnung mit dem islamischen Glauben geboten werden. Des Weiteren sollen die speziellen Verzierungen und Inschriften in der Kuppel die islamische Prägung des Gebäudes hervorheben.
+Bei der Planung vom islamischen Begegnungszentrum mussten die kommunalen und kantonalen Bauvorschriften eingehalten werden. Dies beinhaltete u.a. die Berücksichtigung der architektonischen Baukunst."
+            tools:layout_editor_absoluteY="388dp"></TextView>
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

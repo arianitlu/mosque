@@ -81,7 +81,7 @@
         android:paddingTop="10dp">
 
         <ImageView
-            android:id="@+id/nav_button_njoftimet"
+            android:id="@+id/contact_nummer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -100,14 +100,14 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:text="Spenden über Telefon"
+            android:text="Spendenummer"
             android:textAllCaps="true"
             android:textColor="@android:color/black"
             android:fontFamily="@font/lato_semibold"
             android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="@+id/nav_button_njoftimet"
-            app:layout_constraintStart_toStartOf="@+id/nav_button_njoftimet"
-            app:layout_constraintTop_toTopOf="@+id/nav_button_njoftimet" />
+            app:layout_constraintEnd_toEndOf="@+id/contact_nummer"
+            app:layout_constraintStart_toStartOf="@+id/contact_nummer"
+            app:layout_constraintTop_toTopOf="@+id/contact_nummer" />
 
         <TextView
             android:id="@+id/textView3"
@@ -116,14 +116,16 @@
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
             android:gravity="center_horizontal"
             android:letterSpacing="0.01"
-            android:text="Um telefonisch zu spenden rufen\nSie folgende Nummer an:\n\n0900 10 20 10"
+            android:text="0900 10 20 10"
             android:textColor="#ffffff"
             android:textSize="15sp"
-            app:layout_constraintBottom_toBottomOf="@+id/nav_button_njoftimet"
-            app:layout_constraintEnd_toEndOf="@+id/nav_button_njoftimet"
-            app:layout_constraintStart_toStartOf="@+id/nav_button_njoftimet" />
+            app:layout_constraintBottom_toBottomOf="@+id/contact_nummer"
+            app:layout_constraintEnd_toEndOf="@+id/contact_nummer"
+            app:layout_constraintStart_toStartOf="@+id/contact_nummer"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_don_2" />
 
         <ImageView
             android:id="@+id/imageView6"
@@ -136,7 +138,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/textView3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/textView3"
-            app:layout_constraintTop_toTopOf="@+id/nav_button_njoftimet"
+            app:layout_constraintTop_toTopOf="@+id/contact_nummer"
             app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/don_figure2" />
 

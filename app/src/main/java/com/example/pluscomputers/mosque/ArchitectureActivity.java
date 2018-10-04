@@ -27,9 +27,6 @@ public class ArchitectureActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        PDFView p = (PDFView)findViewById(R.id.pdfView);
-        p.fromAsset("cv.pdf").load();
-
         buttonBack = findViewById(R.id.architecture_back_button);
         buttonBack.setOnClickListener(new View.OnClickListener() {
             @Override
