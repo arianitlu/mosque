@@ -1,9 +1,11 @@
 package com.example.pluscomputers.mosque;
 
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -34,9 +36,11 @@ public class SinglenewsActivity extends AppCompatActivity {
         toolbarTxt = findViewById(R.id.tolbar_text_view);
         toolbarTxt.setText("Single News");
 
-        getWindow().setFlags(
-                WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            Window w = getWindow();
+            w.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+            w.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+        }
 
         overridePendingTransition(0, 0);
 
@@ -60,7 +64,7 @@ public class SinglenewsActivity extends AppCompatActivity {
             int color = extras.getInt("color");
 
             txtTitle.setText(title);
-            txtCategory.setText(category);
+            txtCategory.setText("Wil Mosque");
             txtDescription.setText(Html.fromHtml(describtion));
 
             //imgImage.setImageResource(image);
