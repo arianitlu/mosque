@@ -33,9 +33,13 @@ public final class Query {
 
                 String titleString = titleObj.getString("rendered");
 
+                titleString = titleString.replace("&#8211;","");
+
                 JSONObject contentObj = lajmiAktualObj.getJSONObject("content");
 
                 String contentString = contentObj.getString("rendered");
+
+                contentString = contentString.replaceAll("\\[\\/?vc_[^\\]]*\\]","");
 
                 JSONArray categoriesArray = lajmiAktualObj.getJSONArray("categories");
 

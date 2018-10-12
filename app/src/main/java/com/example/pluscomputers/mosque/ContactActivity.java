@@ -31,15 +31,6 @@ public class ContactActivity extends AppCompatActivity {
             }
         });
 
-        contactNummer = findViewById(R.id.contact_nummer);
-        contactNummer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String number = "0900102010";
-                Intent i=new Intent(Intent.ACTION_DIAL,Uri.parse("tel:" + number));
-                startActivity(i);
-            }
-        });
 
         getWindow().setFlags(
                 WindowManager.LayoutParams.FLAG_FULLSCREEN,

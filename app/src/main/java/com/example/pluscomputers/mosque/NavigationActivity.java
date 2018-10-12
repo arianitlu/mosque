@@ -36,7 +36,6 @@ public class NavigationActivity extends AppCompatActivity {
 
         overridePendingTransition(0, 0);
 
-
         btnAbout = findViewById(R.id.nav_button_aboutUs);
         btnNjoftimet = findViewById(R.id.nav_button_njoftimet);
         btnIslami = findViewById(R.id.nav_button_islamiNeWil);

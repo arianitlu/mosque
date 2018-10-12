@@ -28,15 +28,17 @@
 
     <TextView
         android:id="@+id/news_text_view_titulli"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
         android:fontFamily="@font/lato_regular"
         android:text="Pervjetori i hapjes se xhamise"
         android:textColor="#ffffff"
         android:textSize="20.2sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView15"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/imageView15" />
 
     <ImageView
