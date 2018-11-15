@@ -50,7 +50,7 @@ public class PanoramaActivity extends AppCompatActivity {
         webview.getSettings().setJavaScriptEnabled(true);
         webview.getSettings().setDomStorageEnabled(true);
         webview.setOverScrollMode(webview.OVER_SCROLL_NEVER);
-        webview.loadUrl("https://sennepgames.com");
+        webview.loadUrl("http://1.lagjaledina.com/Moschee.html");
 
     }
 }

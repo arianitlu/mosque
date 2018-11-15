@@ -45,7 +45,7 @@ public class NewsActivity extends AppCompatActivity {
             "http://1.lagjaledina.com/wp-json/wp/v2/media";
 
     private RecyclerView recyclerView;
-    private List<Lajmi> listLajmet = new ArrayList<>();
+    //private List<Lajmi> listLajmet = new ArrayList<>();
     LajmiAdapter mAdapter = new LajmiAdapter(this);
     private ImageButton back_button;
     private TextView toolbarTxt;
@@ -68,6 +68,7 @@ public class NewsActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
+
         toolbarTxt = findViewById(R.id.tolbar_text_view);
         toolbarTxt.setText("News");
 
@@ -92,20 +93,22 @@ public class NewsActivity extends AppCompatActivity {
 
     public void merrLajmet(){
 
+
         Uri baseUri = Uri.parse(NEWS_REQUEST_URL);
         Uri.Builder uriBuilder = baseUri.buildUpon();
 
         JsonArrayRequest jsonObjectRequest = new JsonArrayRequest(
                 Request.Method.GET, uriBuilder.toString(), null, new Response.Listener<JSONArray>() {
 
-                    @Override
+                    List<Lajmi> listLajmet = new ArrayList<>();
+
+            @Override
                     public void onResponse(JSONArray response) {
                         listLajmet = Query.shfaqLajmet(response);
 
                         for (Lajmi lajmi : listLajmet){
                             merrFoton(lajmi);
                         }
-
                         mAdapter.setLajmi(listLajmet);
                     }
                 }, new Response.ErrorListener() {
@@ -132,8 +135,11 @@ public class NewsActivity extends AppCompatActivity {
             @Override
             public void onResponse(JSONObject response) {
                 String imageUrl = Query.shfaqFoton(response);
+                if (imageUrl == ""){
+                    imageUrl = String.valueOf(R.drawable.news_photo1);
+                }
                 lajmi.setImage(imageUrl);
-                mAdapter.setLajmi(listLajmet);
+                //mAdapter.setLajmi(listLajmet);
             }
         }, new Response.ErrorListener() {
 

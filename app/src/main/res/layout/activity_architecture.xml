@@ -6,42 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".ArchitectureActivity">
 
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar" />
+
     <android.support.v4.view.ViewPager
         android:id="@+id/image_view_islami_background"
         android:layout_width="match_parent"
-        android:layout_height="264dp"
+        android:layout_height="201dp"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include"
         app:srcCompat="@drawable/islami_background" />
-
-    <ImageButton
-        android:id="@+id/architecture_back_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:background="?android:selectableItemBackground"
-        android:padding="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/image_view_islami_background"
-        app:srcCompat="@drawable/don_back_btn" />
-
-    <TextView
-        android:id="@+id/text_view_about"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
-        android:fontFamily="@font/lato_regular"
-        android:text="Architecture"
-        android:textColor="@android:color/black"
-        android:textSize="17.5sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
 
 
     <TextView

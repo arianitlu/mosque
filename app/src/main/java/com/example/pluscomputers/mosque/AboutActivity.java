@@ -7,23 +7,28 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class AboutActivity extends AppCompatActivity {
 
     ImageButton backButton;
+    private TextView toolbarTxt;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
 
-        backButton = findViewById(R.id.about_back_button);
+        backButton = findViewById(R.id.toolbar_back_button);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();
             }
         });
+        toolbarTxt = findViewById(R.id.tolbar_text_view);
+        toolbarTxt.setText("Rreth Nesh");
 
         overridePendingTransition(0, 0);
 

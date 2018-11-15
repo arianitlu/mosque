@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.example.pluscomputers.mosque.adapters.MyCustomPagerAdapter;
 import com.github.barteksc.pdfviewer.PDFView;
@@ -14,26 +15,30 @@ public class ArchitectureActivity extends AppCompatActivity {
 
     private ImageButton buttonBack;
     private ViewPager viewPager;
+    private TextView toolbarTxt;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_architecture);
 
-        overridePendingTransition(0, 0);
-
-
-        getWindow().setFlags(
-                WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
-        buttonBack = findViewById(R.id.architecture_back_button);
+        buttonBack = findViewById(R.id.toolbar_back_button);
         buttonBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();
             }
         });
+        toolbarTxt = findViewById(R.id.tolbar_text_view);
+        toolbarTxt.setText("Arkitektura");
+
+        overridePendingTransition(0, 0);
+
+        getWindow().setFlags(
+                WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
 
         int images[] = {R.drawable.about_background, R.drawable.don_background,
                 R.drawable.islami_background};
