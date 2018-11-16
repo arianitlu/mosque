@@ -31,7 +31,7 @@
         android:layout_marginTop="96dp"
         android:fontFamily="@font/opensans_light"
         android:letterSpacing="0.02"
-        android:text="Miresevini te Xhamia Wil"
+        android:text="Willkommen bei Moschee Wil"
         android:textColor="@android:color/white"
         android:textSize="18.2sp"
         app:layout_constraintEnd_toEndOf="parent"

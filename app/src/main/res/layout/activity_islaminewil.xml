@@ -27,40 +27,12 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/lato_bold"
-        android:text="BZ Wil – mehr als eine Gebetsstätte"
+        android:text="Die Muslime in der Schweiz – Ein Rückblick
+"
         android:textColor="#343434"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image_view_islami_background" />
-
-    <ImageButton
-        android:id="@+id/imageView8"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="?android:selectableItemBackground"
-        android:padding="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView4"
-        app:layout_constraintEnd_toStartOf="@+id/imageView9"
-        app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toTopOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.629"
-        app:srcCompat="@drawable/about_heart" />
-
-    <ImageButton
-        android:id="@+id/imageView9"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="16dp"
-        android:background="?android:selectableItemBackground"
-        android:padding="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView8"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/about_share" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -81,16 +53,19 @@
             android:layout_height="match_parent"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="4dp"
             android:fontFamily="@font/lato_regular"
-            android:text="Das islamische Begegnungszentrum Wil soll nicht nur ein Ort des Gebets sein, sondern in dessen Funktion einen Beitrag zur Förderung der Integration der Musliminnen und Muslime in die schweizerische Gesellschaft leisten. Aus diesem Grund wird das Zentrum Dienste wie Beratung der Behörden und umliegenden Kliniken und Spitäler in religiösen Angelegenheiten anbieten sowie Freizeit- und insbesondere integrationsfördernde Aktivitäten gestalten.
+            android:text="In den 60-er und 70-er Jahren rekrutierte die Schweiz Arbeitskräfte aus dem Ausland, welche die damaligen wirtschaftlichen Bedürfnisse – vor allem in der Landwirtschafts- und Baubranche – sättigen sollten. Nachhaltige soziale, ökonomische aber auch politische Umwälzungen in den Herkunftsländern dieser Arbeitskräfte, insbesondere in den osteuropäischen Ländern führten dazu, dass die sogenannten Gastarbeiter nach einigen Jahren ihre Familien nachzogen und sich somit in ihrem Gastgeberland niederliessen. Unter den Gastarbeiterfamilien war ein beträchtlicher Teil islamischen Glaubens.
 
-Die Realisierung dieses Vorhabens ist das Ergebnis dessen, was im edlen Koran verankert ist: “Wahrlich, der allein vermag die Moscheen Allahs zu erhalten, der an Allah und an den Jüngsten Tag glaubt und das Gebet verrichtet ...“ (9:18). Die edlen Worte des Gesandten Allahs, Muhammad (Friede und Segen Allahs seien auf ihm) bekräftigen dies: “Wer eine Moschee baut oder an deren Bau sich beteiligt, dem wird Allah einen Palast im Paradies bauen“.
+Der relativ grosse Zuwachs der Einwandererfamilien in die Schweiz bedurfte grossen behördlichen Managements für ihre Integration, aber auch viele Anstrengungen seitens der Eingewanderten selbst. Bildung, Kultur, Wirtschaft, Soziales, sowie Religion bildeten und bilden auch heute noch die Integrationsschwerpunkte, welche sich gegenseitig beeinflussen und somit ein Komplex ergeben.
 
-Das IBZ ist auch für Nicht-Muslime offen
+Wenn man von der Integration bzgl. Religion spricht, meint man vielfach die Integration des Islam resp. dessen Praktiken in der schweizerischen Gesellschaft. Die mit der Zeit und dem Zuwachs der muslimischen Bevölkerung in die Schweiz einhergehenden, konkreten Ansprüche und Bedürfnisse in religiöser Hinsicht führten dazu, dass u.a. vielerorts islamische Vereine und muslimische Gebetsstätten errichtet wurden: meist in bautechnisch und infrastrukturell ungenügenden Objekten, sowie siedlungsbezogen in abgeschiedenen Gegenden. Um dieser Ghettoisierung entgegenzuwirken, versuchen nun die Muslime in der Schweiz vermehrt, geeignete Gebets- und Versammlungsstätte zu erstellen.
 
-Da das Objekt ein Ort der Begegnung sein soll, kann es auch von Nicht-Vereinsmitgliedern aber auch von Andersgläubigen besucht werden. Interessierte, welche beispielsweise auch einer Predigt oder einem Referat beiwohnen wollen, können von der Zuschauertribüne im obersten Geschoss die Vorstellungen resp. Referate verfolgen.
-"
+Stadt Wil
+_
+Die Stadt Wil zählt rund 23‘000 Einwohner, wovon geschätzte 15 % dem islamischen Glauben angehören. Bis Ende der 80er Jahre besuchten die albanisch-stämmigen Muslime das Türkisch-Islamische Zentrum. Im Jahre 1991 gründeten die albanischen Muslime die Islamische Gemeinschaft Wil, nicht zuletzt wegen der Sprache der Predigten und der täglichen Kommunikation. Nach mehreren Standortwechseln ist die Gemeinschaft seit 1993 in einem Lokal an der Titlisstrasse 3a untergebracht, welches mehr schlecht als recht den Ansprüchen und Bedürfnissen der über 400 Mitgliederfamilien genügt. Angesichts dessen entschieden die Mitglieder der Gemeinschaft, angeführt von Imam Bekim Alimi, ein geeignetes und würdiges Objekt planen und errichten zu lassen.
+
+Mit der Formulierung des Bauvorhabens und dessen Bekanntwerden in der Öffentlichkeit mobilisierten sich in Wil und Umgebung eine Vielzahl von Einwohner gegen die Errichtung einer Moschee, welche ursprünglich noch den Bau eines Minaretts vorsah. In diesem Zeitraum entstand in der Stadt Wil eine heftige politische Debatte über den Islam, welche sich bald über die gesamte Schweiz erstrecken sollte. Der Widerstand gegen die in Wil geplante Moschee inklusive Minarett war mit ein Auslöser der Anti-Minarett-Initiative, die von der Schweizer Bevölkerung am 29. November 2009 in einer Volksabstimmung mehrheitlich angenommen wurde. Aufgrund dieses im Grundgesetz verankerten Verbots zum Bau eines Minaretts mussten nun die Pläne für das Bauvorhaben entsprechend angepasst werden. Mit dem Erwerb einer Bauparzelle an der Rosenstrasse in Wil im Jahr 2009 konnten nun konkrete Baupläne für das neue islamische Begegnungszentrum (ohne Minarett) erstellt werden."
             tools:layout_editor_absoluteY="388dp"></TextView>
     </ScrollView>
 

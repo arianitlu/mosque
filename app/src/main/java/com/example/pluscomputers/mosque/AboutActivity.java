@@ -28,7 +28,7 @@ public class AboutActivity extends AppCompatActivity {
             }
         });
         toolbarTxt = findViewById(R.id.tolbar_text_view);
-        toolbarTxt.setText("Rreth Nesh");
+        toolbarTxt.setText("Über uns");
 
         overridePendingTransition(0, 0);
 

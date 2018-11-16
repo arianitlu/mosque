@@ -25,7 +25,7 @@ public class IslaminewilActivity extends AppCompatActivity {
             }
         });
         toolbarTxt = findViewById(R.id.tolbar_text_view);
-        toolbarTxt.setText("Islami ne Wil");
+        toolbarTxt.setText("Islam in Wil");
 
         overridePendingTransition(0, 0);
 

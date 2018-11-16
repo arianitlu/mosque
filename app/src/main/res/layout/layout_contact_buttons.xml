@@ -13,81 +13,13 @@
         android:paddingTop="10dp">
 
         <ImageView
-            android:id="@+id/nav_button_aboutUs"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/don_rectangle_btn"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/text_view_don_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:fontFamily="@font/lato_semibold"
-            android:text="Contact Info"
-            android:textAllCaps="true"
-            android:textColor="@android:color/black"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="@+id/nav_button_aboutUs"
-            app:layout_constraintStart_toStartOf="@+id/nav_button_aboutUs"
-            app:layout_constraintTop_toTopOf="@+id/nav_button_aboutUs" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:gravity="center_horizontal"
-            android:fontFamily="@font/lato_semibold"
-            android:textColor="#ffffff"
-            android:textSize="15sp"
-            app:layout_constraintBottom_toBottomOf="@+id/nav_button_aboutUs"
-            app:layout_constraintEnd_toEndOf="@+id/nav_button_aboutUs"
-            app:layout_constraintStart_toStartOf="@+id/nav_button_aboutUs"
-            app:layout_constraintTop_toBottomOf="@+id/text_view_don_1"
-            android:text="Rosenstrasse 45, 9500 Wil SG \ninfo@moschee-wil.ch\nTel. +41 (0) 71 911 59 59" />
-
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/nav_button_aboutUs"
-            app:layout_constraintVertical_bias="0.873"
-            app:srcCompat="@drawable/don_figure1" />
-
-    </android.support.constraint.ConstraintLayout>
-
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="10dp"
-        android:paddingTop="10dp">
-
-        <ImageView
             android:id="@+id/nav_button_islamiNeWil"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_height="220dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
             android:background="@drawable/don_rectangle_btn"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -101,7 +33,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:text="Opening Hours"
+            android:text="KONTAKT"
             android:textAllCaps="true"
             android:textColor="@android:color/black"
             android:fontFamily="@font/lato_semibold"
@@ -114,20 +46,60 @@
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:gravity="center_horizontal"
             android:letterSpacing="0.01"
-            android:text="Monday-Sunday: 9:00 - 16:30 \nFriday: Open All day"
+            android:text="Rosenstrasse 45, 9500 Wil SG \n info@moschee-wil.ch \n Tel. +41 (0) 71 911 59 59"
             android:textColor="#ffffff"
             android:textSize="15sp"
-            app:layout_constraintBottom_toBottomOf="@+id/nav_button_islamiNeWil"
             app:layout_constraintEnd_toEndOf="@+id/nav_button_islamiNeWil"
             app:layout_constraintStart_toStartOf="@+id/nav_button_islamiNeWil"
             app:layout_constraintTop_toBottomOf="@+id/text_view_don_3" />
 
+        <ImageView
+            android:id="@+id/img_facebook"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/fblogo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textview_contact_phone1"
+            app:layout_constraintTop_toBottomOf="@+id/textview_contact_phone2"
+            app:layout_constraintVertical_bias="0.222" />
+        <ImageView
+            android:id="@+id/img_instagram"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/instagram"
+            app:layout_constraintBottom_toBottomOf="@+id/img_facebook"
+            app:layout_constraintStart_toEndOf="@+id/img_facebook"
+            app:layout_constraintTop_toTopOf="@+id/img_facebook" />
+
+        <TextView
+            android:id="@+id/textview_contact_phone1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Präsident A. Mustafa: 079 544 39 83"
+            android:textColor="#ffffff"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/nav_button_islamiNeWil"
+            app:layout_constraintStart_toStartOf="@+id/nav_button_islamiNeWil"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <TextView
+            android:id="@+id/textview_contact_phone2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Imam Bekim Alimi: 079 55 00 555"
+            android:textColor="#ffffff"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/nav_button_islamiNeWil"
+            app:layout_constraintStart_toStartOf="@+id/nav_button_islamiNeWil"
+            app:layout_constraintTop_toBottomOf="@+id/textview_contact_phone1" />
 
     </android.support.constraint.ConstraintLayout>
 

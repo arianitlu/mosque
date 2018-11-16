@@ -28,38 +28,11 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/lato_bold"
-        android:text="Anpassung an die Umgebung"
+        android:text="Architektur"
         android:textColor="#343434"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image_view_islami_background" />
-
-    <ImageButton
-        android:id="@+id/imageView8"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="?android:selectableItemBackground"
-        android:padding="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView4"
-        app:layout_constraintEnd_toStartOf="@+id/imageView9"
-        app:layout_constraintTop_toTopOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.629"
-        app:srcCompat="@drawable/about_heart" />
-
-    <ImageButton
-        android:id="@+id/imageView9"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="16dp"
-        android:background="?android:selectableItemBackground"
-        android:padding="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView8"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/about_share" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -84,7 +57,11 @@
             android:fontFamily="@font/lato_regular"
             android:text="Das geplante Begegnungszentrum besteht aus einem unterirdischen Geschoss, das als Tiefgarage genutzt werden soll, sowie vier weiteren oberirdischen Geschossen.
 Die architektonische Herausforderung lag darin, verschiedene und vielfältige Elemente harmonisch in das Objekt zu integrieren. In weiterer Folge sollte die islamische Prägung zum Vorschein kommen und somit das islamische Begegnungszentrum als solches unverkennbar werden zu lassen. Die Kuppel im süd-östlichen Trakt, sowie die integrierten kreisförmig gegen Mekka ausgerichteten Gebetsräume sollen dem Gebäude seinen speziellen Charakter verleihen. Die geplante Anordnung dieser Räume soll dem Besucher ein Gefühl von Besinnlichkeit in einem angenehmen Ambiente vermitteln. Durch die offene Kuppelkonstruktion, welche sich über alle vier oberen Etagen erstreckt, soll viel Raum für die Begegnung mit dem islamischen Glauben geboten werden. Des Weiteren sollen die speziellen Verzierungen und Inschriften in der Kuppel die islamische Prägung des Gebäudes hervorheben.
-Bei der Planung vom islamischen Begegnungszentrum mussten die kommunalen und kantonalen Bauvorschriften eingehalten werden. Dies beinhaltete u.a. die Berücksichtigung der architektonischen Baukunst."
+Bei der Planung vom islamischen Begegnungszentrum mussten die kommunalen und kantonalen Bauvorschriften eingehalten werden. Dies beinhaltete u.a. die Berücksichtigung der architektonischen Baukunst.
+
+Anpassung an die Umgebung
+_
+Die Parzelle an der Rosenstrasse liegt in der Bauzone für industrielle und gewerbliche Bauten sowie in einer verkehrsarmen Zone. In der unmittelbaren Umgebung des zukünftigen Begegnungszentrums sind die meisten Parzellen bereits bebaut – überwiegend mit Wohnbauten. Aufgrund seiner Lager, ist das zukünftige Begegnungszentrum sowohl mit privaten Autos als auch mit den öffentlichen Verkehrsmitteln gut erreichbar. Die Architekturkunst des islamischen Begegnungszentrums wird mit Sicherheit ein “besonderes Flair” in der Region schaffen."
             tools:layout_editor_absoluteY="388dp"></TextView>
     </ScrollView>
 

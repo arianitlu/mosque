@@ -37,7 +37,7 @@ public class AnetaresiaActivity extends AppCompatActivity {
             }
         });
         toolbarTxt = findViewById(R.id.tolbar_text_view);
-        toolbarTxt.setText("Anetaresia");
+        toolbarTxt.setText("Mitglields");
 
         overridePendingTransition(0, 0);
 

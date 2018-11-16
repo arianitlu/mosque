@@ -36,7 +36,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
-        android:text="Donacionet"
+        android:text="Spenden"
         android:textColor="@android:color/white"
         android:textSize="17.5sp"
         app:layout_constraintEnd_toEndOf="@+id/image_view_donation_fig"
