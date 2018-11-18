@@ -75,5 +75,18 @@ public final class Query {
         return imageUrl;
     }
 
+    public static String shfaqMeetings(JSONArray response) {
+
+        String rendered = null;
+
+        try {
+            JSONObject meetingsObj = response.getJSONObject(0);
+            JSONObject contentObj = meetingsObj.getJSONObject("content");
+            rendered = contentObj.getString("rendered");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return rendered;
+    }
 }
 
