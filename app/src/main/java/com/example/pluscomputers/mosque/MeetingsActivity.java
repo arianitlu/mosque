@@ -20,7 +20,9 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.example.pluscomputers.mosque.Utilities.MySingleton;
+import com.example.pluscomputers.mosque.Utilities.OnClickSignal;
 import com.example.pluscomputers.mosque.Utilities.Query;
+import com.onesignal.OneSignal;
 
 import org.json.JSONArray;
 
@@ -37,6 +39,10 @@ public class MeetingsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_meetings);
+
+        OneSignal.startInit(this)
+                .setNotificationOpenedHandler(new OnClickSignal(this))
+                .init();
 
         back_button = findViewById(R.id.toolbar_back_button);
         back_button.setOnClickListener(new View.OnClickListener() {

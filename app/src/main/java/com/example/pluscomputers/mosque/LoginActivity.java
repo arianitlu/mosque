@@ -11,6 +11,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.pluscomputers.mosque.Utilities.OnClickSignal;
 import com.onesignal.OneSignal;
 
 public class LoginActivity extends AppCompatActivity {
@@ -25,11 +26,15 @@ public class LoginActivity extends AppCompatActivity {
 
         overridePendingTransition(0, 0);
 
-
         OneSignal.startInit(this)
-                .inFocusDisplaying(OneSignal.OSInFocusDisplayOption.Notification)
-                .unsubscribeWhenNotificationsAreDisabled(true)
+                .setNotificationOpenedHandler(new OnClickSignal(this))
                 .init();
+
+
+//        OneSignal.startInit(this)
+//                .inFocusDisplaying(OneSignal.OSInFocusDisplayOption.Notification)
+//                .unsubscribeWhenNotificationsAreDisabled(true)
+//                .init();
 
         btnLogin = findViewById(R.id.login_button);
 
