@@ -57,22 +57,22 @@ public class SinglenewsActivity extends AppCompatActivity {
         if (extras != null) {
 
             String title = extras.getString("title");
-            String category = extras.getString("category");
+            //String category = extras.getString("category");
             String describtion = extras.getString("description");
 
             String image = extras.getString("image");
-            int color = extras.getInt("color");
+            //int color = extras.getInt("color");
 
             txtTitle.setText(title);
-            txtCategory.setText("Wil Mosque");
+            //txtCategory.setText("Wil Mosque");
             txtDescription.setText(Html.fromHtml(describtion));
 
             //imgImage.setImageResource(image);
-//            Picasso.get()
-//                    .load(image)
-//                    //.placeholder(R.drawable.news_photo1)
-//                    //.error(R.drawable.news_photo1)
-//                    .into(imgImage);
+            Picasso.get()
+                    .load(image)
+                    //.placeholder(R.drawable.news_photo1)
+                    //.error(R.drawable.news_photo1)
+                    .into(imgImage);
 //            imgColor.setImageResource(color);
         }
     }
