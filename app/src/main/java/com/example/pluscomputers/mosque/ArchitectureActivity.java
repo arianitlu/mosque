@@ -31,7 +31,7 @@ public class ArchitectureActivity extends AppCompatActivity {
             }
         });
         toolbarTxt = findViewById(R.id.tolbar_text_view);
-        toolbarTxt.setText("Architekt");
+        toolbarTxt.setText("Architektur");
 
         overridePendingTransition(0, 0);
 

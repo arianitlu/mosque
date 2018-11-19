@@ -5,4 +5,6 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="webView">#EEF0F3</color>
+    <color name="active_dots">#dcaaaa</color>
+    <color name="inactive_dots">#594444</color>
 </resources>

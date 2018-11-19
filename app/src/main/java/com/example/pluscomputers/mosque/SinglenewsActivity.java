@@ -46,11 +46,11 @@ public class SinglenewsActivity extends AppCompatActivity {
 
 
         txtTitle = findViewById(R.id.single_news_text_view_titulli);
-        txtCategory = findViewById(R.id.single_news_text_view_kategoria);
+        //txtCategory = findViewById(R.id.single_news_text_view_kategoria);
         txtDescription = findViewById(R.id.single_news_text_view_description);
 
         imgImage = findViewById(R.id.single_news_image_main);
-        imgColor = findViewById(R.id.single_news_image_small);
+        //imgColor = findViewById(R.id.single_news_image_small);
 
 
         Bundle extras = getIntent().getExtras();
@@ -68,12 +68,12 @@ public class SinglenewsActivity extends AppCompatActivity {
             txtDescription.setText(Html.fromHtml(describtion));
 
             //imgImage.setImageResource(image);
-            Picasso.get()
-                    .load(image)
-                    //.placeholder(R.drawable.news_photo1)
-                    //.error(R.drawable.news_photo1)
-                    .into(imgImage);
-            imgColor.setImageResource(color);
+//            Picasso.get()
+//                    .load(image)
+//                    //.placeholder(R.drawable.news_photo1)
+//                    //.error(R.drawable.news_photo1)
+//                    .into(imgImage);
+//            imgColor.setImageResource(color);
         }
     }
 }

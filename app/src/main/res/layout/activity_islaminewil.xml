@@ -27,8 +27,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/lato_bold"
-        android:text="Die Muslime in der Schweiz – Ein Rückblick
-"
+        android:text="Die Muslime in der Schweiz – Ein Rückblick"
         android:textColor="#343434"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,6 +53,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="4dp"
+            android:textSize="13.5sp"
             android:fontFamily="@font/lato_regular"
             android:text="In den 60-er und 70-er Jahren rekrutierte die Schweiz Arbeitskräfte aus dem Ausland, welche die damaligen wirtschaftlichen Bedürfnisse – vor allem in der Landwirtschafts- und Baubranche – sättigen sollten. Nachhaltige soziale, ökonomische aber auch politische Umwälzungen in den Herkunftsländern dieser Arbeitskräfte, insbesondere in den osteuropäischen Ländern führten dazu, dass die sogenannten Gastarbeiter nach einigen Jahren ihre Familien nachzogen und sich somit in ihrem Gastgeberland niederliessen. Unter den Gastarbeiterfamilien war ein beträchtlicher Teil islamischen Glaubens.
 

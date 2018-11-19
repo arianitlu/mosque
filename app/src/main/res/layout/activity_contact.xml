@@ -17,16 +17,17 @@
 
     <ImageView
         android:id="@+id/image_view_donation_fig"
-        android:layout_width="124dp"
-        android:layout_height="124dp"
-        android:layout_marginBottom="40dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="40dp"
+        android:layout_height="70dp"
         android:layout_marginStart="8dp"
-        android:visibility="invisible"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="40dp"
         app:layout_constraintBottom_toBottomOf="@+id/image_view_donation_backg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/nav_donacionet" />
+        app:layout_constraintTop_toBottomOf="@+id/text_view_don"
+        android:src="@drawable/nav_kontakti" />
 
     <TextView
         android:id="@+id/text_view_don"
