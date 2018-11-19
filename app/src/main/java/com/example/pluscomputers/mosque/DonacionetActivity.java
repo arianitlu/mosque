@@ -51,7 +51,7 @@ public class DonacionetActivity extends AppCompatActivity {
 
     public void onCall() {
         Intent callIntent = new Intent(Intent.ACTION_CALL);
-        callIntent.setData(Uri.parse("tel:+41 71 911 59 59"));
+        callIntent.setData(Uri.parse("tel:0900 10 20 10"));
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this,

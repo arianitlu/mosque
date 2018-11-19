@@ -145,8 +145,8 @@ public class NewsActivity extends AppCompatActivity {
 
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(NewsActivity.this, "Nuk ka te image " +
-                        error.networkResponse.toString(), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(NewsActivity.this, "Nuk ka te image " +
+                        //error.networkResponse.toString(), Toast.LENGTH_SHORT).show();
             }
         });
 

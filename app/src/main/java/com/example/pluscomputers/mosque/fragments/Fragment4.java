@@ -52,13 +52,13 @@ public class Fragment4 extends Fragment {
 
         anetaresiaList.clear();
 
-        Anetaresia obj1 = new Anetaresia("Abi Muhtari", "Kommisionsleiter", R.drawable.about_background);
+        Anetaresia obj1 = new Anetaresia("Abi Muhtari", "Kommisionsleiter", R.drawable.anetaresia_nophoto);
         anetaresiaList.add(obj1);
-        Anetaresia obj2 = new Anetaresia("Idriz Sheapi", "Member", R.drawable.news_photo1);
+        Anetaresia obj2 = new Anetaresia("Idriz Sheapi", "Member", R.drawable.anetaresia_nophoto);
         anetaresiaList.add(obj2);
-        Anetaresia obj3 = new Anetaresia("Bujar Zenuni", "Member", R.drawable.news_photo2);
+        Anetaresia obj3 = new Anetaresia("Bujar Zenuni", "Member", R.drawable.anetaresia_nophoto);
         anetaresiaList.add(obj3);
-        Anetaresia obj4 = new Anetaresia("Sulejman Ramadani", "Member", R.drawable.news_photo2);
+        Anetaresia obj4 = new Anetaresia("Sulejman Ramadani", "Member", R.drawable.anetaresia_nophoto);
         anetaresiaList.add(obj4);
 
         return anetaresiaList;

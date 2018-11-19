@@ -48,7 +48,8 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/news_text_view_titulli"
         app:layout_constraintStart_toStartOf="@+id/news_text_view_titulli"
-        app:srcCompat="@drawable/news_circle_green" />
+        app:srcCompat="@drawable/news_circle_green"
+        android:visibility="invisible"/>
 
     <TextView
         android:id="@+id/news_text_view_kategoria"
@@ -57,6 +58,7 @@
         android:layout_marginBottom="8dp"
         android:layout_marginStart="8dp"
         android:text="Perurime Evente"
+        android:visibility="invisible"
         android:textColor="#ffffff"
         android:textSize="12.2sp"
         app:layout_constraintBottom_toTopOf="@+id/news_text_view_titulli"

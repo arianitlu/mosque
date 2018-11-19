@@ -104,7 +104,7 @@ public class AnetaresiaActivity extends AppCompatActivity {
 
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
                     ViewGroup.LayoutParams.WRAP_CONTENT);
-            params.setMargins(4,0,4,0);
+            params.setMargins(4,0,10,0);
 
             dots_layout.addView(dots[i],params);
         }

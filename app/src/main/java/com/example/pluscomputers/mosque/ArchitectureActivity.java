@@ -39,11 +39,11 @@ public class ArchitectureActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+        int images[] = {R.drawable.slide_1, R.drawable.slide_2,
+                R.drawable.slide_3,R.drawable.slide_4,R.drawable.slide_5,R.drawable.slide_6};
 
-        int images[] = {R.drawable.about_background, R.drawable.don_background,
-                R.drawable.islami_background};
         MyCustomPagerAdapter myCustomPagerAdapter;
-            viewPager = (ViewPager)findViewById(R.id.image_view_islami_background);
+            viewPager = findViewById(R.id.image_view_islami_background);
 
             myCustomPagerAdapter = new MyCustomPagerAdapter(ArchitectureActivity.this, images);
             viewPager.setAdapter(myCustomPagerAdapter);
