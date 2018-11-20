@@ -27,7 +27,6 @@ public class AnetaresiaActivity extends AppCompatActivity {
     private ViewPager mViewPager;
     private ImageButton back_button;
     private TextView toolbarTxt;
-
     private LinearLayout dots_layout;
     private ImageView[] dots;
     private int[] layouts = {R.layout.fragment_main, R.layout.fragment_main2, R.layout.fragment_main3,
@@ -108,7 +107,6 @@ public class AnetaresiaActivity extends AppCompatActivity {
 
             dots_layout.addView(dots[i],params);
         }
-
 
     }
 }

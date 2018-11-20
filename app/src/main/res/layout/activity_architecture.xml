@@ -20,6 +20,19 @@
         app:layout_constraintTop_toBottomOf="@+id/include"
         app:srcCompat="@drawable/islami_background" />
 
+    <LinearLayout
+        android:id="@+id/dotsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/image_view_islami_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+    </LinearLayout>
 
     <TextView
         android:id="@+id/textView4"

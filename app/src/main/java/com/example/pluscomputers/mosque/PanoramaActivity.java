@@ -1,5 +1,6 @@
 package com.example.pluscomputers.mosque;
 
+import android.content.Intent;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -37,6 +38,8 @@ public class PanoramaActivity extends AppCompatActivity {
         toolbarTxt = findViewById(R.id.tolbar_text_view);
         toolbarTxt.setText("Virtual Tour");
 
+        webview = findViewById(R.id.panorama_image_view);
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             Window w = getWindow();
             w.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
@@ -44,13 +47,26 @@ public class PanoramaActivity extends AppCompatActivity {
         }
         overridePendingTransition(0, 0);
 
-        webview = findViewById(R.id.panorama_image_view);
+        Intent intent = getIntent();
 
-        webview.setWebViewClient(new WebViewClient());
-        webview.getSettings().setJavaScriptEnabled(true);
-        webview.getSettings().setDomStorageEnabled(true);
-        webview.setOverScrollMode(webview.OVER_SCROLL_NEVER);
-        webview.loadUrl("http://1.lagjaledina.com/Moschee.html");
+        boolean vlera = intent.getBooleanExtra("kati_pare",true);
+
+        if (vlera){
+            webview.setWebViewClient(new WebViewClient());
+            webview.getSettings().setJavaScriptEnabled(true);
+            webview.getSettings().setDomStorageEnabled(true);
+            webview.setOverScrollMode(webview.OVER_SCROLL_NEVER);
+            webview.loadUrl("http://1.lagjaledina.com/wp-content/EG1.html");
+        } else{
+            webview.setWebViewClient(new WebViewClient());
+            webview.getSettings().setJavaScriptEnabled(true);
+            webview.getSettings().setDomStorageEnabled(true);
+            webview.setOverScrollMode(webview.OVER_SCROLL_NEVER);
+            webview.loadUrl("http://1.lagjaledina.com/Moschee.html");
+        }
+
+
+
 
     }
 }

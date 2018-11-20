@@ -3,9 +3,9 @@
     package="com.example.pluscomputers.mosque">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/mosque"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity"
+        <activity
+            android:name=".LoginActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,30 +23,43 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AboutActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".NavigationActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".DonacionetActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".IslaminewilActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".AnetaresiaActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".NewsActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".SinglenewsActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".PanoramaActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ContactActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".MeetingsActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ArchitectureActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".CopyrightActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".AboutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NavigationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DonacionetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".IslaminewilActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AnetaresiaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NewsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SinglenewsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PanoramaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ContactActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MeetingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ArchitectureActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CopyrightActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".PanoramaHome"></activity>
     </application>
 
 </manifest>

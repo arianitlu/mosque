@@ -77,7 +77,7 @@ public class NavigationActivity extends AppCompatActivity {
         btnPanorama.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(NavigationActivity.this,PanoramaActivity.class);
+                Intent intent = new Intent(NavigationActivity.this,PanoramaHome.class);
                 startActivity(intent);
             }
         });
