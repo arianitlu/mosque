@@ -13,9 +13,9 @@
 
         <ImageView
             android:id="@+id/nav_button_islamiNeWil"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="350dp"
-            android:background="@drawable/don_rectangle_btn"
+            android:background="@drawable/rectangle_gradient"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -25,17 +25,17 @@
             android:id="@+id/text_view_don_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/lato_semibold"
             android:text="KONTAKT"
             android:textAllCaps="true"
             android:textColor="@android:color/black"
-            android:fontFamily="@font/lato_semibold"
             android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView5"
             app:layout_constraintEnd_toEndOf="@+id/nav_button_islamiNeWil"
             app:layout_constraintStart_toStartOf="@+id/nav_button_islamiNeWil"
-            app:layout_constraintTop_toTopOf="@+id/nav_button_islamiNeWil" />
+            app:layout_constraintTop_toBottomOf="@+id/nav_button_islamiNeWil" />
 
         <TextView
             android:id="@+id/textView5"
@@ -47,7 +47,9 @@
             android:text="Rosenstrasse 45, 9500 Wil SG\ninfo@moschee-wil.ch\nTel. +41 (0) 71 911 59 59"
             android:textColor="#ffffff"
             android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/textview_contact_phone1"
             app:layout_constraintEnd_toEndOf="@+id/nav_button_islamiNeWil"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/nav_button_islamiNeWil"
             app:layout_constraintTop_toBottomOf="@+id/text_view_don_3" />
 
@@ -58,6 +60,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="24dp"
             android:src="@drawable/fbicon1"
+            app:layout_constraintBottom_toTopOf="@+id/nav_button_islamiNeWil"
             app:layout_constraintStart_toStartOf="@+id/textview_contact_phone2"
             app:layout_constraintTop_toBottomOf="@+id/textview_contact_phone2" />
 
@@ -83,7 +86,9 @@
             android:text="\nPräsident A.Mustafa:\n+41 (0) 79 544 39 83"
             android:textColor="#ffffff"
             android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/textview_contact_phone2"
             app:layout_constraintEnd_toEndOf="@+id/nav_button_islamiNeWil"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/nav_button_islamiNeWil"
             app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -95,7 +100,9 @@
             android:text="\nImam Bekim Alimi:\n+41 (0) 79 55 00 55"
             android:textColor="#ffffff"
             android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/img_facebook"
             app:layout_constraintEnd_toEndOf="@+id/nav_button_islamiNeWil"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/nav_button_islamiNeWil"
             app:layout_constraintTop_toBottomOf="@+id/textview_contact_phone1" />
 
