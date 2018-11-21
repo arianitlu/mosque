@@ -11,6 +11,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.pluscomputers.mosque.Utilities.MyService;
 import com.example.pluscomputers.mosque.Utilities.OnClickSignal;
 import com.onesignal.OneSignal;
 
@@ -26,16 +27,7 @@ public class LoginActivity extends AppCompatActivity {
 
         overridePendingTransition(0, 0);
 
-        OneSignal.startInit(this)
-                .setNotificationOpenedHandler(new OnClickSignal(this))
-                .init();
-
-
-//        OneSignal.startInit(this)
-//                .inFocusDisplaying(OneSignal.OSInFocusDisplayOption.Notification)
-//                .unsubscribeWhenNotificationsAreDisabled(true)
-//                .init();
-
+        startService(new Intent(LoginActivity.this, MyService.class));
         btnLogin = findViewById(R.id.login_button);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
@@ -55,5 +47,13 @@ public class LoginActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        OneSignal.startInit(this)
+                .setNotificationOpenedHandler(new OnClickSignal(this))
+                .init();
     }
 }

@@ -4,6 +4,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -41,6 +42,10 @@ public class ArchitectureActivity extends AppCompatActivity {
         });
         toolbarTxt = findViewById(R.id.tolbar_text_view);
         toolbarTxt.setText("Architektur");
+
+        TextView textView = findViewById(R.id.text_view);
+
+        textView.setMovementMethod(new ScrollingMovementMethod());
 
         overridePendingTransition(0, 0);
 

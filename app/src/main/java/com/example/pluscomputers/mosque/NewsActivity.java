@@ -22,12 +22,14 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.example.pluscomputers.mosque.Utilities.MySingleton;
+import com.example.pluscomputers.mosque.Utilities.OnClickSignal;
 import com.example.pluscomputers.mosque.Utilities.Query;
 import com.example.pluscomputers.mosque.adapters.AnetaresiaAdapter;
 import com.example.pluscomputers.mosque.adapters.LajmiAdapter;
 import com.example.pluscomputers.mosque.model.Anetaresia;
 import com.example.pluscomputers.mosque.model.Lajmi;
 import com.jaeger.library.StatusBarUtil;
+import com.onesignal.OneSignal;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -38,14 +40,14 @@ import java.util.List;
 public class NewsActivity extends AppCompatActivity {
 
 
-    private static final String NEWS_REQUEST_URL =
-            "http://1.lagjaledina.com/wp-json/wp/v2/posts";
+    private static final String NEWS_REQUEST_URL = "http://1.lagjaledina.com//wp-json/wp/v2/posts/?per_page=100";
+            //"http://1.lagjaledina.com/wp-json/wp/v2/posts";
+    //http://1.lagjaledina.com//wp-json/wp/v2/posts/?per_page=100
 
     private static final String IMAGE_REQUEST_URL =
             "http://1.lagjaledina.com/wp-json/wp/v2/media";
 
     private RecyclerView recyclerView;
-    //private List<Lajmi> listLajmet = new ArrayList<>();
     LajmiAdapter mAdapter = new LajmiAdapter(this);
     private ImageButton back_button;
     private TextView toolbarTxt;

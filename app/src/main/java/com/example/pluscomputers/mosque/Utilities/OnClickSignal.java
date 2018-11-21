@@ -24,14 +24,23 @@ public class OnClickSignal implements OneSignal.NotificationOpenedHandler {
         JSONObject data = result.notification.payload.additionalData;
         String customKey;
 
+
         if (data != null) {
             customKey = data.optString("customkey", null);
             if (customKey != null)
                 Log.e("OneSignalExample", "customkey set with value: " + customKey);
+            Intent intent = new Intent(context, NewsActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT | Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(intent);
         }
 
-        if (actionType == OSNotificationAction.ActionType.ActionTaken)
+        if (actionType == OSNotificationAction.ActionType.ActionTaken){
             Log.i("OneSignalExample", "Button pressed with id: " + result.action.actionID);
+            Intent intent = new Intent(context, NewsActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT | Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(intent);
+        }
+
 
         Intent intent = new Intent(context, NewsActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT | Intent.FLAG_ACTIVITY_NEW_TASK);

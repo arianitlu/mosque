@@ -47,35 +47,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image_view_islami_background" />
 
-    <ScrollView
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4">
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/text_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:textSize="13.5sp"
+            android:scrollbars="vertical"
             android:fontFamily="@font/lato_regular"
             android:text="Das geplante Begegnungszentrum besteht aus einem unterirdischen Geschoss, das als Tiefgarage genutzt werden soll, sowie vier weiteren oberirdischen Geschossen.
 Die architektonische Herausforderung lag darin, verschiedene und vielfältige Elemente harmonisch in das Objekt zu integrieren. In weiterer Folge sollte die islamische Prägung zum Vorschein kommen und somit das islamische Begegnungszentrum als solches unverkennbar werden zu lassen. Die Kuppel im süd-östlichen Trakt, sowie die integrierten kreisförmig gegen Mekka ausgerichteten Gebetsräume sollen dem Gebäude seinen speziellen Charakter verleihen. Die geplante Anordnung dieser Räume soll dem Besucher ein Gefühl von Besinnlichkeit in einem angenehmen Ambiente vermitteln. Durch die offene Kuppelkonstruktion, welche sich über alle vier oberen Etagen erstreckt, soll viel Raum für die Begegnung mit dem islamischen Glauben geboten werden. Des Weiteren sollen die speziellen Verzierungen und Inschriften in der Kuppel die islamische Prägung des Gebäudes hervorheben.
 Bei der Planung vom islamischen Begegnungszentrum mussten die kommunalen und kantonalen Bauvorschriften eingehalten werden. Dies beinhaltete u.a. die Berücksichtigung der architektonischen Baukunst.
+\n\nAnpassung an die Umgebung
+\nDie Parzelle an der Rosenstrasse liegt in der Bauzone für industrielle und gewerbliche Bauten sowie in einer verkehrsarmen Zone. In der unmittelbaren Umgebung des zukünftigen Begegnungszentrums sind die meisten Parzellen bereits bebaut – überwiegend mit Wohnbauten. Aufgrund seiner Lager, ist das zukünftige Begegnungszentrum sowohl mit privaten Autos als auch mit den öffentlichen Verkehrsmitteln gut erreichbar. Die Architekturkunst des islamischen Begegnungszentrums wird mit Sicherheit ein “besonderes Flair” in der Region schaffen.">
 
-Anpassung an die Umgebung
-_
-Die Parzelle an der Rosenstrasse liegt in der Bauzone für industrielle und gewerbliche Bauten sowie in einer verkehrsarmen Zone. In der unmittelbaren Umgebung des zukünftigen Begegnungszentrums sind die meisten Parzellen bereits bebaut – überwiegend mit Wohnbauten. Aufgrund seiner Lager, ist das zukünftige Begegnungszentrum sowohl mit privaten Autos als auch mit den öffentlichen Verkehrsmitteln gut erreichbar. Die Architekturkunst des islamischen Begegnungszentrums wird mit Sicherheit ein “besonderes Flair” in der Region schaffen."
-            tools:layout_editor_absoluteY="388dp"></TextView>
-    </ScrollView>
+        </TextView>
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
