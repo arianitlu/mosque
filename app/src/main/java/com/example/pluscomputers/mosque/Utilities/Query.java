@@ -14,12 +14,13 @@ import java.util.ArrayList;
 
 public final class Query {
 
-    private static ArrayList<Lajmi> listLajmeve = new ArrayList<>();
 
     private Query() {
     }
 
     public static ArrayList<Lajmi> shfaqLajmet(JSONArray response) {
+
+        ArrayList<Lajmi> listLajmeve = new ArrayList<>();
 
         try {
 

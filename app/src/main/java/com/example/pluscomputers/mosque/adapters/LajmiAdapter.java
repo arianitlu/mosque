@@ -14,11 +14,12 @@ import com.example.pluscomputers.mosque.SinglenewsActivity;
 import com.example.pluscomputers.mosque.model.Lajmi;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class LajmiAdapter extends RecyclerView.Adapter<LajmiAdapter.MyViewHolder>{
 
-    private List<Lajmi> mLajmiList;
+    private List<Lajmi> mLajmiList = new ArrayList<>();
     private Context ctx;
 
     public LajmiAdapter(Context ctx) {
@@ -72,22 +73,26 @@ public class LajmiAdapter extends RecyclerView.Adapter<LajmiAdapter.MyViewHolder
 
     @Override
     public void onBindViewHolder(LajmiAdapter.MyViewHolder holder, int position) {
+
         Lajmi lajmi = mLajmiList.get(position);
 
         holder.mTitle.setText(lajmi.getTitle());
-        holder.mCategory.setText("Wil Mosque");
+        //holder.mCategory.setText("Wil Mosque");
 
-        //holder.mImage.setImageResource(lajmi.getDefaultImage());
-        holder.mColor.setImageResource(lajmi.getColor());
+        //holder.mColor.setImageResource(lajmi.getColor());
         Picasso.get()
                 .load(lajmi.getImage())
-                //.placeholder(R.drawable.news_photo1)
-                //.error(R.drawable.news_photo1)
+                .resize(400, 300)
+                .onlyScaleDown() // the image will only be resized if it's bigger than 6000x2000 pixels.
                 .into(holder.mImage);
+
+//        Picasso.get()
+//                .load(lajmi.getImage())
+//                .into(holder.mImage);
     }
 
     public void setLajmi(List<Lajmi> lajmiList) {
-        this.mLajmiList = lajmiList;
+        mLajmiList = lajmiList;
         notifyDataSetChanged();
     }
 
@@ -98,5 +103,15 @@ public class LajmiAdapter extends RecyclerView.Adapter<LajmiAdapter.MyViewHolder
         else {
         return mLajmiList.size();
         }
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        return position;
     }
 }

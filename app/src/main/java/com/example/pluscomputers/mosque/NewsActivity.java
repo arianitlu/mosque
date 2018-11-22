@@ -1,5 +1,6 @@
 package com.example.pluscomputers.mosque;
 
+import android.app.Activity;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -38,11 +39,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class NewsActivity extends AppCompatActivity {
-
-
-    private static final String NEWS_REQUEST_URL = "http://1.lagjaledina.com//wp-json/wp/v2/posts/?per_page=100";
+    
+    private static final String NEWS_REQUEST_URL =
+            "http://1.lagjaledina.com//wp-json/wp/v2/posts/?per_page=100";
             //"http://1.lagjaledina.com/wp-json/wp/v2/posts";
-    //http://1.lagjaledina.com//wp-json/wp/v2/posts/?per_page=100
 
     private static final String IMAGE_REQUEST_URL =
             "http://1.lagjaledina.com/wp-json/wp/v2/media";
@@ -51,6 +51,8 @@ public class NewsActivity extends AppCompatActivity {
     LajmiAdapter mAdapter = new LajmiAdapter(this);
     private ImageButton back_button;
     private TextView toolbarTxt;
+    List<Lajmi> listLajmet = new ArrayList<>();
+    Boolean mCalled = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,12 +83,13 @@ public class NewsActivity extends AppCompatActivity {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(mAdapter);
+        recyclerView.setHasFixedSize(true);
 
         ConnectivityManager connectivityManager = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
 
         if(connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState() == NetworkInfo.State.CONNECTED ||
                 connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.CONNECTED) {
-            merrLajmet();
+                merrLajmet();
         } else{
             Toast.makeText(this, "You do not have internet connection", Toast.LENGTH_SHORT).show();
         }
@@ -95,34 +98,33 @@ public class NewsActivity extends AppCompatActivity {
 
     public void merrLajmet(){
 
-
         Uri baseUri = Uri.parse(NEWS_REQUEST_URL);
         Uri.Builder uriBuilder = baseUri.buildUpon();
 
         JsonArrayRequest jsonObjectRequest = new JsonArrayRequest(
                 Request.Method.GET, uriBuilder.toString(), null, new Response.Listener<JSONArray>() {
 
-                    List<Lajmi> listLajmet = new ArrayList<>();
-
             @Override
                     public void onResponse(JSONArray response) {
-                        listLajmet = Query.shfaqLajmet(response);
 
-                        for (Lajmi lajmi : listLajmet){
+                    listLajmet = Query.shfaqLajmet(response);
+
+                for (Lajmi lajmi : listLajmet){
                             merrFoton(lajmi);
                         }
-                        mAdapter.setLajmi(listLajmet);
+                    mAdapter.setLajmi(listLajmet);
                     }
                 }, new Response.ErrorListener() {
 
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(NewsActivity.this, "Nuk ka te dhena " +
-                                error.networkResponse.toString(), Toast.LENGTH_SHORT).show();
+                        // Error
                     }
                 });
+        if (listLajmet.isEmpty()) {
+            MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest);
+        }
 
-        MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest);
     }
 
     public void merrFoton(final Lajmi lajmi){
@@ -154,4 +156,11 @@ public class NewsActivity extends AppCompatActivity {
 
         MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest);
     }
+
+    public void merrLajmetNull(){
+        List<Lajmi> listLajmet= new ArrayList<>();
+        listLajmet.clear();
+        mAdapter.setLajmi(listLajmet);
+    }
+
 }

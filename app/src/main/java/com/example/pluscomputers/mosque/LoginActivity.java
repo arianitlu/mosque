@@ -25,6 +25,10 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        OneSignal.startInit(this)
+                .setNotificationOpenedHandler(new OnClickSignal(this))
+                .init();
+
         overridePendingTransition(0, 0);
 
         startService(new Intent(LoginActivity.this, MyService.class));
