@@ -7,10 +7,6 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageButton;
 
-import com.rrokullia.pluscomputers.mosque.Utilities.MyService;
-import com.rrokullia.pluscomputers.mosque.Utilities.OnClickSignal;
-import com.onesignal.OneSignal;
-
 public class LoginActivity extends AppCompatActivity {
 
     private ImageButton btnLogin;
@@ -20,11 +16,9 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        OneSignal.startInit(this)
-                .setNotificationOpenedHandler(new OnClickSignal(this))
-                .init();
-
-        startService(new Intent(getApplicationContext(), MyService.class));
+        getWindow().setFlags(
+                WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         btnLogin = findViewById(R.id.login_button);
 
@@ -36,17 +30,5 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        getWindow().setFlags(
-                WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        OneSignal.startInit(this)
-                .setNotificationOpenedHandler(new OnClickSignal(this))
-                .init();
     }
 }

@@ -21,6 +21,10 @@ public class CopyrightActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_copyright);
 
+        getWindow().setFlags(
+                WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         back_button = findViewById(R.id.copyright_button_back);
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,9 +33,6 @@ public class CopyrightActivity extends AppCompatActivity {
             }
         });
 
-        getWindow().setFlags(
-                WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 
     public void openEmail(View view) {
@@ -39,25 +40,6 @@ public class CopyrightActivity extends AppCompatActivity {
         Uri data = Uri.parse("mailto:rrokullia@gmail.com?subject=" + " " + "&body=" + " ");
         intent.setData(data);
         startActivity(intent);
-    }
-
-    public void openTel1(View view) {
-        Intent callIntent = new Intent(Intent.ACTION_CALL);
-        callIntent.setData(Uri.parse("tel:+38649802206"));
-
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.CALL_PHONE},
-                    10);
-            return;
-        }else {
-            try{
-                startActivity(callIntent);
-            }
-            catch (android.content.ActivityNotFoundException ex){
-                Toast.makeText(getApplicationContext(),"yourActivity is not founded",Toast.LENGTH_SHORT).show();
-            }
-        }
     }
 
     public void openWeb(View view) {

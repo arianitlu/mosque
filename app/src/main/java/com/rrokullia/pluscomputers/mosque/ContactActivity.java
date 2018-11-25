@@ -26,6 +26,10 @@ public class ContactActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact);
 
+        getWindow().setFlags(
+                WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         imgFcb = findViewById(R.id.img_facebook);
         imgInsta = findViewById(R.id.img_instagram);
         textViewContact1 = findViewById(R.id.textview_contact_phone1);
@@ -98,9 +102,6 @@ public class ContactActivity extends AppCompatActivity {
         });
 
 
-        getWindow().setFlags(
-                WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 
 

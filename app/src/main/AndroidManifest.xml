@@ -13,11 +13,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/mosque"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-
-        <service android:enabled="true"
-            android:launchMode="singleTop"
-            android:name="com.rrokullia.pluscomputers.mosque.Utilities.MyService" />
+        android:theme="@style/AppTheme"
+        android:name=".MyApp">
 
         <activity
             android:name="com.rrokullia.pluscomputers.mosque.LoginActivity"

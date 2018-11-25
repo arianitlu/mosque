@@ -20,6 +20,10 @@ public class NavigationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation);
 
+        getWindow().setFlags(
+                WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         txtCopyright = findViewById(R.id.nav_copyright_text_view);
 
         txtCopyright.setOnClickListener(new View.OnClickListener() {
@@ -104,8 +108,6 @@ public class NavigationActivity extends AppCompatActivity {
             }
         });
 
-        getWindow().setFlags(
-                WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
     }
 }

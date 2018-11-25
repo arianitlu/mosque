@@ -20,9 +20,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.rrokullia.pluscomputers.mosque.Utilities.MySingleton;
-import com.rrokullia.pluscomputers.mosque.Utilities.OnClickSignal;
 import com.rrokullia.pluscomputers.mosque.Utilities.Query;
-import com.onesignal.OneSignal;
 
 import org.json.JSONArray;
 
@@ -40,6 +38,12 @@ public class MeetingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_meetings);
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            Window w = getWindow();
+            w.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+            w.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+        }
+
         back_button = findViewById(R.id.toolbar_back_button);
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,12 +53,6 @@ public class MeetingsActivity extends AppCompatActivity {
         });
         toolbarTxt = findViewById(R.id.tolbar_text_view);
         toolbarTxt.setText("Meetings");
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            Window w = getWindow();
-            w.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-            w.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
-        }
 
         webView = findViewById(R.id.webView);
         webView.setBackgroundColor(getResources().getColor(R.color.webView));

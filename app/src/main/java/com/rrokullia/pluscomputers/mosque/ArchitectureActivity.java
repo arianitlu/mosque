@@ -32,6 +32,10 @@ public class ArchitectureActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_architecture);
 
+        getWindow().setFlags(
+                WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         buttonBack = findViewById(R.id.toolbar_back_button);
         buttonBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,9 +50,7 @@ public class ArchitectureActivity extends AppCompatActivity {
 
         textView.setMovementMethod(new ScrollingMovementMethod());
 
-        getWindow().setFlags(
-                WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
 
         int images[] = {R.drawable.slide_1, R.drawable.slide_2,
                 R.drawable.slide_3,R.drawable.slide_4,R.drawable.slide_5,R.drawable.slide_6};

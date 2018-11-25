@@ -17,6 +17,10 @@ public class IslaminewilActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_islaminewil);
 
+        getWindow().setFlags(
+                WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         buttonBack = findViewById(R.id.toolbar_back_button);
         buttonBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,8 +31,6 @@ public class IslaminewilActivity extends AppCompatActivity {
         toolbarTxt = findViewById(R.id.tolbar_text_view);
         toolbarTxt.setText("Islam in Wil");
 
-        getWindow().setFlags(
-                WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
     }
 }

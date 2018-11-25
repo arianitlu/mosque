@@ -23,6 +23,11 @@ public class DonacionetActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_donacionet);
 
+        getWindow().setFlags(
+                WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN
+        );
+
         btnCall = findViewById(R.id.nav_button_njoftimet);
         btnCall.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,10 +45,7 @@ public class DonacionetActivity extends AppCompatActivity {
             }
         });
 
-        getWindow().setFlags(
-                WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN
-        );
+
     }
 
     public void onCall() {
@@ -63,5 +65,12 @@ public class DonacionetActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),"yourActivity is not founded",Toast.LENGTH_SHORT).show();
             }
         }
+    }
+
+    public void paypalMethod(View view) {
+        Uri uri = Uri.parse("https://goo.gl/ZrX1RH");
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+
     }
 }

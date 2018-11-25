@@ -32,6 +32,13 @@ public class AnetaresiaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_anetaresia);
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            Window w = getWindow();
+            w.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+            w.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+        }
+
+
         back_button = findViewById(R.id.toolbar_back_button);
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,11 +49,6 @@ public class AnetaresiaActivity extends AppCompatActivity {
         toolbarTxt = findViewById(R.id.tolbar_text_view);
         toolbarTxt.setText("Mitglields");
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            Window w = getWindow();
-            w.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-            w.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
-        }
 
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 

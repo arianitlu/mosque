@@ -18,6 +18,10 @@ public class AboutActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
 
+        getWindow().setFlags(
+                WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         backButton = findViewById(R.id.toolbar_back_button);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,9 +32,7 @@ public class AboutActivity extends AppCompatActivity {
         toolbarTxt = findViewById(R.id.tolbar_text_view);
         toolbarTxt.setText("Über uns");
 
-        getWindow().setFlags(
-                WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
 
     }
 }
