@@ -31,7 +31,6 @@
         android:fontFamily="@font/lato_medium"
         android:gravity="center_horizontal"
         android:letterSpacing="0.02"
-        android:lineSpacingExtra="-10.3sp"
         android:text="Ehemaliger Moscheerat"
         android:textAllCaps="true"
         android:textColor="#385a7f"

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.pluscomputers.mosque">
+    package="com.rrokullia.pluscomputers.mosque">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -15,10 +15,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <service android:enabled="true" android:name="com.example.pluscomputers.mosque.Utilities.MyService" />
+        <service android:enabled="true"
+            android:launchMode="singleTop"
+            android:name="com.rrokullia.pluscomputers.mosque.Utilities.MyService" />
 
         <activity
-            android:name=".LoginActivity"
+            android:name="com.rrokullia.pluscomputers.mosque.LoginActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,42 +29,42 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".AboutActivity"
+            android:name="com.rrokullia.pluscomputers.mosque.AboutActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".NavigationActivity"
+            android:name="com.rrokullia.pluscomputers.mosque.NavigationActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".DonacionetActivity"
+            android:name="com.rrokullia.pluscomputers.mosque.DonacionetActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".IslaminewilActivity"
+            android:name="com.rrokullia.pluscomputers.mosque.IslaminewilActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".AnetaresiaActivity"
+            android:name="com.rrokullia.pluscomputers.mosque.AnetaresiaActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".NewsActivity"
+            android:name="com.rrokullia.pluscomputers.mosque.NewsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".SinglenewsActivity"
+            android:name="com.rrokullia.pluscomputers.mosque.SinglenewsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".PanoramaActivity"
+            android:name="com.rrokullia.pluscomputers.mosque.PanoramaActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ContactActivity"
+            android:name="com.rrokullia.pluscomputers.mosque.ContactActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".MeetingsActivity"
+            android:name="com.rrokullia.pluscomputers.mosque.MeetingsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ArchitectureActivity"
+            android:name="com.rrokullia.pluscomputers.mosque.ArchitectureActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".CopyrightActivity"
+            android:name="com.rrokullia.pluscomputers.mosque.CopyrightActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".PanoramaHome"
+        <activity android:name="com.rrokullia.pluscomputers.mosque.PanoramaHome"
             android:screenOrientation="portrait"/>
     </application>
 

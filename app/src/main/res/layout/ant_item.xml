@@ -26,7 +26,6 @@
         android:fontFamily="@font/roboto_regular"
         android:textStyle="normal"
         android:textColor="#3c3b3b"
-        android:lineSpacingExtra="-10.3sp"
         android:text="Bekim Alimi"
         app:layout_constraintStart_toEndOf="@+id/imageView10"
         app:layout_constraintTop_toTopOf="@+id/imageView10" />
@@ -41,7 +40,6 @@
         android:fontFamily="sans-serif-light"
         android:textStyle="normal"
         android:textColor="#616161"
-        android:lineSpacingExtra="-9.3sp"
         android:text="Projektmanager"
         app:layout_constraintStart_toEndOf="@+id/imageView10"
         app:layout_constraintTop_toBottomOf="@+id/ant_text_view_emri" />

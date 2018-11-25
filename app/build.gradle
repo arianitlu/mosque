@@ -9,7 +9,7 @@ android {
                 // Project number pulled from dashboard, local value is ignored.
                 onesignal_google_project_number: 'REMOTE']
 
-        applicationId "com.example.pluscomputers.mosque"
+        applicationId "com.rrokullia.pluscomputers.mosque"
         minSdkVersion 19
         targetSdkVersion 27
         versionCode 1
