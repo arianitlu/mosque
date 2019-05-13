@@ -37,8 +37,8 @@ public class SinglenewsActivity extends AppCompatActivity {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             Window w = getWindow();
-            w.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-            w.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+            w.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            w.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         }
 
         txtTitle = findViewById(R.id.single_news_text_view_titulli);

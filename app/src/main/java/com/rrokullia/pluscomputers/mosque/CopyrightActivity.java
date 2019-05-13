@@ -4,10 +4,12 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.Toast;
@@ -21,9 +23,11 @@ public class CopyrightActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_copyright);
 
-        getWindow().setFlags(
-                WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            Window w = getWindow();
+            w.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            w.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        }
 
         back_button = findViewById(R.id.copyright_button_back);
         back_button.setOnClickListener(new View.OnClickListener() {
