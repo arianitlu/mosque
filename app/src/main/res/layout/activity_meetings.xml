@@ -6,84 +6,73 @@
     android:layout_height="match_parent"
     tools:context=".MeetingsActivity">
 
-    <include
-        android:id="@+id/include3"
-        layout="@layout/toolbar" />
-
     <ImageView
-        android:id="@+id/image_view_ant_box"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/image_view_donation_backg"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include3"
-        app:srcCompat="@drawable/ant_box" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/don_background" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/text_view_don"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/lato_medium"
-        android:gravity="center_horizontal"
-        android:letterSpacing="0.02"
+        android:layout_marginEnd="8dp"
         android:text="Meetings"
-        android:textAllCaps="true"
-        android:textColor="#385a7f"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/image_view_ant_box"
-        app:layout_constraintStart_toStartOf="@+id/image_view_ant_box"
-        app:layout_constraintTop_toTopOf="@+id/image_view_ant_box" />
+        android:textColor="@android:color/white"
+        android:textSize="17.5sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.373"
+        app:layout_constraintStart_toEndOf="@+id/donacionet_button_back"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView11"
+    <ImageButton
+        android:id="@+id/donacionet_button_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="@+id/textView8"
-        app:layout_constraintStart_toStartOf="@+id/textView8"
-        app:layout_constraintTop_toBottomOf="@+id/textView8"
-        app:srcCompat="@drawable/ant_line" />
-
-    <!--<android.support.v7.widget.RecyclerView-->
-        <!--android:id="@+id/meetings_recyclerview"-->
-        <!--android:layout_width="0dp"-->
-        <!--android:layout_height="0dp"-->
-        <!--android:layout_marginBottom="8dp"-->
-        <!--android:layout_marginTop="8dp"-->
-        <!--android:padding="20dp"-->
-        <!--app:layout_constraintBottom_toBottomOf="@+id/image_view_ant_box"-->
-        <!--app:layout_constraintEnd_toEndOf="@+id/image_view_ant_box"-->
-        <!--app:layout_constraintStart_toStartOf="@+id/image_view_ant_box"-->
-        <!--app:layout_constraintTop_toBottomOf="@+id/imageView11" />-->
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="8dp"
+        android:background="?android:selectableItemBackground"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_view_don"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text_view_don"
+        app:layout_constraintVertical_bias="0.388"
+        app:srcCompat="@drawable/don_back_btn" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:layout_margin="30dp"
-
-        app:layout_constraintBottom_toBottomOf="@+id/image_view_ant_box"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView11">
+        app:layout_constraintTop_toBottomOf="@+id/image_view_donation_backg">
 
-        <WebView
-            android:id="@+id/webView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-        </WebView>
+        <include
+            layout="@layout/layout_meetings_buttons"/>
 
     </ScrollView>
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toEndOf="@+id/text_view_don"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="@+id/text_view_don"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_don"
+        app:srcCompat="@drawable/nav_meetings" />
+
+
 </android.support.constraint.ConstraintLayout>

@@ -65,10 +65,13 @@ public class LajmiAdapter extends RecyclerView.Adapter<LajmiAdapter.MyViewHolder
     @Override
     public LajmiAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.news_item, parent, false);
+        View itemView;
 
-        return new LajmiAdapter.MyViewHolder(itemView);
+            itemView = LayoutInflater.from(parent.getContext())
+                    .inflate(R.layout.news_item, parent, false);
+            return new LajmiAdapter.MyViewHolder(itemView);
+
+
     }
 
     @Override
@@ -77,18 +80,13 @@ public class LajmiAdapter extends RecyclerView.Adapter<LajmiAdapter.MyViewHolder
         Lajmi lajmi = mLajmiList.get(position);
 
         holder.mTitle.setText(lajmi.getTitle());
-        //holder.mCategory.setText("Wil Mosque");
 
-        //holder.mColor.setImageResource(lajmi.getColor());
         Picasso.get()
                 .load(lajmi.getImage())
                 .resize(400, 300)
-                .onlyScaleDown() // the image will only be resized if it's bigger than 6000x2000 pixels.
+                .onlyScaleDown()
                 .into(holder.mImage);
 
-//        Picasso.get()
-//                .load(lajmi.getImage())
-//                .into(holder.mImage);
     }
 
     public void setLajmi(List<Lajmi> lajmiList) {
