@@ -18,8 +18,8 @@ import android.widget.Toast;
 public class ContactActivity extends AppCompatActivity {
 
     ImageButton buttonBack;
-    ImageView contactNummer,imgFcb,imgInsta;
-    TextView textViewContact1,textViewContact2;
+    ImageView imgFcb,imgInsta,imgYoutube;
+    TextView textViewContact1,txtEmailContact;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,11 +30,12 @@ public class ContactActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+        txtEmailContact = findViewById(R.id.textview_email_contact);
+        textViewContact1 = findViewById(R.id.textview_contact);
+
         imgFcb = findViewById(R.id.img_facebook);
         imgInsta = findViewById(R.id.img_instagram);
-        textViewContact1 = findViewById(R.id.textview_contact_phone1);
-        textViewContact2 = findViewById(R.id.textview_contact_phone2);
-
+        imgYoutube = findViewById(R.id.img_youtube);
 
         imgInsta.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,18 +80,10 @@ public class ContactActivity extends AppCompatActivity {
         textViewContact1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String tel = "tel:079 544 39 83";
+                String tel = "tel:+41 071 911 59 59";
                 onCall(tel);
             }
         });
-        textViewContact2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String tel = "tel:079 55 00 555";
-                onCall(tel);
-            }
-        });
-
 
         buttonBack = findViewById(R.id.contact_button_back);
 
@@ -98,6 +91,20 @@ public class ContactActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 onBackPressed();
+            }
+        });
+
+        txtEmailContact.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openEmail();
+            }
+        });
+
+        imgYoutube.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openWeb();
             }
         });
 
@@ -123,4 +130,20 @@ public class ContactActivity extends AppCompatActivity {
             }
         }
     }
+
+
+
+    public void openEmail() {
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        Uri data = Uri.parse("mailto:bekimalimi@gmail.com?subject=" + " " + "&body=" + " ");
+        intent.setData(data);
+        startActivity(intent);
+    }
+
+    public void openWeb() {
+        Uri uri = Uri.parse("https://www.youtube.com/user/XhamiaWil");
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+    }
+
 }
