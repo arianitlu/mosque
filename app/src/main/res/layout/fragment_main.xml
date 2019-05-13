@@ -31,7 +31,7 @@
         android:fontFamily="@font/lato_medium"
         android:gravity="center_horizontal"
         android:letterSpacing="0.02"
-        android:text="Projekt­management"
+        android:text="Hauptvorstand"
         android:textAllCaps="true"
         android:textColor="#385a7f"
         android:textSize="20sp"

@@ -26,24 +26,24 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
             case 1:
                 Fragment2 frag2 = Fragment2.newInstance();
                 return frag2;
-            case 2:
-                Fragment3 frag3 = Fragment3.newInstance();
-                return frag3;
-            case 3:
-                Fragment4 frag4 = Fragment4.newInstance();
-                return frag4;
-            case 4:
-                Fragment5 frag5 = Fragment5.newInstance();
-                return frag5;
-            case 5:
-                Fragment6 frag6 = Fragment6.newInstance();
-                return frag6;
+//            case 2:
+//                Fragment3 frag3 = Fragment3.newInstance();
+//                return frag3;
+//            case 3:
+//                Fragment4 frag4 = Fragment4.newInstance();
+//                return frag4;
+//            case 4:
+//                Fragment5 frag5 = Fragment5.newInstance();
+//                return frag5;
+//            case 5:
+//                Fragment6 frag6 = Fragment6.newInstance();
+//                return frag6;
         }
         return null;
     }
 
     @Override
     public int getCount() {
-        return 6;
+        return 2;
     }
 }

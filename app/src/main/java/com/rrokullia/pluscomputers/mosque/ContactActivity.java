@@ -80,7 +80,7 @@ public class ContactActivity extends AppCompatActivity {
         textViewContact1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String tel = "tel:+41 071 911 59 59";
+                String tel = "tel:+41 71 911 59 59";
                 onCall(tel);
             }
         });

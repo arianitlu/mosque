@@ -57,7 +57,7 @@
             app:layout_constraintEnd_toEndOf="@+id/nav_button_aboutUs"
             app:layout_constraintStart_toStartOf="@+id/nav_button_aboutUs"
             app:layout_constraintTop_toBottomOf="@+id/text_view_don_1"
-            android:text="Islamischer Verein Wil\nSWIFT-Nr: KBSGCH22\nClearing: 78119\nIBAN: CH81 0078 1195 5346 9840 8" />
+            android:text="Islamischer Verein Wil\nSWIFT-Nr: KBSGCH22\nClearing: 78119\nIBAN: CH28 0078 1195 5019 2800 9" />
 
         <ImageView
             android:id="@+id/imageView5"

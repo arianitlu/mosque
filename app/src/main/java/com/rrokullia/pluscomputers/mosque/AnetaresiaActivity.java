@@ -24,8 +24,10 @@ public class AnetaresiaActivity extends AppCompatActivity {
     private TextView toolbarTxt;
     private LinearLayout dots_layout;
     private ImageView[] dots;
-    private int[] layouts = {R.layout.fragment_main, R.layout.fragment_main2, R.layout.fragment_main3,
-    R.layout.fragment_main4,R.layout.fragment_main5,R.layout.fragment_main6};
+    private int[] layouts = {R.layout.fragment_main, R.layout.fragment_main2};
+
+//    R.layout.fragment_main3,
+//    R.layout.fragment_main4,R.layout.fragment_main5,R.layout.fragment_main6}
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +49,7 @@ public class AnetaresiaActivity extends AppCompatActivity {
             }
         });
         toolbarTxt = findViewById(R.id.tolbar_text_view);
-        toolbarTxt.setText("Mitglields");
+        toolbarTxt.setText("Vorstand");
 
 
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());

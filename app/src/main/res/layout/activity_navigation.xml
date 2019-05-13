@@ -9,12 +9,12 @@
 
     <include
         android:id="@+id/include2"
-        layout="@layout/layout_nav_items"
+        layout="@layout/layout_nav_items2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toTopOf="@+id/nav_copyright_text_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -24,16 +24,12 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="308dp"
+        android:layout_height="111dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="96dp"
-        android:fontFamily="@font/opensans_light"
-        android:letterSpacing="0.02"
-        android:text="Willkommen bei Moschee Wil"
-        android:textColor="@android:color/white"
-        android:textSize="18.2sp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/nav_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

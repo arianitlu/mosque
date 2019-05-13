@@ -10,8 +10,10 @@ import android.widget.TextView;
 
 public class NavigationActivity extends AppCompatActivity {
 
-    ImageButton btnAbout,btnNjoftimet, btnIslami, btnMeetings, btnPanorama,
-    btnArkitektura, btnDonacionet, btnAnetaresia, btnKontakti;
+    ImageButton btnAbout,btnNjoftimet, btnIslami, btnDonacionet, btnAnetaresia, btnKontakti;
+
+    //    btnMeetings, btnPanorama,
+    //    btnArkitektura
 
     TextView txtCopyright;
 
@@ -34,12 +36,12 @@ public class NavigationActivity extends AppCompatActivity {
             }
         });
 
-        btnAbout = findViewById(R.id.nav_button_aboutUs);
-        btnNjoftimet = findViewById(R.id.nav_button_njoftimet);
-        btnIslami = findViewById(R.id.nav_button_islamiNeWil);
-        btnMeetings = findViewById(R.id.nav_button_meetings);
-        btnPanorama = findViewById(R.id.nav_button_panorama);
-        btnArkitektura = findViewById(R.id.nav_button_arkitektura);
+        btnAbout = findViewById(R.id.nav_button_aboutUs); // news
+        btnNjoftimet = findViewById(R.id.nav_button_njoftimet); // virtual tour
+        btnIslami = findViewById(R.id.nav_button_islamiNeWil); // calendar
+//        btnMeetings = findViewById(R.id.nav_button_meetings);
+//        btnPanorama = findViewById(R.id.nav_button_panorama);
+//        btnArkitektura = findViewById(R.id.nav_button_arkitektura);
         btnDonacionet = findViewById(R.id.nav_button_donacionet);
         btnAnetaresia = findViewById(R.id.nav_button_anetaresia);
         btnKontakti = findViewById(R.id.nav_button_kontakti);
@@ -47,45 +49,45 @@ public class NavigationActivity extends AppCompatActivity {
         btnAbout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(NavigationActivity.this,AboutActivity.class);
+                Intent intent = new Intent(NavigationActivity.this,NewsActivity.class);
                 startActivity(intent);
             }
         });
         btnNjoftimet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(NavigationActivity.this,NewsActivity.class);
+                Intent intent = new Intent(NavigationActivity.this,PanoramaHome.class);
                 startActivity(intent);
             }
         });
         btnIslami.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(NavigationActivity.this,IslaminewilActivity.class);
-                startActivity(intent);
-            }
-        });
-        btnMeetings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
                 Intent intent = new Intent(NavigationActivity.this,MeetingsActivity.class);
                 startActivity(intent);
             }
         });
-        btnPanorama.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(NavigationActivity.this,PanoramaHome.class);
-                startActivity(intent);
-            }
-        });
-        btnArkitektura.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(NavigationActivity.this,ArchitectureActivity.class);
-                startActivity(intent);
-            }
-        });
+//        btnMeetings.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(NavigationActivity.this,MeetingsActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+//        btnPanorama.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(NavigationActivity.this,PanoramaHome.class);
+//                startActivity(intent);
+//            }
+//        });
+//        btnArkitektura.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(NavigationActivity.this,ArchitectureActivity.class);
+//                startActivity(intent);
+//            }
+//        });
         btnDonacionet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
