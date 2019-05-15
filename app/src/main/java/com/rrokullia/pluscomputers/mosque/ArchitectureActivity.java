@@ -54,16 +54,14 @@ public class ArchitectureActivity extends AppCompatActivity {
 
         textView.setMovementMethod(new ScrollingMovementMethod());
 
-
-
         int images[] = {R.drawable.slide_1, R.drawable.slide_2,
                 R.drawable.slide_3,R.drawable.slide_4,R.drawable.slide_5,R.drawable.slide_6};
 
         MyCustomPagerAdapter myCustomPagerAdapter;
-            viewPager = findViewById(R.id.image_view_islami_background);
+        viewPager = findViewById(R.id.image_view_islami_background);
 
-            myCustomPagerAdapter = new MyCustomPagerAdapter(ArchitectureActivity.this, images);
-            viewPager.setAdapter(myCustomPagerAdapter);
+        myCustomPagerAdapter = new MyCustomPagerAdapter(ArchitectureActivity.this, images);
+        viewPager.setAdapter(myCustomPagerAdapter);
 
         dots_layout = findViewById(R.id.dotsLayout);
 

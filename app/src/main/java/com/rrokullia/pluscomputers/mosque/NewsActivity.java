@@ -35,11 +35,11 @@ import java.util.List;
 public class NewsActivity extends AppCompatActivity {
     
     private static final String NEWS_REQUEST_URL =
-            "http://1.lagjaledina.com//wp-json/wp/v2/posts/?per_page=100";
-            //"http://1.lagjaledina.com/wp-json/wp/v2/posts";
+            "http://moschee-wil.ch//wp-json/wp/v2/posts/?per_page=100";
+    //http://moschee-wil.ch/wp-json/wp/v2/posts/?per_page=100
 
     private static final String IMAGE_REQUEST_URL =
-            "http://1.lagjaledina.com/wp-json/wp/v2/media";
+            "http://moschee-wil.ch/wp-json/wp/v2/media";
 
     private RecyclerView recyclerView;
     LajmiAdapter mAdapter = new LajmiAdapter(this);

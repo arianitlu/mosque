@@ -52,13 +52,14 @@ public class PanoramaActivity extends AppCompatActivity {
             webview.getSettings().setJavaScriptEnabled(true);
             webview.getSettings().setDomStorageEnabled(true);
             webview.setOverScrollMode(webview.OVER_SCROLL_NEVER);
-            webview.loadUrl("http://1.lagjaledina.com/wp-content/EG1.html");
+            webview.loadUrl("http://moschee-wil.ch/wp-content/3d/EG1.html");
+
         } else{
             webview.setWebViewClient(new WebViewClient());
             webview.getSettings().setJavaScriptEnabled(true);
             webview.getSettings().setDomStorageEnabled(true);
             webview.setOverScrollMode(webview.OVER_SCROLL_NEVER);
-            webview.loadUrl("http://1.lagjaledina.com/Moschee.html");
+            webview.loadUrl("http://moschee-wil.ch/wp-content/3d2/Moschee.html");
         }
 
 
