@@ -15,6 +15,9 @@ import java.util.List;
 
 public class AnetaresiaAdapter extends RecyclerView.Adapter<AnetaresiaAdapter.MyViewHolder> {
 
+    private static final int TYPE_ANETARESIA = 1;
+    private static final int TYPE_LINE = 2;
+
     private List<Anetaresia> mAnetaresiaList;
     private Context ctx;
 
@@ -25,7 +28,7 @@ public class AnetaresiaAdapter extends RecyclerView.Adapter<AnetaresiaAdapter.My
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
         TextView mEmri, mPozita;
-        ImageView mImage;
+        ImageView mImage, imgAntLine;
 
         public MyViewHolder(View itemView) {
             super(itemView);
@@ -34,31 +37,64 @@ public class AnetaresiaAdapter extends RecyclerView.Adapter<AnetaresiaAdapter.My
             mPozita = itemView.findViewById(R.id.ant_text_view_pozita);
 
             mImage = itemView.findViewById(R.id.ant_image_view);
+            imgAntLine = itemView.findViewById(R.id.img_ant_linee);
         }
     }
+
 
     @Override
     public AnetaresiaAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.ant_item, parent, false);
+        View itemView;
 
+        itemView = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.ant_item, parent, false);
         return new MyViewHolder(itemView);
+
+//        switch (viewType) {
+//            case TYPE_ANETARESIA:
+//                itemView = LayoutInflater.from(parent.getContext())
+//                        .inflate(R.layout.ant_item, parent, false);
+//                return new MyViewHolder(itemView);
+//            case TYPE_LINE:
+//                itemView = LayoutInflater.from(parent.getContext())
+//                        .inflate(R.layout.ant_item2, parent, false);
+//                return new MyViewHolder(itemView);
+//            default:
+//                return null;
+//        }
     }
 
     @Override
     public void onBindViewHolder(AnetaresiaAdapter.MyViewHolder holder, int position) {
         Anetaresia anetaresia = mAnetaresiaList.get(position);
 
-        holder.mEmri.setText(anetaresia.getEmri());
-        holder.mPozita.setText(anetaresia.getPozita());
-        holder.mImage.setImageResource(anetaresia.getImage());
+        if (position == 4) {
+            holder.mEmri.setVisibility(View.GONE);
+            holder.mPozita.setVisibility(View.GONE);
+            holder.mImage.setVisibility(View.GONE);
+            holder.imgAntLine.setVisibility(View.VISIBLE);
+        }else{
+            holder.mEmri.setText(anetaresia.getEmri());
+            holder.mPozita.setText(anetaresia.getPozita());
+            holder.mImage.setImageResource(anetaresia.getImage());
+        }
 //        Picasso.with(ctx)
 //                .load(list.getImg())
 //                .into(holder.mImageViewMain);
     }
 
-    public void setAnetaresia(List<Anetaresia> anetaresiaList){
+//    @Override
+//    public int getItemViewType(int position) {
+//        if (position == 5) {
+//            return TYPE_ANETARESIA;
+//        } else {
+//            return TYPE_LINE;
+//        }
+//    }
+
+
+    public void setAnetaresia(List<Anetaresia> anetaresiaList) {
 
         this.mAnetaresiaList = anetaresiaList;
         notifyDataSetChanged();
@@ -69,3 +105,4 @@ public class AnetaresiaAdapter extends RecyclerView.Adapter<AnetaresiaAdapter.My
         return mAnetaresiaList.size();
     }
 }
+

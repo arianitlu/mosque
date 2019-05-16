@@ -23,9 +23,9 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
             case 0:
                 Fragment1 frag1 = Fragment1.newInstance();
                 return frag1;
-            case 1:
-                Fragment2 frag2 = Fragment2.newInstance();
-                return frag2;
+//            case 1:
+//                Fragment2 frag2 = Fragment2.newInstance();
+//                return frag2;
 //            case 2:
 //                Fragment3 frag3 = Fragment3.newInstance();
 //                return frag3;
