@@ -30,15 +30,15 @@ public class NavigationActivity extends AppCompatActivity {
             w.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         }
 
-        txtCopyright = findViewById(R.id.nav_copyright_text_view);
+        //txtCopyright = findViewById(R.id.nav_copyright_text_view);
 
-        txtCopyright.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(NavigationActivity.this,CopyrightActivity.class);
-                startActivity(intent);
-            }
-        });
+//        txtCopyright.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(NavigationActivity.this,CopyrightActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
         btnAbout = findViewById(R.id.nav_button_aboutUs); // news
         btnNjoftimet = findViewById(R.id.nav_button_njoftimet); // virtual tour

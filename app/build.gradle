@@ -12,8 +12,8 @@ android {
         applicationId "com.rrokullia.pluscomputers.mosque"
         minSdkVersion 19
         targetSdkVersion 27
-        versionCode 4
-        versionName "4.0"
+        versionCode 9
+        versionName "9.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

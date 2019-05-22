@@ -58,12 +58,12 @@ public class Fragment1 extends Fragment {
         anetaresiaList.add(new Anetaresia("Hikmet Selami","Sekretär",R.drawable.anetaresia_nophoto));
         anetaresiaList.add(new Anetaresia("Xhemil Jakupi","Kassier",R.drawable.anetaresia_nophoto));
 
-        anetaresiaList.add(new Anetaresia("Arben Bejtula", "Mitglied des Rates", R.drawable.anetaresia_nophoto));
-        anetaresiaList.add(new Anetaresia("Arben Bejtula", "Mitglied des Rates", R.drawable.anetaresia_nophoto));
-        anetaresiaList.add(new Anetaresia("Esref Jusufi", "Mitglied des Rates", R.drawable.anetaresia_nophoto));
-        anetaresiaList.add(new Anetaresia("Shefik Xheladini", "Mitglied des Rates", R.drawable.anetaresia_nophoto));
-        anetaresiaList.add(new Anetaresia("Aliresat Ismani", "Mitglied des Rates", R.drawable.anetaresia_nophoto));
-        anetaresiaList.add(new Anetaresia("Muzafer Beluli", "Mitglied des Rates", R.drawable.anetaresia_nophoto));
+        anetaresiaList.add(new Anetaresia("Arben Bejtula", "Vorstandsmitglied", R.drawable.anetaresia_nophoto));
+        anetaresiaList.add(new Anetaresia("Arben Bejtulai", "Vorstandsmitglied", R.drawable.anetaresia_nophoto));
+        anetaresiaList.add(new Anetaresia("Esref Jusufi", "Vorstandsmitglied", R.drawable.anetaresia_nophoto));
+        anetaresiaList.add(new Anetaresia("Shefik Xheladini", "Vorstandsmitglied", R.drawable.anetaresia_nophoto));
+        anetaresiaList.add(new Anetaresia("Aliresat Ismani", "Vorstandsmitglied", R.drawable.anetaresia_nophoto));
+        anetaresiaList.add(new Anetaresia("Muzafer Beluli", "Vorstandsmitglied", R.drawable.anetaresia_nophoto));
 
         return anetaresiaList;
     }

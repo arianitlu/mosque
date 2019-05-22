@@ -35,7 +35,7 @@
         android:fontFamily="@font/lato_regular"
         android:text="Pervjetori i hapjes se xhamise"
         android:textColor="#ffffff"
-        android:textSize="20.2sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView15"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/imageView15" />
@@ -48,18 +48,17 @@
         app:layout_constraintBottom_toTopOf="@+id/news_text_view_titulli"
         app:layout_constraintStart_toStartOf="@+id/news_text_view_titulli"
         app:srcCompat="@drawable/news_circle_green"
-        android:visibility="invisible"/>
+        android:visibility="gone"/>
 
     <TextView
         android:id="@+id/news_text_view_kategoria"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginStart="8dp"
         android:text="Perurime Evente"
-        android:visibility="invisible"
         android:textColor="#ffffff"
         android:textSize="12.2sp"
+        android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/news_text_view_titulli"
-        app:layout_constraintStart_toEndOf="@+id/news_image_small" />
+        app:layout_constraintStart_toStartOf="@+id/news_text_view_titulli" />
 </android.support.constraint.ConstraintLayout>

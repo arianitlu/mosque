@@ -80,6 +80,7 @@ public class LajmiAdapter extends RecyclerView.Adapter<LajmiAdapter.MyViewHolder
         Lajmi lajmi = mLajmiList.get(position);
 
         holder.mTitle.setText(lajmi.getTitle());
+        holder.mCategory.setText(lajmi.getDate());
 
         Picasso.get()
                 .load(lajmi.getImage())

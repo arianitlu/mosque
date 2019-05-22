@@ -21,7 +21,7 @@ public class ContactActivity extends AppCompatActivity {
 
     ImageButton buttonBack;
     ImageView imgFcb,imgInsta,imgYoutube;
-    TextView textViewContact1,txtEmailContact;
+    TextView textViewContact1,txtEmailContact,txtOpenEmail,txtOpenWeb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +35,9 @@ public class ContactActivity extends AppCompatActivity {
         }
 
         txtEmailContact = findViewById(R.id.textview_email_contact);
-        textViewContact1 = findViewById(R.id.textview_contact);
+        textViewContact1 = findViewById(R.id.textview_contact2);
+        txtOpenEmail = findViewById(R.id.txt_open_email);
+        txtOpenWeb = findViewById(R.id.txt_openWeb);
 
         imgFcb = findViewById(R.id.img_facebook);
         imgInsta = findViewById(R.id.img_instagram);
@@ -81,11 +83,30 @@ public class ContactActivity extends AppCompatActivity {
             }
         });
 
+        txtOpenEmail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                Uri data = Uri.parse("mailto:info@moschee-wil.ch?subject=" + " " + "&body=" + " ");
+                intent.setData(data);
+                startActivity(intent);
+            }
+        });
+
         textViewContact1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String tel = "tel:+41 71 911 59 59";
                 onCall(tel);
+            }
+        });
+
+        txtOpenWeb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse("https://www.moschee-will.ch");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
             }
         });
 

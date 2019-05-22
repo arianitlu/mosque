@@ -98,7 +98,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="4dp"
-            android:text="Virtual Tourr"
+            android:text="Virtual Tour"
             android:textColor="@android:color/white"
             android:textSize="11.3sp"
             app:layout_constraintEnd_toEndOf="@+id/nav_button_njoftimet_frame"
@@ -126,15 +126,15 @@
 
         <ImageView
             android:id="@+id/image_view_3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="@+id/nav_button_islamiNeWil_frame"
             app:layout_constraintStart_toStartOf="@+id/nav_button_islamiNeWil_frame"
             app:layout_constraintTop_toTopOf="@+id/nav_button_islamiNeWil_frame"
-            app:srcCompat="@drawable/nav_meetings" />
+            app:srcCompat="@drawable/nav_kalender" />
 
         <TextView
             android:id="@+id/text_view_3"
@@ -143,7 +143,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="4dp"
-            android:text="Calendar"
+            android:text="Kalender"
             android:textColor="@android:color/white"
             android:textSize="11.3sp"
             app:layout_constraintEnd_toEndOf="@+id/nav_button_islamiNeWil_frame"

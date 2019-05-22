@@ -30,6 +30,9 @@ public final class Query {
 
                 JSONObject titleObj = lajmiAktualObj.getJSONObject("title");
 
+                String date = lajmiAktualObj.getString("date");
+                String littleDate = date.substring(0,10);
+
                 int featuredMedia = lajmiAktualObj.getInt("featured_media");
 
                 String titleString = titleObj.getString("rendered");
@@ -49,7 +52,7 @@ public final class Query {
                 String categoriesString = String.valueOf(categoriesValue);
 
                 Lajmi lajmi = new Lajmi(featuredMedia, titleString, categoriesString,
-                        R.drawable.news_circle_green, contentString);
+                        R.drawable.news_circle_green, contentString,littleDate);
 
                 listLajmeve.add(lajmi);
             }

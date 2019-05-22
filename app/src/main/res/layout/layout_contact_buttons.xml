@@ -24,14 +24,15 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textview_contact"
+            android:id="@+id/txt_openWeb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:gravity="center_horizontal"
             android:letterSpacing="0.01"
-            android:text="Rosenstrasse 45, 9500 Wil SG\ninfo@moschee-wil.ch\nTel. +41 (0) 71 911 59 59\nwww.moschee-wil.ch"
+            android:text="www.moschee-wil.ch"
             android:textAlignment="center"
             android:textColor="#ffffff"
             android:textSize="17sp"
@@ -39,58 +40,94 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_open_email" />
+
+        <TextView
+            android:id="@+id/textview_contact2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center_horizontal"
+            android:letterSpacing="0.01"
+            android:text="Rosenstrasse 45, 9500 Wil SG\nTel. +41 (0) 71 911 59 59"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toTopOf="@+id/txt_open_email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/nav_button_islamiNeWil" />
+
+        <TextView
+            android:id="@+id/txt_open_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center_horizontal"
+            android:letterSpacing="0.01"
+            android:text="info@moschee-wil.ch"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toTopOf="@+id/txt_openWeb"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_contact2" />
 
         <TextView
             android:id="@+id/textview_email_contact"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
             android:text="\nImam Bekim Alimi:\nbekimalimi@gmail.com"
             android:textAlignment="center"
             android:textColor="#ffffff"
             android:textSize="17sp"
             app:layout_constraintBottom_toTopOf="@+id/img_facebook"
-            app:layout_constraintEnd_toEndOf="@+id/textview_contact"
+            app:layout_constraintEnd_toEndOf="@+id/nav_button_islamiNeWil"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="@+id/textview_contact"
-            app:layout_constraintTop_toBottomOf="@+id/textview_contact" />
+            app:layout_constraintStart_toStartOf="@+id/nav_button_islamiNeWil"
+            app:layout_constraintTop_toBottomOf="@+id/txt_openWeb" />
 
         <ImageView
             android:id="@+id/img_facebook"
             android:layout_width="40dp"
             android:layout_height="40dp"
+            android:layout_marginEnd="20dp"
             android:layout_marginTop="48dp"
-            android:layout_marginRight="32dp"
             android:src="@drawable/fbicon1"
             app:layout_constraintBottom_toTopOf="@+id/nav_button_islamiNeWil"
             app:layout_constraintEnd_toStartOf="@+id/img_instagram"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/nav_button_islamiNeWil"
             app:layout_constraintTop_toBottomOf="@+id/textview_email_contact" />
 
         <ImageView
             android:id="@+id/img_instagram"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_marginRight="32dp"
             android:src="@drawable/instaicon1"
             app:layout_constraintBottom_toBottomOf="@+id/img_facebook"
-            app:layout_constraintEnd_toStartOf="@+id/img_youtube"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/img_facebook"
-            app:layout_constraintTop_toTopOf="@+id/img_facebook" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/img_facebook"
+            app:layout_constraintVertical_bias="0.0" />
 
         <ImageView
             android:id="@+id/img_youtube"
             android:layout_width="40dp"
             android:layout_height="40dp"
+            android:layout_marginStart="20dp"
             android:src="@drawable/icon_youtube"
-            app:layout_constraintBottom_toBottomOf="@+id/img_instagram"
-            app:layout_constraintEnd_toStartOf="@+id/nav_button_islamiNeWil"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintBottom_toBottomOf="@+id/img_facebook"
             app:layout_constraintStart_toEndOf="@+id/img_instagram"
-            app:layout_constraintTop_toTopOf="@+id/img_instagram" />
+            app:layout_constraintTop_toTopOf="@+id/img_facebook"
+            app:layout_constraintVertical_bias="0.0" />
 
     </android.support.constraint.ConstraintLayout>
 
