@@ -135,6 +135,7 @@ public class NewsActivity extends AppCompatActivity {
                 }
                 lajmi.setImage(imageUrl);
                 //mAdapter.setLajmi(listLajmet);
+                mAdapter.notifyDataSetChanged();
             }
         }, new Response.ErrorListener() {
 
