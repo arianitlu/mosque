@@ -73,7 +73,7 @@
             android:layout_marginBottom="8dp"
             android:gravity="center_horizontal"
             android:letterSpacing="0.01"
-            android:text="Dita / Tag \nE premte/Freitag	\nMiladi/Gregorianisch\n08.03.2019\nHidschrij / Islamich\n30.J.Thani 1440\nRasti / Anlass\nHyrja ne tre muajt e medhenje/\nEinführung in den drei heiligen Monaten"
+            android:text="Dita / Tag \nE premte/Freitag	\nMiladi/Gregorianisch\n08.03.2019\nHidschrij / Islamich\n1.Rajab 1440\nRasti / Anlass\nHyrja ne tre muajt e medhenje/\nEinführung in den drei heiligen Monaten"
             android:textColor="#ffffff"
             android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="@+id/nav_button_islamiNeWil_1111"

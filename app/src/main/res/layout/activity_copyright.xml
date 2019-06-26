@@ -9,17 +9,18 @@
     <ImageView
         android:id="@+id/image_view_donation_backg"
         android:layout_width="match_parent"
-        android:layout_height="178dp"
+        android:layout_height="200dp"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/copyright_background" />
 
     <ImageView
         android:id="@+id/image_view_donation_fig"
-        android:layout_width="68dp"
-        android:layout_height="68dp"
-        android:layout_marginBottom="20dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="40dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         app:layout_constraintBottom_toBottomOf="@+id/image_view_donation_backg"

@@ -9,7 +9,7 @@
     <ImageView
         android:id="@+id/image_view_donation_backg"
         android:layout_width="match_parent"
-        android:layout_height="264dp"
+        android:layout_height="200dp"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -67,9 +67,9 @@
         android:id="@+id/imageView8"
         android:layout_width="80dp"
         android:layout_height="80dp"
+        android:layout_marginBottom="40dp"
         app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="@+id/text_view_don"
-        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="@+id/text_view_don"
         app:layout_constraintTop_toBottomOf="@+id/text_view_don"
         app:srcCompat="@drawable/nav_kalender" />

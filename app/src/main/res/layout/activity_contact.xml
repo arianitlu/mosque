@@ -9,7 +9,7 @@
     <ImageView
         android:id="@+id/image_view_donation_backg"
         android:layout_width="match_parent"
-        android:layout_height="264dp"
+        android:layout_height="200dp"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
