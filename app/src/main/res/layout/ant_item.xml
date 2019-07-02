@@ -18,11 +18,12 @@
 
     <TextView
         android:id="@+id/ant_text_view_emri"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginStart="42dp"
         android:textSize="15sp"
+        android:textAlignment="center"
         android:fontFamily="@font/roboto_regular"
         android:textStyle="normal"
         android:textColor="#3c3b3b"
@@ -32,7 +33,7 @@
 
     <TextView
         android:id="@+id/ant_text_view_pozita"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="42dp"
         android:layout_marginTop="4dp"
@@ -40,6 +41,7 @@
         android:fontFamily="sans-serif-light"
         android:textStyle="normal"
         android:textColor="#616161"
+        android:textAlignment="center"
         android:text="Projektmanager"
         app:layout_constraintStart_toEndOf="@+id/imageView10"
         app:layout_constraintTop_toBottomOf="@+id/ant_text_view_emri" />

@@ -1,5 +1,6 @@
 package com.rrokullia.pluscomputers.mosque.Utilities;
 
+import android.text.Html;
 import android.util.Log;
 
 import com.rrokullia.pluscomputers.mosque.R;
@@ -8,6 +9,8 @@ import com.rrokullia.pluscomputers.mosque.model.Lajmi;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 
 import java.util.ArrayList;
 
@@ -43,7 +46,15 @@ public final class Query {
 
                 String contentString = contentObj.getString("rendered");
 
-                contentString = contentString.replaceAll("\\[\\/?vc_[^\\]]*\\]","");
+                contentString = noTags(contentString);
+
+//                contentString = contentString.replaceAll("\\[\\/?vc_[^\\]]*\\]","");
+//
+//                contentString = contentString.replaceAll("(?:\\s|^)#[A-Za-z0-9\\-\\.\\_]+(?:\\s|$)", "");
+//
+//                contentString = contentString.replaceAll("body\\s*\\{.*?\\}", "");
+
+                //contentString =  contentString.replaceAll("\\([^{}]*\\)", "");
 
                 JSONArray categoriesArray = lajmiAktualObj.getJSONArray("categories");
 
@@ -61,6 +72,15 @@ public final class Query {
             Log.e("QueryUtils", "Problem parsing the JSON results", e);
         }
         return listLajmeve;
+    }
+
+    public static String noTags(String str){
+        Document doc = Jsoup.parse(str);
+
+        doc.getElementsByTag("style").remove();
+        doc.select("[style]").removeAttr("style");
+
+        return doc.body().text();
     }
 
     public static String shfaqFoton(JSONObject response) {

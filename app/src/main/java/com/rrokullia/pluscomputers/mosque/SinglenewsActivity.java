@@ -56,7 +56,9 @@ public class SinglenewsActivity extends AppCompatActivity {
             String image = extras.getString("image");
 
             txtTitle.setText(title);
-            txtDescription.setText(Html.fromHtml(describtion));
+            //txtDescription.setText(Html.fromHtml(describtion));
+            txtDescription.setText(describtion);
+
 
             Picasso.get()
                     .load(image)

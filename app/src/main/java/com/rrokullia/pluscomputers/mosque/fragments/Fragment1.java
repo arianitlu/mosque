@@ -54,9 +54,9 @@ public class Fragment1 extends Fragment {
         anetaresiaList.clear();
 
         anetaresiaList.add(new Anetaresia("Abdulla Mustafa","Präsident",R.drawable.anetaresia_nophoto));
-        anetaresiaList.add(new Anetaresia("Sami Mustafa","Vizepräsidant",R.drawable.anetaresia_nophoto));
+        anetaresiaList.add(new Anetaresia("Sami Mustafa","Vizepräsident",R.drawable.anetaresia_nophoto));
         anetaresiaList.add(new Anetaresia("Hikmet Selami","Sekretär",R.drawable.anetaresia_nophoto));
-        anetaresiaList.add(new Anetaresia("Xhemil Jakupi","Kassier",R.drawable.anetaresia_nophoto));
+        anetaresiaList.add(new Anetaresia("Xhemil Jakupi","Kassierer",R.drawable.anetaresia_nophoto));
 
         anetaresiaList.add(new Anetaresia("Arben Bejtula", "Vorstandsmitglied", R.drawable.anetaresia_nophoto));
         anetaresiaList.add(new Anetaresia("Arben Bejtulai", "Vorstandsmitglied", R.drawable.anetaresia_nophoto));
