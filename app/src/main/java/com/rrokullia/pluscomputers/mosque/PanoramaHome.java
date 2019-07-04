@@ -16,6 +16,7 @@ public class PanoramaHome extends AppCompatActivity {
 
     private ImageButton back_button;
     private ImageView button3,button4;
+    private WebView webView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,14 @@ public class PanoramaHome extends AppCompatActivity {
             w.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
             w.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         }
+
+        webView = findViewById(R.id.image_view_donation_backg);
+
+        webView.setWebViewClient(new WebViewClient());
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.getSettings().setDomStorageEnabled(true);
+        webView.setOverScrollMode(webView.OVER_SCROLL_NEVER);
+        webView.loadUrl("http://moschee-wil.ch/wp-content/3d2/Moschee.html");
 
         back_button = findViewById(R.id.contact_button_back);
         back_button.setOnClickListener(new View.OnClickListener() {

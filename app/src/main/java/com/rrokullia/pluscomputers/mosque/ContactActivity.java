@@ -104,7 +104,7 @@ public class ContactActivity extends AppCompatActivity {
         txtOpenWeb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri uri = Uri.parse("https://www.moschee-will.ch");
+                Uri uri = Uri.parse("https://www.moschee-wil.ch");
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
             }
