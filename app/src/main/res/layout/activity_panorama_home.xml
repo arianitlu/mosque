@@ -6,13 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".PanoramaHome">
 
-    <WebView
+
+    <ImageView
         android:id="@+id/image_view_donation_backg"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/kupolla"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="#385a7f"
+        android:alpha="0.5"
+        app:layout_constraintBottom_toTopOf="@+id/include3"
+        app:layout_constraintEnd_toEndOf="@+id/image_view_donation_backg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <ImageView
         android:id="@+id/image_view_donation_fig"
@@ -60,11 +73,12 @@
         android:id="@+id/include3"
         layout="@layout/panorama_layout"
         android:layout_width="412dp"
-        android:layout_height="500dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_view_donation_backg" />
 
 
 </android.support.constraint.ConstraintLayout>

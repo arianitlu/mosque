@@ -55,7 +55,7 @@
             android:layout_marginEnd="8dp"
             android:gravity="center_horizontal"
             android:letterSpacing="0.01"
-            android:text="Rosenstrasse 45, 9500 Wil SG\nTel. +41 (0) 71 911 59 59"
+            android:text="Tel. +41 (0) 71 911 59 59"
             android:textAlignment="center"
             android:textColor="#ffffff"
             android:textSize="17sp"
@@ -158,9 +158,9 @@
             android:id="@+id/imageView5"
             android:layout_width="15dp"
             android:layout_height="15dp"
-            android:layout_marginBottom="4dp"
+            android:layout_marginBottom="3dp"
             app:layout_constraintBottom_toBottomOf="@+id/textview_contact2"
-            app:layout_constraintStart_toStartOf="@+id/textview_contact2"
+            app:layout_constraintStart_toStartOf="@+id/imageView18"
             app:srcCompat="@drawable/ic_phone2" />
 
         <ImageView
@@ -176,10 +176,36 @@
             android:id="@+id/imageView7"
             android:layout_width="15dp"
             android:layout_height="15dp"
-            android:layout_marginBottom="4dp"
+            android:layout_marginBottom="3dp"
             app:layout_constraintBottom_toBottomOf="@+id/textview_email_contact"
             app:layout_constraintStart_toStartOf="@+id/imageView6"
             app:srcCompat="@drawable/ic_email2" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:text="Rosenstrasse 45, 9500 Wil SG"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/nav_button_islamiNeWil" />
+
+        <ImageView
+            android:id="@+id/imageView18"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/textview_contact2"
+            app:layout_constraintEnd_toStartOf="@+id/textView19"
+            app:layout_constraintTop_toTopOf="@+id/textView19"
+            app:layout_constraintVertical_bias="0.4"
+            app:srcCompat="@drawable/placeholder" />
 
     </android.support.constraint.ConstraintLayout>
 

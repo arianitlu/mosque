@@ -30,8 +30,8 @@
                           <map>
                             <entry key="assetSourceType" value="FILE" />
                             <entry key="color" value="00ff00" />
-                            <entry key="outputName" value="ic_name" />
-                            <entry key="sourceFile" value="$PROJECT_DIR$/../Icons_svg/name.psd" />
+                            <entry key="outputName" value="ic_charity_new" />
+                            <entry key="sourceFile" value="$PROJECT_DIR$/../../charity.svg" />
                           </map>
                         </option>
                       </PersistentState>
