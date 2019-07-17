@@ -15,8 +15,8 @@
 
         <LinearLayout
             android:id="@+id/nav_button_aboutUs_frame"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -34,8 +34,8 @@
 
         <ImageView
             android:id="@+id/image_view_1"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
@@ -55,15 +55,15 @@
             android:text="News"
             android:elevation="20dp"
             android:textColor="@android:color/white"
-            android:textSize="11.3sp"
+            android:textSize="10sp"
             app:layout_constraintEnd_toEndOf="@+id/nav_button_aboutUs_frame"
             app:layout_constraintStart_toStartOf="@+id/nav_button_aboutUs_frame"
             app:layout_constraintTop_toBottomOf="@+id/image_view_1" />
 
         <LinearLayout
             android:id="@+id/nav_button_njoftimet_frame"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -81,8 +81,8 @@
 
         <ImageView
             android:id="@+id/image_view_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
@@ -100,15 +100,15 @@
             android:layout_marginTop="4dp"
             android:text="Virtual Tour"
             android:textColor="@android:color/white"
-            android:textSize="11.3sp"
+            android:textSize="10sp"
             app:layout_constraintEnd_toEndOf="@+id/nav_button_njoftimet_frame"
             app:layout_constraintStart_toStartOf="@+id/nav_button_njoftimet_frame"
             app:layout_constraintTop_toBottomOf="@+id/image_view_2" />
 
         <LinearLayout
             android:id="@+id/nav_button_islamiNeWil_frame"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -126,8 +126,8 @@
 
         <ImageView
             android:id="@+id/image_view_3"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
@@ -145,7 +145,7 @@
             android:layout_marginTop="4dp"
             android:text="Kalender"
             android:textColor="@android:color/white"
-            android:textSize="11.3sp"
+            android:textSize="10sp"
             app:layout_constraintEnd_toEndOf="@+id/nav_button_islamiNeWil_frame"
             app:layout_constraintStart_toStartOf="@+id/nav_button_islamiNeWil_frame"
             app:layout_constraintTop_toBottomOf="@+id/image_view_3" />
@@ -303,8 +303,8 @@
 
         <LinearLayout
             android:id="@+id/nav_button_donacionet_frame"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -322,8 +322,8 @@
 
         <ImageView
             android:id="@+id/image_view_7"
-            android:layout_width="47dp"
-            android:layout_height="47dp"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="10dp"
@@ -340,15 +340,15 @@
             android:layout_marginStart="8dp"
             android:text="Spenden"
             android:textColor="@android:color/white"
-            android:textSize="11.3sp"
+            android:textSize="10sp"
             app:layout_constraintEnd_toEndOf="@+id/nav_button_donacionet_frame"
             app:layout_constraintStart_toStartOf="@+id/nav_button_donacionet_frame"
             app:layout_constraintTop_toBottomOf="@+id/image_view_7" />
 
         <LinearLayout
             android:id="@+id/nav_button_anetaresia_frame"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -366,8 +366,8 @@
 
         <ImageView
             android:id="@+id/image_view_8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
@@ -385,15 +385,15 @@
             android:layout_marginTop="4dp"
             android:text="Vorstand"
             android:textColor="@android:color/white"
-            android:textSize="11.3sp"
+            android:textSize="10sp"
             app:layout_constraintEnd_toEndOf="@+id/nav_button_anetaresia_frame"
             app:layout_constraintStart_toStartOf="@+id/nav_button_anetaresia_frame"
             app:layout_constraintTop_toBottomOf="@+id/image_view_8" />
 
         <LinearLayout
             android:id="@+id/nav_button_kontakti_frame"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -411,8 +411,8 @@
 
         <ImageView
             android:id="@+id/image_view_9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
@@ -430,7 +430,7 @@
             android:layout_marginTop="4dp"
             android:text="Kontakt"
             android:textColor="@android:color/white"
-            android:textSize="11.3sp"
+            android:textSize="10sp"
             app:layout_constraintEnd_toEndOf="@+id/nav_button_kontakti_frame"
             app:layout_constraintStart_toStartOf="@+id/nav_button_kontakti_frame"
             app:layout_constraintTop_toBottomOf="@+id/image_view_9" />
