@@ -53,11 +53,8 @@ public class AnetaresiaActivity extends AppCompatActivity {
 
 
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
-
         mViewPager = findViewById(R.id.container);
-
         mViewPager.setAdapter(mSectionsPagerAdapter);
-
         dots_layout = findViewById(R.id.dotsLayout);
 
         createDots(0);

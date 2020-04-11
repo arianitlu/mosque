@@ -34,7 +34,6 @@ public class Fragment1 extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
 
-
         recyclerView = rootView.findViewById(R.id.recyclerView1);
 
         adapter = new AnetaresiaAdapter(getContext());
