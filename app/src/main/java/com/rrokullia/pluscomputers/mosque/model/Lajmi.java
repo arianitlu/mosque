@@ -8,13 +8,15 @@ public class Lajmi {
     private String image;
     private int color;
     private String description;
+    private String link;
 
-    public Lajmi(int featureMedia,String title, String category,int color, String description) {
+    public Lajmi(int featureMedia,String title, String category,int color, String description, String link) {
         this.featureMedia = featureMedia;
         this.title = title;
         this.category = category;
         this.color = color;
         this.description = description;
+        this.link = link;
     }
 
     public int getFeatureMedia() {
@@ -63,5 +65,13 @@ public class Lajmi {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
     }
 }

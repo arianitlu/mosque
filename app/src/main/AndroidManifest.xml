@@ -8,16 +8,17 @@
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
+        android:name=".MyApp"
         android:allowBackup="true"
         android:icon="@mipmap/mosque"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/mosque"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:name=".MyApp">
-
+        android:theme="@style/AppTheme">
+        <activity android:name="com.rrokullia.pluscomputers.praytime.PrayTimeActivity">
+        </activity>
         <activity
-            android:name="com.rrokullia.pluscomputers.mosque.LoginActivity"
+            android:name=".LoginActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,43 +27,47 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.rrokullia.pluscomputers.mosque.AboutActivity"
+            android:name=".AboutActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.rrokullia.pluscomputers.mosque.NavigationActivity"
+            android:name=".NavigationActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.rrokullia.pluscomputers.mosque.DonacionetActivity"
+            android:name=".DonacionetActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.rrokullia.pluscomputers.mosque.IslaminewilActivity"
+            android:name=".IslaminewilActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.rrokullia.pluscomputers.mosque.AnetaresiaActivity"
+            android:name=".AnetaresiaActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.rrokullia.pluscomputers.mosque.NewsActivity"
+            android:name=".NewsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.rrokullia.pluscomputers.mosque.SinglenewsActivity"
+            android:name=".SinglenewsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.rrokullia.pluscomputers.mosque.PanoramaActivity"
+            android:name=".SinglenewsActivity2"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.rrokullia.pluscomputers.mosque.ContactActivity"
+            android:name=".PanoramaActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.rrokullia.pluscomputers.mosque.MeetingsActivity"
+            android:name=".ContactActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.rrokullia.pluscomputers.mosque.ArchitectureActivity"
+            android:name=".MeetingsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.rrokullia.pluscomputers.mosque.CopyrightActivity"
+            android:name=".ArchitectureActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="com.rrokullia.pluscomputers.mosque.PanoramaHome"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".CopyrightActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PanoramaHome"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

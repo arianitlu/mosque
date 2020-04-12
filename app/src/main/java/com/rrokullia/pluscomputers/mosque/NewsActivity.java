@@ -34,7 +34,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class NewsActivity extends AppCompatActivity {
-    
+
     private static final String NEWS_REQUEST_URL =
             "https://moschee-wil.ch/wp-json/wp/v2/posts/?per_page=100";
     //http://moschee-wil.ch/wp-json/wp/v2/posts/?per_page=100
@@ -77,18 +77,18 @@ public class NewsActivity extends AppCompatActivity {
         recyclerView.setAdapter(mAdapter);
         recyclerView.setHasFixedSize(true);
 
-        ConnectivityManager connectivityManager = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
+        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
 
-        if(connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState() == NetworkInfo.State.CONNECTED ||
+        if (connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState() == NetworkInfo.State.CONNECTED ||
                 connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.CONNECTED) {
-                merrLajmet();
-        } else{
+            merrLajmet();
+        } else {
             Toast.makeText(this, "You do not have internet connection", Toast.LENGTH_SHORT).show();
         }
 
     }
 
-    public void merrLajmet(){
+    public void merrLajmet() {
 
         Uri baseUri = Uri.parse(NEWS_REQUEST_URL);
         Uri.Builder uriBuilder = baseUri.buildUpon();
@@ -97,31 +97,29 @@ public class NewsActivity extends AppCompatActivity {
                 Request.Method.GET, uriBuilder.toString(), null, new Response.Listener<JSONArray>() {
 
             @Override
-                    public void onResponse(JSONArray response) {
+            public void onResponse(JSONArray response) {
 
-                    listLajmet = Query.shfaqLajmet(response);
+                listLajmet = Query.shfaqLajmet(response);
 
-                for (Lajmi lajmi : listLajmet){
-                            merrFoton(lajmi);
-                        }
-                    mAdapter.setLajmi(listLajmet);
-                    }
-                }, new Response.ErrorListener() {
+                for (Lajmi lajmi : listLajmet) {
+                    merrFoton(lajmi);
+                }
+                mAdapter.setLajmi(listLajmet);
+            }
+        }, new Response.ErrorListener() {
 
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        // Error
-                    }
-                });
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                // Error
+            }
+        });
         if (listLajmet.isEmpty()) {
             MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest);
         }
 
-        Log.d("lajmet",listLajmet.toString());
-
     }
 
-    public void merrFoton(final Lajmi lajmi){
+    public void merrFoton(final Lajmi lajmi) {
 
         Uri baseUri = Uri.parse(IMAGE_REQUEST_URL);
         Uri.Builder uriBuilder = baseUri.buildUpon();
@@ -133,10 +131,12 @@ public class NewsActivity extends AppCompatActivity {
             @Override
             public void onResponse(JSONObject response) {
                 String imageUrl = Query.shfaqFoton(response);
-                if (imageUrl == ""){
+                if (imageUrl == "") {
                     imageUrl = String.valueOf(R.drawable.news_photo1);
                 }
+                Log.d("imageURL",imageUrl);
                 lajmi.setImage(imageUrl);
+                mAdapter.notifyDataSetChanged();
                 //mAdapter.setLajmi(listLajmet);
             }
         }, new Response.ErrorListener() {
@@ -144,7 +144,7 @@ public class NewsActivity extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 //Toast.makeText(NewsActivity.this, "Nuk ka te image " +
-                        //error.networkResponse.toString(), Toast.LENGTH_SHORT).show();
+                //error.networkResponse.toString(), Toast.LENGTH_SHORT).show();
             }
         });
 

@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.rrokullia.pluscomputers.mosque.R;
 import com.rrokullia.pluscomputers.mosque.SinglenewsActivity;
+import com.rrokullia.pluscomputers.mosque.SinglenewsActivity2;
 import com.rrokullia.pluscomputers.mosque.model.Lajmi;
 import com.squareup.picasso.Picasso;
 
@@ -50,13 +51,14 @@ public class LajmiAdapter extends RecyclerView.Adapter<LajmiAdapter.MyViewHolder
 
             Lajmi lajmi = mLajmiList.get(position);
 
-            Intent intent = new Intent(ctx, SinglenewsActivity.class);
+            Intent intent = new Intent(ctx, SinglenewsActivity2.class);
 
             intent.putExtra("title", lajmi.getTitle());
             intent.putExtra("category", lajmi.getCategory());
             intent.putExtra("image", lajmi.getImage());
             intent.putExtra("color",lajmi.getColor());
             intent.putExtra("description",lajmi.getDescription());
+            intent.putExtra("link",lajmi.getLink());
 
             ctx.startActivity(intent);
         }
@@ -70,7 +72,6 @@ public class LajmiAdapter extends RecyclerView.Adapter<LajmiAdapter.MyViewHolder
             itemView = LayoutInflater.from(parent.getContext())
                     .inflate(R.layout.news_item, parent, false);
             return new LajmiAdapter.MyViewHolder(itemView);
-
 
     }
 
