@@ -3,22 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center_vertical">
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="10dp"
-        android:paddingTop="10dp">
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
 
         <LinearLayout
             android:id="@+id/nav_button_aboutUs_frame"
             android:layout_width="84dp"
             android:layout_height="84dp"
-            android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/nav_button_njoftimet_frame"
             app:layout_constraintHorizontal_bias="0.5"
@@ -34,8 +34,8 @@
 
         <ImageView
             android:id="@+id/image_view_1"
-            android:layout_width="34dp"
-            android:layout_height="34dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
@@ -49,11 +49,11 @@
             android:id="@+id/text_view_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="4dp"
-            android:text="News"
+            android:layout_marginEnd="8dp"
             android:elevation="20dp"
+            android:text="News"
             android:textColor="@android:color/white"
             android:textSize="10sp"
             app:layout_constraintEnd_toEndOf="@+id/nav_button_aboutUs_frame"
@@ -64,13 +64,13 @@
             android:id="@+id/nav_button_njoftimet_frame"
             android:layout_width="84dp"
             android:layout_height="84dp"
-            android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/nav_button_islamiNeWil_frame"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/nav_button_aboutUs_frame"
-            app:layout_constraintTop_toTopOf="parent" >
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageButton
                 android:id="@+id/nav_button_njoftimet"
@@ -81,11 +81,12 @@
 
         <ImageView
             android:id="@+id/image_view_2"
-            android:layout_width="34dp"
-            android:layout_height="34dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
+            android:elevation="20dp"
             app:layout_constraintEnd_toEndOf="@+id/nav_button_njoftimet_frame"
             app:layout_constraintStart_toStartOf="@+id/nav_button_njoftimet_frame"
             app:layout_constraintTop_toTopOf="@+id/nav_button_njoftimet_frame"
@@ -95,9 +96,9 @@
             android:id="@+id/text_view_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
             android:text="Virtual Tour"
             android:textColor="@android:color/white"
             android:textSize="10sp"
@@ -109,13 +110,13 @@
             android:id="@+id/nav_button_islamiNeWil_frame"
             android:layout_width="84dp"
             android:layout_height="84dp"
-            android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/nav_button_njoftimet_frame"
-            app:layout_constraintTop_toTopOf="parent" >
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageButton
                 android:id="@+id/nav_button_islamiNeWil"
@@ -126,11 +127,12 @@
 
         <ImageView
             android:id="@+id/image_view_3"
-            android:layout_width="34dp"
-            android:layout_height="34dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
+            android:elevation="20dp"
             app:layout_constraintEnd_toEndOf="@+id/nav_button_islamiNeWil_frame"
             app:layout_constraintStart_toStartOf="@+id/nav_button_islamiNeWil_frame"
             app:layout_constraintTop_toTopOf="@+id/nav_button_islamiNeWil_frame"
@@ -140,178 +142,38 @@
             android:id="@+id/text_view_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
             android:text="Kalender"
             android:textColor="@android:color/white"
             android:textSize="10sp"
             app:layout_constraintEnd_toEndOf="@+id/nav_button_islamiNeWil_frame"
             app:layout_constraintStart_toStartOf="@+id/nav_button_islamiNeWil_frame"
             app:layout_constraintTop_toBottomOf="@+id/image_view_3" />
+
     </android.support.constraint.ConstraintLayout>
-
-    <!--<android.support.constraint.ConstraintLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:paddingBottom="10dp"-->
-        <!--android:paddingTop="10dp">-->
-
-        <!--<LinearLayout-->
-            <!--android:id="@+id/nav_button_meetings_frame"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginBottom="8dp"-->
-            <!--android:layout_marginTop="8dp"-->
-            <!--app:layout_constraintBottom_toBottomOf="parent"-->
-            <!--app:layout_constraintEnd_toStartOf="@+id/nav_button_panorama_frame"-->
-            <!--app:layout_constraintHorizontal_bias="0.5"-->
-            <!--app:layout_constraintStart_toStartOf="parent"-->
-            <!--app:layout_constraintTop_toTopOf="parent" >-->
-
-            <!--<ImageButton-->
-                <!--android:id="@+id/nav_button_meetings"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:background="@drawable/nav_item_bg" />-->
-        <!--</LinearLayout>-->
-
-        <!--<ImageView-->
-            <!--android:id="@+id/image_view_4"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginEnd="8dp"-->
-            <!--android:layout_marginStart="8dp"-->
-            <!--android:layout_marginTop="16dp"-->
-            <!--app:layout_constraintEnd_toEndOf="@+id/nav_button_meetings_frame"-->
-            <!--app:layout_constraintStart_toStartOf="@+id/nav_button_meetings_frame"-->
-            <!--app:layout_constraintTop_toTopOf="@+id/nav_button_meetings_frame"-->
-            <!--app:srcCompat="@drawable/nav_meetings" />-->
-
-        <!--<TextView-->
-            <!--android:id="@+id/text_view_4"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginEnd="8dp"-->
-            <!--android:layout_marginStart="8dp"-->
-            <!--android:layout_marginTop="4dp"-->
-            <!--android:text="Calendar"-->
-            <!--android:textColor="@android:color/white"-->
-            <!--android:textSize="11.3sp"-->
-            <!--app:layout_constraintEnd_toEndOf="@+id/nav_button_meetings_frame"-->
-            <!--app:layout_constraintStart_toStartOf="@+id/nav_button_meetings_frame"-->
-            <!--app:layout_constraintTop_toBottomOf="@+id/image_view_4" />-->
-
-        <!--<LinearLayout-->
-            <!--android:id="@+id/nav_button_panorama_frame"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginBottom="8dp"-->
-            <!--android:layout_marginTop="8dp"-->
-            <!--app:layout_constraintBottom_toBottomOf="parent"-->
-            <!--app:layout_constraintEnd_toStartOf="@+id/nav_button_arkitektura_frame"-->
-            <!--app:layout_constraintHorizontal_bias="0.5"-->
-            <!--app:layout_constraintStart_toEndOf="@+id/nav_button_meetings_frame"-->
-            <!--app:layout_constraintTop_toTopOf="parent" >-->
-
-            <!--<ImageButton-->
-                <!--android:id="@+id/nav_button_panorama"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:background="@drawable/nav_item_bg" />-->
-        <!--</LinearLayout>-->
-
-        <!--<ImageView-->
-            <!--android:id="@+id/image_view_5"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginEnd="8dp"-->
-            <!--android:layout_marginStart="8dp"-->
-            <!--android:layout_marginTop="16dp"-->
-            <!--app:layout_constraintEnd_toEndOf="@+id/nav_button_panorama_frame"-->
-            <!--app:layout_constraintStart_toStartOf="@+id/nav_button_panorama_frame"-->
-            <!--app:layout_constraintTop_toTopOf="@+id/nav_button_panorama_frame"-->
-            <!--app:srcCompat="@drawable/nav_360" />-->
-
-        <!--<TextView-->
-            <!--android:id="@+id/text_view_5"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginEnd="8dp"-->
-            <!--android:layout_marginStart="8dp"-->
-            <!--android:layout_marginTop="4dp"-->
-            <!--android:text="Virtual Tour"-->
-            <!--android:textColor="@android:color/white"-->
-            <!--android:textSize="11.3sp"-->
-            <!--app:layout_constraintEnd_toEndOf="@+id/nav_button_panorama_frame"-->
-            <!--app:layout_constraintStart_toStartOf="@+id/nav_button_panorama_frame"-->
-            <!--app:layout_constraintTop_toBottomOf="@+id/image_view_5" />-->
-
-        <!--<LinearLayout-->
-            <!--android:id="@+id/nav_button_arkitektura_frame"-->
-            <!--android:layout_width="84dp"-->
-            <!--android:layout_height="84dp"-->
-            <!--android:layout_marginBottom="8dp"-->
-            <!--android:layout_marginTop="8dp"-->
-            <!--app:layout_constraintBottom_toBottomOf="parent"-->
-            <!--app:layout_constraintEnd_toEndOf="parent"-->
-            <!--app:layout_constraintHorizontal_bias="0.5"-->
-            <!--app:layout_constraintStart_toEndOf="@+id/nav_button_panorama_frame"-->
-            <!--app:layout_constraintTop_toTopOf="parent" >-->
-
-            <!--<ImageButton-->
-                <!--android:id="@+id/nav_button_arkitektura"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:background="@drawable/nav_item_bg" />-->
-        <!--</LinearLayout>-->
-
-        <!--<ImageView-->
-            <!--android:id="@+id/image_view_6"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginEnd="8dp"-->
-            <!--android:layout_marginStart="8dp"-->
-            <!--android:layout_marginTop="16dp"-->
-            <!--app:layout_constraintEnd_toEndOf="@+id/nav_button_arkitektura_frame"-->
-            <!--app:layout_constraintStart_toStartOf="@+id/nav_button_arkitektura_frame"-->
-            <!--app:layout_constraintTop_toTopOf="@+id/nav_button_arkitektura_frame"-->
-            <!--app:srcCompat="@drawable/nav_arkitektura" />-->
-
-        <!--<TextView-->
-            <!--android:id="@+id/text_view_6"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginEnd="8dp"-->
-            <!--android:layout_marginStart="8dp"-->
-            <!--android:layout_marginTop="4dp"-->
-            <!--android:text="Architektur"-->
-            <!--android:textColor="@android:color/white"-->
-            <!--android:textSize="11.3sp"-->
-            <!--app:layout_constraintEnd_toEndOf="@+id/nav_button_arkitektura_frame"-->
-            <!--app:layout_constraintStart_toStartOf="@+id/nav_button_arkitektura_frame"-->
-            <!--app:layout_constraintTop_toBottomOf="@+id/image_view_6" />-->
-
-    <!--</android.support.constraint.ConstraintLayout>-->
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="10dp"
+        android:layout_marginTop="16dp"
         android:paddingTop="10dp"
-        android:layout_marginTop="48dp">
+        android:paddingBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
             android:id="@+id/nav_button_donacionet_frame"
             android:layout_width="84dp"
             android:layout_height="84dp"
-            android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/nav_button_anetaresia_frame"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" >
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageButton
                 android:id="@+id/nav_button_donacionet"
@@ -322,11 +184,12 @@
 
         <ImageView
             android:id="@+id/image_view_7"
-            android:layout_width="42dp"
-            android:layout_height="42dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="16dp"
+            android:elevation="20dp"
             app:layout_constraintEnd_toEndOf="@+id/nav_button_donacionet_frame"
             app:layout_constraintStart_toStartOf="@+id/nav_button_donacionet_frame"
             app:layout_constraintTop_toTopOf="@+id/nav_button_donacionet_frame"
@@ -336,8 +199,8 @@
             android:id="@+id/text_view_7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
             android:text="Spenden"
             android:textColor="@android:color/white"
             android:textSize="10sp"
@@ -349,13 +212,13 @@
             android:id="@+id/nav_button_anetaresia_frame"
             android:layout_width="84dp"
             android:layout_height="84dp"
-            android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/nav_button_kontakti_frame"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/nav_button_donacionet_frame"
-            app:layout_constraintTop_toTopOf="parent" >
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageButton
                 android:id="@+id/nav_button_anetaresia"
@@ -366,11 +229,12 @@
 
         <ImageView
             android:id="@+id/image_view_8"
-            android:layout_width="34dp"
-            android:layout_height="34dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
+            android:elevation="20dp"
             app:layout_constraintEnd_toEndOf="@+id/nav_button_anetaresia_frame"
             app:layout_constraintStart_toStartOf="@+id/nav_button_anetaresia_frame"
             app:layout_constraintTop_toTopOf="@+id/nav_button_anetaresia_frame"
@@ -380,9 +244,9 @@
             android:id="@+id/text_view_8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
             android:text="Vorstand"
             android:textColor="@android:color/white"
             android:textSize="10sp"
@@ -394,13 +258,13 @@
             android:id="@+id/nav_button_kontakti_frame"
             android:layout_width="84dp"
             android:layout_height="84dp"
-            android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/nav_button_anetaresia_frame"
-            app:layout_constraintTop_toTopOf="parent" >
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageButton
                 android:id="@+id/nav_button_kontakti"
@@ -411,11 +275,12 @@
 
         <ImageView
             android:id="@+id/image_view_9"
-            android:layout_width="34dp"
-            android:layout_height="34dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
+            android:elevation="20dp"
             app:layout_constraintEnd_toEndOf="@+id/nav_button_kontakti_frame"
             app:layout_constraintStart_toStartOf="@+id/nav_button_kontakti_frame"
             app:layout_constraintTop_toTopOf="@+id/nav_button_kontakti_frame"
@@ -425,9 +290,9 @@
             android:id="@+id/text_view_9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
             android:text="Kontakt"
             android:textColor="@android:color/white"
             android:textSize="10sp"
@@ -436,5 +301,157 @@
             app:layout_constraintTop_toBottomOf="@+id/image_view_9" />
 
     </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <LinearLayout
+            android:id="@+id/nav_button_meetings_frame"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/nav_button_panorama_frame"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/nav_button_meetings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/nav_item_bg" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/image_view_4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:elevation="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/nav_button_meetings_frame"
+            app:layout_constraintStart_toStartOf="@+id/nav_button_meetings_frame"
+            app:layout_constraintTop_toTopOf="@+id/nav_button_meetings_frame"
+            app:srcCompat="@drawable/ic_live_news" />
+
+        <TextView
+            android:id="@+id/text_view_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:text="Live"
+            android:textColor="@android:color/white"
+            android:textSize="11.3sp"
+            app:layout_constraintEnd_toEndOf="@+id/nav_button_meetings_frame"
+            app:layout_constraintStart_toStartOf="@+id/nav_button_meetings_frame"
+            app:layout_constraintTop_toBottomOf="@+id/image_view_4" />
+
+        <LinearLayout
+            android:id="@+id/nav_button_panorama_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/nav_button_arkitektura_frame"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/nav_button_meetings_frame"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/nav_button_panorama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/nav_item_bg" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/image_view_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:visibility="invisible"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/nav_button_panorama_frame"
+            app:layout_constraintStart_toStartOf="@+id/nav_button_panorama_frame"
+            app:layout_constraintTop_toTopOf="@+id/nav_button_panorama_frame"
+            app:srcCompat="@drawable/nav_360" />
+
+        <TextView
+            android:id="@+id/text_view_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:text="Virtual Tour"
+            android:visibility="invisible"
+            android:textColor="@android:color/white"
+            android:textSize="11.3sp"
+            app:layout_constraintEnd_toEndOf="@+id/nav_button_panorama_frame"
+            app:layout_constraintStart_toStartOf="@+id/nav_button_panorama_frame"
+            app:layout_constraintTop_toBottomOf="@+id/image_view_5" />
+
+        <LinearLayout
+            android:id="@+id/nav_button_arkitektura_frame"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/nav_button_panorama_frame"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/nav_button_arkitektura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/nav_item_bg" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/image_view_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/nav_button_arkitektura_frame"
+            app:layout_constraintStart_toStartOf="@+id/nav_button_arkitektura_frame"
+            app:layout_constraintTop_toTopOf="@+id/nav_button_arkitektura_frame"
+            app:srcCompat="@drawable/nav_arkitektura" />
+
+        <TextView
+            android:id="@+id/text_view_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:text="Architektur"
+            android:visibility="invisible"
+            android:textColor="@android:color/white"
+            android:textSize="11.3sp"
+            app:layout_constraintEnd_toEndOf="@+id/nav_button_arkitektura_frame"
+            app:layout_constraintStart_toStartOf="@+id/nav_button_arkitektura_frame"
+            app:layout_constraintTop_toBottomOf="@+id/image_view_6" />
+
+    </android.support.constraint.ConstraintLayout>
+
 
 </LinearLayout>

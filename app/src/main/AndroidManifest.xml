@@ -63,6 +63,8 @@
             android:screenOrientation="portrait" />
         <activity android:name="com.rrokullia.pluscomputers.mosque.PanoramaHome"
             android:screenOrientation="portrait"/>
+        <activity android:name="com.rrokullia.pluscomputers.mosque.LiveStreamActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
