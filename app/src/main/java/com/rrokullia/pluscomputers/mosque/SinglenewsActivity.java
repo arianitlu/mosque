@@ -23,6 +23,7 @@ public class SinglenewsActivity extends AppCompatActivity {
     TextView toolbarTxt;
     WebView webview;
     String link;
+    String hello;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
