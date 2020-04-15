@@ -62,8 +62,10 @@ public final class Query {
 
                 String categoriesString = String.valueOf(categoriesValue);
 
+                String link = lajmiAktualObj.getString("link");
+
                 Lajmi lajmi = new Lajmi(featuredMedia, titleString, categoriesString,
-                        R.drawable.news_circle_green, contentString,littleDate);
+                        R.drawable.news_circle_green, contentString,littleDate,link);
 
                 listLajmeve.add(lajmi);
             }

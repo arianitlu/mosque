@@ -7,6 +7,8 @@ import android.text.Html;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -19,6 +21,8 @@ public class SinglenewsActivity extends AppCompatActivity {
     ImageView imgImage,imgColor;
     ImageButton back_button;
     TextView toolbarTxt;
+    WebView webview;
+    String link;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,28 +45,17 @@ public class SinglenewsActivity extends AppCompatActivity {
             w.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         }
 
-        txtTitle = findViewById(R.id.single_news_text_view_titulli);
-
-        txtDescription = findViewById(R.id.single_news_text_view_description);
-
-        imgImage = findViewById(R.id.single_news_image_main);
+        webview = findViewById(R.id.panorama_image_view);
 
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
-
-            String title = extras.getString("title");
-            String describtion = extras.getString("description");
-
-            String image = extras.getString("image");
-
-            txtTitle.setText(title);
-            //txtDescription.setText(Html.fromHtml(describtion));
-            txtDescription.setText(describtion);
-
-
-            Picasso.get()
-                    .load(image)
-                    .into(imgImage);
+            link = extras.getString("link");
         }
+
+        webview.setWebViewClient(new WebViewClient());
+        webview.getSettings().setJavaScriptEnabled(true);
+        webview.getSettings().setDomStorageEnabled(true);
+        webview.setOverScrollMode(webview.OVER_SCROLL_NEVER);
+        webview.loadUrl(link);
     }
 }

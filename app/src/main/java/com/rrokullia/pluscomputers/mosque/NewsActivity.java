@@ -35,11 +35,11 @@ import java.util.List;
 public class NewsActivity extends AppCompatActivity {
     
     private static final String NEWS_REQUEST_URL =
-            "http://moschee-wil.ch//wp-json/wp/v2/posts/?per_page=100";
+            "https://moschee-wil.ch//wp-json/wp/v2/posts/?per_page=100";
     //http://moschee-wil.ch/wp-json/wp/v2/posts/?per_page=100
 
     private static final String IMAGE_REQUEST_URL =
-            "http://moschee-wil.ch/wp-json/wp/v2/media";
+            "https://moschee-wil.ch/wp-json/wp/v2/media";
 
     private RecyclerView recyclerView;
     LajmiAdapter mAdapter = new LajmiAdapter(this);
@@ -134,6 +134,7 @@ public class NewsActivity extends AppCompatActivity {
                     imageUrl = String.valueOf(R.drawable.news_photo1);
                 }
                 lajmi.setImage(imageUrl);
+                mAdapter.notifyDataSetChanged();
                 //mAdapter.setLajmi(listLajmet);
                 mAdapter.notifyDataSetChanged();
             }

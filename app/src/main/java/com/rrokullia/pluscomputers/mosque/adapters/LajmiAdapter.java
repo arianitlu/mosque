@@ -57,6 +57,7 @@ public class LajmiAdapter extends RecyclerView.Adapter<LajmiAdapter.MyViewHolder
             intent.putExtra("image", lajmi.getImage());
             intent.putExtra("color",lajmi.getColor());
             intent.putExtra("description",lajmi.getDescription());
+            intent.putExtra("link",lajmi.getLink());
 
             ctx.startActivity(intent);
         }
