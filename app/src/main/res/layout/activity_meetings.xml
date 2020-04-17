@@ -23,7 +23,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
-        android:text="Kalender"
+        android:text="Takvimi"
         android:textColor="@android:color/white"
         android:textSize="17.5sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,22 +46,17 @@
         app:layout_constraintVertical_bias="0.611"
         app:srcCompat="@drawable/don_back_btn" />
 
-    <ScrollView
+    <ImageView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:background="@drawable/img_takvimi"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image_view_donation_backg">
 
-        <include layout="@layout/layout_meetings_buttons" />
-
-    </ScrollView>
+    </ImageView>
 
     <ImageView
         android:id="@+id/imageView8"
@@ -72,7 +67,250 @@
         app:layout_constraintEnd_toEndOf="@+id/text_view_don"
         app:layout_constraintStart_toStartOf="@+id/text_view_don"
         app:layout_constraintTop_toBottomOf="@+id/text_view_don"
+        app:srcCompat="@drawable/ic_hourglass" />
+
+    <ImageView
+        android:id="@+id/ic_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/donacionet_button_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/donacionet_button_back"
+        app:srcCompat="@drawable/ic_settings" />
+
+    <TextView
+        android:id="@+id/txt_verejtje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="46dp"
+        android:textColor="#fff"
+        android:text="@string/txt_verejtje"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/lbl_jacia_xhami"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="24dp"
+        android:text="Jacia ne xhami"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_verejtje"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_jacia_xhami"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:text="20:80"
+        app:layout_constraintBottom_toBottomOf="@+id/lbl_jacia_xhami"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lbl_jacia_xhami" />
+
+    <TextView
+        android:id="@+id/lbl_jacia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Jacia"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_jacia_xhami"
+        app:layout_constraintEnd_toEndOf="@+id/lbl_jacia_xhami"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/lbl_jacia_xhami" />
+
+    <TextView
+        android:id="@+id/txt_jacia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="19:54"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_jacia_xhami"
+        app:layout_constraintEnd_toEndOf="@+id/txt_jacia_xhami"
+        app:layout_constraintStart_toStartOf="@+id/txt_jacia_xhami" />
+
+    <TextView
+        android:id="@+id/lbl_akshami"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Akshami"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_jacia"
+        app:layout_constraintStart_toStartOf="@+id/lbl_jacia" />
+
+    <TextView
+        android:id="@+id/txt_akshami"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="18:54"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_jacia"
+        app:layout_constraintEnd_toEndOf="@+id/txt_jacia"
+        app:layout_constraintStart_toStartOf="@+id/txt_jacia" />
+
+    <TextView
+        android:id="@+id/lbl_dreka"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Dreka"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_akshami"
+        app:layout_constraintStart_toStartOf="@+id/lbl_akshami" />
+
+    <TextView
+        android:id="@+id/txt_dreka"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="17:54"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_akshami"
+        app:layout_constraintEnd_toEndOf="@+id/txt_akshami"
+        app:layout_constraintStart_toStartOf="@+id/txt_akshami" />
+
+    <TextView
+        android:id="@+id/lbl_lindja_diellit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Lindja e diellit"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_dreka"
+        app:layout_constraintStart_toStartOf="@+id/lbl_dreka" />
+
+    <TextView
+        android:id="@+id/txt_lindja_diellit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="17:54"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_dreka"
+        app:layout_constraintEnd_toEndOf="@+id/txt_dreka"
+        app:layout_constraintStart_toStartOf="@+id/txt_dreka" />
+
+    <TextView
+        android:id="@+id/lbl_sabahu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Sabahu"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_lindja_diellit"
+        app:layout_constraintStart_toStartOf="@+id/lbl_lindja_diellit" />
+
+    <TextView
+        android:id="@+id/txt_sabahu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="17:54"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_lindja_diellit"
+        app:layout_constraintEnd_toEndOf="@+id/txt_lindja_diellit"
+        app:layout_constraintStart_toStartOf="@+id/txt_lindja_diellit" />
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Imsaku"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_sabahu"
+        app:layout_constraintEnd_toEndOf="@+id/lbl_sabahu"
+        app:layout_constraintStart_toStartOf="@+id/lbl_sabahu" />
+
+    <TextView
+        android:id="@+id/textView35"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="17:54"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_sabahu"
+        app:layout_constraintEnd_toEndOf="@+id/txt_sabahu"
+        app:layout_constraintStart_toStartOf="@+id/txt_sabahu" />
+
+    <ImageView
+        android:id="@+id/imageView21"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/scrollView2"
         app:srcCompat="@drawable/nav_kalender" />
+
+    <TextView
+        android:id="@+id/txt_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="20.04.2020"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView21"
+        app:layout_constraintStart_toStartOf="@+id/imageView21"
+        app:layout_constraintTop_toBottomOf="@+id/imageView21" />
+
+    <TextView
+        android:id="@+id/textView38"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="E hënë"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/txt_data"
+        app:layout_constraintStart_toStartOf="@+id/txt_data"
+        app:layout_constraintTop_toBottomOf="@+id/txt_data" />
+
+    <ImageView
+        android:id="@+id/ic_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_data"
+        app:layout_constraintEnd_toStartOf="@+id/txt_data"
+        app:layout_constraintTop_toTopOf="@+id/txt_data"
+        app:srcCompat="@drawable/don_back_btn" />
+
+    <ImageView
+        android:id="@+id/ic_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_data"
+        app:layout_constraintStart_toEndOf="@+id/txt_data"
+        app:layout_constraintTop_toTopOf="@+id/txt_data"
+        app:srcCompat="@drawable/don_back_btn" />
 
 
 </android.support.constraint.ConstraintLayout>

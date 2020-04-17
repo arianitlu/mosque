@@ -7,11 +7,13 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 public class MeetingsActivity extends AppCompatActivity {
 
 
     private ImageButton back_button;
+    private ImageView icSettings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,5 +33,7 @@ public class MeetingsActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
+
+        icSettings = findViewById(R.id.ic_settings);
     }
 }

@@ -136,7 +136,7 @@
             app:layout_constraintEnd_toEndOf="@+id/nav_button_islamiNeWil_frame"
             app:layout_constraintStart_toStartOf="@+id/nav_button_islamiNeWil_frame"
             app:layout_constraintTop_toTopOf="@+id/nav_button_islamiNeWil_frame"
-            app:srcCompat="@drawable/nav_kalender" />
+            app:srcCompat="@drawable/ic_hourglass" />
 
         <TextView
             android:id="@+id/text_view_3"
@@ -145,7 +145,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="8dp"
-            android:text="Kalender"
+            android:text="Takvimi"
             android:textColor="@android:color/white"
             android:textSize="10sp"
             app:layout_constraintEnd_toEndOf="@+id/nav_button_islamiNeWil_frame"
