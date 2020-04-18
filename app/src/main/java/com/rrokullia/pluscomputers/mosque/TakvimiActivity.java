@@ -29,7 +29,7 @@ public class TakvimiActivity extends AppCompatActivity {
     private ImageButton back_button;
     private ImageView icSettings;
     private TextView lblImsaku, lblSabahu, lblLindjaDiellit, lblDreka,
-            lblIkindija,lblAkshami, lblJacia;
+            lblIkindija, lblAkshami, lblJacia;
     private TextView txtImsaku, txtSabahi, txtLindjaDiellit, txtDreka,
             txtIkindija, txtAkshami, txtJacia, txtverejtje;
     private TextView txtData, txtDita;
@@ -80,11 +80,10 @@ public class TakvimiActivity extends AppCompatActivity {
         });
 
 
-
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public void merrKohetNamazit(long id){
+    public void merrKohetNamazit(long id) {
         LocalDateTime now;
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         now = LocalDateTime.now().plusDays(id);
@@ -95,13 +94,13 @@ public class TakvimiActivity extends AppCompatActivity {
 
         List<Namazi> namaziList = welcome.getNamazi();
         for (Namazi namazi : namaziList) {
-            if (namazi.getDate().equals(dateNowWithSlash)){
+            if (namazi.getDate().equals(dateNowWithSlash)) {
 
-                Log.d("namazi",namazi.toString());
 
-                txtDita.setText(namazi.getWeekDay());
+//                txtDita.setText(namazi.getWeekDay());
+                txtDita.setText(getDayInGerman(namazi.getWeekDay()));
+
                 txtData.setText(namazi.getDate());
-
                 txtImsaku.setText(namazi.getImsaku());
                 txtSabahi.setText(namazi.getSabahu());
                 txtLindjaDiellit.setText(namazi.getDielli());
@@ -114,7 +113,28 @@ public class TakvimiActivity extends AppCompatActivity {
         }
     }
 
-    public void boundViews(){
+    public String getDayInGerman(String day) {
+        switch (day) {
+            case "E Hënë":
+                return "Montag";
+            case "E Martë":
+                return "Dienstag";
+            case "E Mërkurë":
+                return "Mittwoch";
+            case "E Enjte":
+                return "Donnerstag";
+            case "E Premte":
+                return "Freitag";
+            case "E Shtunë":
+                return "Samstag";
+            case "E Diele":
+                return "Sonntag";
+            default:
+                return "";
+        }
+    }
+
+    public void boundViews() {
         lblImsaku = findViewById(R.id.lbl_imsaku);
         lblSabahu = findViewById(R.id.lbl_sabahu);
         lblLindjaDiellit = findViewById(R.id.lbl_lindja_diellit);
@@ -138,4 +158,5 @@ public class TakvimiActivity extends AppCompatActivity {
         ic_back = findViewById(R.id.ic_back);
         ic_next = findViewById(R.id.ic_next);
     }
+
 }
