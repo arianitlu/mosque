@@ -21,8 +21,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.rrokullia.pluscomputers.mosque.Utilities.MySingleton;
-import com.rrokullia.pluscomputers.mosque.Utilities.Query;
+import com.rrokullia.pluscomputers.mosque.utilities.MySingleton;
+import com.rrokullia.pluscomputers.mosque.utilities.Query;
 import com.rrokullia.pluscomputers.mosque.adapters.LajmiAdapter;
 import com.rrokullia.pluscomputers.mosque.model.Lajmi;
 

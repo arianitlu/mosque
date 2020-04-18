@@ -1,6 +1,5 @@
-package com.rrokullia.pluscomputers.mosque.Utilities;
+package com.rrokullia.pluscomputers.mosque.utilities;
 
-import android.text.Html;
 import android.util.Log;
 
 import com.rrokullia.pluscomputers.mosque.R;

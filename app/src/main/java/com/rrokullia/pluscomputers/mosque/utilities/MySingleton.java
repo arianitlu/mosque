@@ -1,4 +1,4 @@
-package com.rrokullia.pluscomputers.mosque.Utilities;
+package com.rrokullia.pluscomputers.mosque.utilities;
 
 
 import android.content.Context;

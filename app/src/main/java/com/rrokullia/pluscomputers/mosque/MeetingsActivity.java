@@ -3,11 +3,15 @@ package com.rrokullia.pluscomputers.mosque;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+
+import com.rrokullia.pluscomputers.mosque.model.takvimi.Welcome;
+import com.rrokullia.pluscomputers.mosque.utilities.Helper;
 
 public class MeetingsActivity extends AppCompatActivity {
 
@@ -35,5 +39,6 @@ public class MeetingsActivity extends AppCompatActivity {
         });
 
         icSettings = findViewById(R.id.ic_settings);
+
     }
 }
