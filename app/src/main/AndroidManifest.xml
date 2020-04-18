@@ -56,6 +56,9 @@
             android:name="com.rrokullia.pluscomputers.mosque.TakvimiActivity"
             android:screenOrientation="portrait" />
         <activity
+            android:name="com.rrokullia.pluscomputers.mosque.TakvimiSettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
             android:name="com.rrokullia.pluscomputers.mosque.ArchitectureActivity"
             android:screenOrientation="portrait" />
         <activity

@@ -221,7 +221,6 @@
         android:textColor="#fff"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/lbl_sabahu"
-        app:layout_constraintEnd_toEndOf="@+id/lbl_sabahu"
         app:layout_constraintStart_toStartOf="@+id/lbl_sabahu" />
 
     <TextView

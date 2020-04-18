@@ -1,5 +1,6 @@
 package com.rrokullia.pluscomputers.mosque;
 
+import android.content.Intent;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
@@ -25,7 +26,6 @@ import static com.rrokullia.pluscomputers.mosque.utilities.Helper.convert24HourT
 
 public class TakvimiActivity extends AppCompatActivity {
 
-
     private ImageButton back_button;
     private ImageView icSettings;
     private TextView lblImsaku, lblSabahu, lblLindjaDiellit, lblDreka,
@@ -34,6 +34,7 @@ public class TakvimiActivity extends AppCompatActivity {
             txtIkindija, txtAkshami, txtJacia, txtverejtje;
     private TextView txtData, txtDita;
     private ImageView ic_back, ic_next;
+
 
     int i = 0;
     int j = 0;
@@ -50,16 +51,22 @@ public class TakvimiActivity extends AppCompatActivity {
             w.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         }
 
-        back_button = findViewById(R.id.donacionet_button_back);
+        boundViews();
+
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();
             }
         });
-        icSettings = findViewById(R.id.ic_settings);
-        boundViews();
 
+        icSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TakvimiActivity.this, TakvimiSettingsActivity.class);
+                startActivity(intent);
+            }
+        });
 
         merrKohetNamazit(0);
 
@@ -96,10 +103,14 @@ public class TakvimiActivity extends AppCompatActivity {
         for (Namazi namazi : namaziList) {
             if (namazi.getDate().equals(dateNowWithSlash)) {
 
-
-//                txtDita.setText(namazi.getWeekDay());
+                // Change weekDay from SQ to DE and vica versa
+                // txtDita.setText(namazi.getWeekDay());
                 txtDita.setText(getDayInGerman(namazi.getWeekDay()));
 
+                // Change labels of dua from SQ to DE and vica versa
+                makeLabelLookGerman();
+
+                // Set time taken from json
                 txtData.setText(namazi.getDate());
                 txtImsaku.setText(namazi.getImsaku());
                 txtSabahi.setText(namazi.getSabahu());
@@ -108,6 +119,13 @@ public class TakvimiActivity extends AppCompatActivity {
                 txtIkindija.setText(namazi.getIkindija());
                 txtAkshami.setText(namazi.getAkshami());
                 txtJacia.setText(namazi.getJacija());
+
+                // Check if namazi have comments property
+                if (namazi.getComments() != null) {
+                    txtverejtje.setText(namazi.getComments());
+                } else {
+                    txtverejtje.setText("-");
+                }
             }
 
         }
@@ -134,6 +152,16 @@ public class TakvimiActivity extends AppCompatActivity {
         }
     }
 
+    public void makeLabelLookGerman() {
+        lblImsaku.setText("Fajr");
+        lblSabahu.setText("Morgengebet");
+        lblLindjaDiellit.setText("Sonnenaufgang");
+        lblDreka.setText("Dhuhr");
+        lblIkindija.setText("Asr");
+        lblAkshami.setText("Maghrib");
+        lblJacia.setText("Isha");
+    }
+
     public void boundViews() {
         lblImsaku = findViewById(R.id.lbl_imsaku);
         lblSabahu = findViewById(R.id.lbl_sabahu);
@@ -157,6 +185,9 @@ public class TakvimiActivity extends AppCompatActivity {
 
         ic_back = findViewById(R.id.ic_back);
         ic_next = findViewById(R.id.ic_next);
+
+        icSettings = findViewById(R.id.ic_settings);
+        back_button = findViewById(R.id.donacionet_button_back);
     }
 
 }
