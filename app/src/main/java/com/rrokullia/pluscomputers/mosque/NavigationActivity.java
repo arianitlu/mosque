@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageButton;
-import android.widget.TextView;
 
 public class NavigationActivity extends AppCompatActivity {
 
@@ -59,7 +58,7 @@ public class NavigationActivity extends AppCompatActivity {
         btnIslami.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(NavigationActivity.this,MeetingsActivity.class);
+                Intent intent = new Intent(NavigationActivity.this, TakvimiActivity.class);
                 startActivity(intent);
             }
         });

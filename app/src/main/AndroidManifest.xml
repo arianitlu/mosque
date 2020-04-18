@@ -53,7 +53,7 @@
             android:name="com.rrokullia.pluscomputers.mosque.ContactActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.rrokullia.pluscomputers.mosque.MeetingsActivity"
+            android:name="com.rrokullia.pluscomputers.mosque.TakvimiActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.rrokullia.pluscomputers.mosque.ArchitectureActivity"

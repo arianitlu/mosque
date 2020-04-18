@@ -1,19 +1,15 @@
 package com.rrokullia.pluscomputers.mosque;
 
 import android.os.Build;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
-import com.rrokullia.pluscomputers.mosque.model.takvimi.Welcome;
-import com.rrokullia.pluscomputers.mosque.utilities.Helper;
-
-public class MeetingsActivity extends AppCompatActivity {
+public class TakvimiSettingsActivity extends AppCompatActivity {
 
 
     private ImageButton back_button;
@@ -22,7 +18,7 @@ public class MeetingsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_meetings);
+        setContentView(R.layout.activity_settings_takvimi);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             Window w = getWindow();
