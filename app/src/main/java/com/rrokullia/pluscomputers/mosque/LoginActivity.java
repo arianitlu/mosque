@@ -38,9 +38,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        Welcome welcome = Helper.getNamazFromJson(getApplicationContext());
-
-        Log.d("welcome",welcome.toString());
 
     }
 }

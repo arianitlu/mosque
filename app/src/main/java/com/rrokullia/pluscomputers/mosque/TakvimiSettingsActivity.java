@@ -18,7 +18,7 @@ public class TakvimiSettingsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings_takvimi);
+        setContentView(R.layout.activity_takvimi);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             Window w = getWindow();
@@ -33,7 +33,6 @@ public class TakvimiSettingsActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
-
         icSettings = findViewById(R.id.ic_settings);
 
     }
