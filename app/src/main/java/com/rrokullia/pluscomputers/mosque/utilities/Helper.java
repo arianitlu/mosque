@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.media.MediaPlayer;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
@@ -13,6 +14,10 @@ import com.rrokullia.pluscomputers.mosque.model.takvimi.Welcome;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Locale;
 
 public class Helper {
@@ -39,7 +44,6 @@ public class Helper {
         return welcome;
 
     }
-
 
 
     public static void cleanWhiteSpace(TextView textView) {
@@ -85,7 +89,7 @@ public class Helper {
     public String muajiConverter(String muaji) {
         String input = "";
 
-        switch(muaji) {
+        switch (muaji) {
             case "Januar":
                 input = "1";
                 break;
@@ -143,5 +147,21 @@ public class Helper {
         SharedPreferences preferences = context.getSharedPreferences("Settings", Context.MODE_PRIVATE);
         String language = preferences.getString("My_Lang", "en");
         setLocale(language, context);
+    }
+
+    public static String convert24HourTimeTo12Hour(String time) {
+
+        String[] timeNow = time.split(":");
+        int hour = Integer.parseInt(timeNow[0]);
+        int minutes = Integer.parseInt(timeNow[1]);
+
+        String meridiem = hour > 11 ? "PM" : "AM";
+
+        hour = (hour %= 12) == 0 ? 12 : hour;
+
+        String convertedTime = String.format("%02d:%02d %s", hour, minutes, meridiem );
+
+        return convertedTime;
+
     }
 }

@@ -21,15 +21,17 @@ import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.List;
 
+import static com.rrokullia.pluscomputers.mosque.utilities.Helper.convert24HourTimeTo12Hour;
+
 public class TakvimiActivity extends AppCompatActivity {
 
 
     private ImageButton back_button;
     private ImageView icSettings;
     private TextView lblImsaku, lblSabahu, lblLindjaDiellit, lblDreka,
-            lblAkshami, lblJacia, lblJacianeXhami;
+            lblIkindija,lblAkshami, lblJacia;
     private TextView txtImsaku, txtSabahi, txtLindjaDiellit, txtDreka,
-            txtAkshami, txtJacia, txtJacianeXhami, txtverejtje;
+            txtIkindija, txtAkshami, txtJacia, txtverejtje;
     private TextView txtData, txtDita;
     private ImageView ic_back, ic_next;
 
@@ -84,25 +86,29 @@ public class TakvimiActivity extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.O)
     public void merrKohetNamazit(long id){
         LocalDateTime now;
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("d/MM/yyyy");
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         now = LocalDateTime.now().plusDays(id);
         String dateNowWithSlash = dtf.format(now);
-        String dateNowWithPoints = dateNowWithSlash.replace("/", ".");
+//        String dateNowWithPoints = dateNowWithSlash.replace("/", ".");
 
         Welcome welcome = Helper.getNamazFromJson(getApplicationContext());
 
         List<Namazi> namaziList = welcome.getNamazi();
         for (Namazi namazi : namaziList) {
-            if (namazi.getData().equals(dateNowWithPoints)){
-                txtDita.setText(namazi.getDita());
-                txtData.setText(namazi.getData());
+            if (namazi.getDate().equals(dateNowWithSlash)){
+
+                Log.d("namazi",namazi.toString());
+
+                txtDita.setText(namazi.getWeekDay());
+                txtData.setText(namazi.getDate());
+
                 txtImsaku.setText(namazi.getImsaku());
                 txtSabahi.setText(namazi.getSabahu());
                 txtLindjaDiellit.setText(namazi.getDielli());
                 txtDreka.setText(namazi.getDreka());
+                txtIkindija.setText(namazi.getIkindija());
                 txtAkshami.setText(namazi.getAkshami());
                 txtJacia.setText(namazi.getJacija());
-                txtJacianeXhami.setText("-");
             }
 
         }
@@ -112,18 +118,18 @@ public class TakvimiActivity extends AppCompatActivity {
         lblImsaku = findViewById(R.id.lbl_imsaku);
         lblSabahu = findViewById(R.id.lbl_sabahu);
         lblLindjaDiellit = findViewById(R.id.lbl_lindja_diellit);
-        lblDreka = findViewById(R.id.lbl_dreka);
+        lblDreka = findViewById(R.id.lbl_ikindija);
         lblAkshami = findViewById(R.id.lbl_akshami);
         lblJacia = findViewById(R.id.lbl_jacia);
-        lblJacianeXhami = findViewById(R.id.lbl_jacia_xhami);
+        lblIkindija = findViewById(R.id.lbl_dreka);
 
         txtImsaku = findViewById(R.id.txt_imsaku);
         txtSabahi = findViewById(R.id.txt_sabahu);
         txtLindjaDiellit = findViewById(R.id.txt_lindja_diellit);
-        txtDreka = findViewById(R.id.txt_dreka);
+        txtDreka = findViewById(R.id.txt_ikindija);
         txtAkshami = findViewById(R.id.txt_akshami);
         txtJacia = findViewById(R.id.txt_jacia);
-        txtJacianeXhami = findViewById(R.id.txt_jacia_xhami);
+        txtIkindija = findViewById(R.id.txt_dreka);
         txtverejtje = findViewById(R.id.txt_verejtje);
 
         txtData = findViewById(R.id.txt_data);

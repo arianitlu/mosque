@@ -5,14 +5,21 @@ import com.google.gson.annotations.SerializedName;
 import java.io.Serializable;
 
 public class Namazi implements Serializable {
-    @SerializedName("Muaji")
-    private String muaji;
 
-    @SerializedName("Data")
-    private String data;
+    @SerializedName("Date")
+    private String date;
 
-    @SerializedName("Dita")
-    private String dita;
+    @SerializedName("Year")
+    private String year;
+
+    @SerializedName("Month")
+    private String month;
+
+    @SerializedName("Day")
+    private String day;
+
+    @SerializedName("WeekDay")
+    private String weekDay;
 
     @SerializedName("Imsaku")
     private String imsaku;
@@ -35,31 +42,47 @@ public class Namazi implements Serializable {
     @SerializedName("Jacija")
     private String jacija;
 
-    @SerializedName("Vërejtje")
-    private String vrejtje;
+    @SerializedName("Comments")
+    private String comments;
 
-    public String getMuaji() {
-        return muaji;
+    public String getDate() {
+        return date;
     }
 
-    public void setMuaji(String value) {
-        this.muaji = value;
+    public void setDate(String value) {
+        this.date = value;
     }
 
-    public String getData() {
-        return data;
+    public String getYear() {
+        return year;
     }
 
-    public void setData(String value) {
-        this.data = value;
+    public void setYear(String value) {
+        this.year = value;
     }
 
-    public String getDita() {
-        return dita;
+    public String getMonth() {
+        return month;
     }
 
-    public void setDita(String value) {
-        this.dita = value;
+    public void setMonth(String value) {
+        this.month = value;
+    }
+
+    public String getDay() {
+        return day;
+    }
+
+    public void setDay(String value) {
+        this.day = value;
+    }
+
+    public String getWeekDay() {
+        return weekDay;
+    }
+
+    public void setWeekDay(String value) {
+        this.weekDay = value;
     }
 
     public String getImsaku() {
@@ -118,20 +141,22 @@ public class Namazi implements Serializable {
         this.jacija = value;
     }
 
-    public String getVrejtje() {
-        return vrejtje;
+    public String getComments() {
+        return comments;
     }
 
-    public void setVrejtje(String value) {
-        this.vrejtje = value;
+    public void setComments(String value) {
+        this.comments = value;
     }
 
     @Override
     public String toString() {
         return "Namazi{" +
-                "muaji=" + muaji +
-                ", data='" + data + '\'' +
-                ", dita=" + dita +
+                "date='" + date + '\'' +
+                ", year='" + year + '\'' +
+                ", month='" + month + '\'' +
+                ", day='" + day + '\'' +
+                ", weekDay='" + weekDay + '\'' +
                 ", imsaku='" + imsaku + '\'' +
                 ", sabahu='" + sabahu + '\'' +
                 ", dielli='" + dielli + '\'' +
@@ -139,7 +164,8 @@ public class Namazi implements Serializable {
                 ", ikindija='" + ikindija + '\'' +
                 ", akshami='" + akshami + '\'' +
                 ", jacija='" + jacija + '\'' +
-                ", vrejtje='" + vrejtje + '\'' +
+                ", comments='" + comments + '\'' +
                 '}';
     }
 }
+

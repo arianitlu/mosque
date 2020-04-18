@@ -36,7 +36,6 @@ public class NewsActivity extends AppCompatActivity {
     
     private static final String NEWS_REQUEST_URL =
             "https://moschee-wil.ch//wp-json/wp/v2/posts/?per_page=100";
-    //http://moschee-wil.ch/wp-json/wp/v2/posts/?per_page=100
 
     private static final String IMAGE_REQUEST_URL =
             "https://moschee-wil.ch/wp-json/wp/v2/media";
