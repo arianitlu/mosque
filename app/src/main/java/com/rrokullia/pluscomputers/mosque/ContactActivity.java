@@ -96,7 +96,7 @@ public class ContactActivity extends AppCompatActivity {
         textViewContact1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String tel = "tel:+41 71 911 59 59";
+                String tel = "tel:+41 58 523 45 45";
                 onCall(tel);
             }
         });
@@ -160,7 +160,7 @@ public class ContactActivity extends AppCompatActivity {
 
     public void openEmail() {
         Intent intent = new Intent(Intent.ACTION_VIEW);
-        Uri data = Uri.parse("mailto:bekimalimi@gmail.com?subject=" + " " + "&body=" + " ");
+        Uri data = Uri.parse("mailto:imam@moschee-wil.ch?subject=" + " " + "&body=" + " ");
         intent.setData(data);
         startActivity(intent);
     }

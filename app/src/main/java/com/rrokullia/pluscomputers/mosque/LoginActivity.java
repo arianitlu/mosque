@@ -10,10 +10,17 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageButton;
 
+import androidx.work.OneTimeWorkRequest;
+import androidx.work.WorkManager;
+
 import com.rrokullia.pluscomputers.mosque.model.takvimi.Welcome;
 import com.rrokullia.pluscomputers.mosque.utilities.Helper;
+import com.rrokullia.pluscomputers.mosque.worker.MyWorker;
 
 public class LoginActivity extends AppCompatActivity {
+
+    WorkManager mWorkManager;
+    OneTimeWorkRequest mRequest;
 
     private ImageButton btnLogin;
 
@@ -30,11 +37,21 @@ public class LoginActivity extends AppCompatActivity {
 
         btnLogin = findViewById(R.id.login_button);
 
+//        btnLogin.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(LoginActivity.this,NavigationActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+
+        mWorkManager = WorkManager.getInstance();
+        mRequest = new OneTimeWorkRequest.Builder(MyWorker.class).build();
+
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this,NavigationActivity.class);
-                startActivity(intent);
+                mWorkManager.enqueue(mRequest);
             }
         });
 
