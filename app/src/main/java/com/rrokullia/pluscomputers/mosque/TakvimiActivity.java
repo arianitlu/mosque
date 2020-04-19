@@ -1,6 +1,7 @@
 package com.rrokullia.pluscomputers.mosque;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
@@ -35,6 +36,8 @@ public class TakvimiActivity extends AppCompatActivity {
     private TextView txtData, txtDita;
     private ImageView ic_back, ic_next;
 
+    SharedPreferences pref;
+    SharedPreferences.Editor editor;
 
     int i = 0;
     int j = 0;
@@ -52,6 +55,10 @@ public class TakvimiActivity extends AppCompatActivity {
         }
 
         boundViews();
+
+        pref = getApplicationContext().getSharedPreferences("info", 0);
+        editor = pref.edit();
+
 
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -104,21 +111,35 @@ public class TakvimiActivity extends AppCompatActivity {
             if (namazi.getDate().equals(dateNowWithSlash)) {
 
                 // Change weekDay from SQ to DE and vica versa
-                // txtDita.setText(namazi.getWeekDay());
-                txtDita.setText(getDayInGerman(namazi.getWeekDay()));
-
-                // Change labels of dua from SQ to DE and vica versa
-                makeLabelLookGerman();
+                if (pref.getString("language", "SQ").equals("DE")) {
+                    txtDita.setText(getDayInGerman(namazi.getWeekDay()));
+                    makeLabelLookGerman();
+                } else {
+                    txtDita.setText(namazi.getWeekDay());
+                }
 
                 // Set time taken from json
-                txtData.setText(namazi.getDate());
-                txtImsaku.setText(namazi.getImsaku());
-                txtSabahi.setText(namazi.getSabahu());
-                txtLindjaDiellit.setText(namazi.getDielli());
-                txtDreka.setText(namazi.getDreka());
-                txtIkindija.setText(namazi.getIkindija());
-                txtAkshami.setText(namazi.getAkshami());
-                txtJacia.setText(namazi.getJacija());
+
+                if (pref.getString("hour", "12").equals("24")) {
+                    txtData.setText(namazi.getDate());
+                    txtImsaku.setText(namazi.getImsaku());
+                    txtSabahi.setText(namazi.getSabahu());
+                    txtLindjaDiellit.setText(namazi.getDielli());
+                    txtDreka.setText(namazi.getDreka());
+                    txtIkindija.setText(namazi.getIkindija());
+                    txtAkshami.setText(namazi.getAkshami());
+                    txtJacia.setText(namazi.getJacija());
+                } else {
+                    txtData.setText(namazi.getDate());
+                    txtImsaku.setText(convert24HourTimeTo12Hour(namazi.getImsaku()));
+                    txtSabahi.setText(convert24HourTimeTo12Hour(namazi.getSabahu()));
+                    txtLindjaDiellit.setText(convert24HourTimeTo12Hour(namazi.getDielli()));
+                    txtDreka.setText(convert24HourTimeTo12Hour(namazi.getDreka()));
+                    txtIkindija.setText(convert24HourTimeTo12Hour(namazi.getIkindija()));
+                    txtAkshami.setText(convert24HourTimeTo12Hour(namazi.getAkshami()));
+                    txtJacia.setText(convert24HourTimeTo12Hour(namazi.getJacija()));
+                }
+
 
                 // Check if namazi have comments property
                 if (namazi.getComments() != null) {

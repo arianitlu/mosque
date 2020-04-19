@@ -1,5 +1,7 @@
 package com.rrokullia.pluscomputers.mosque;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
@@ -35,30 +37,44 @@ public class TakvimiSettingsActivity extends AppCompatActivity {
             w.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         }
 
-        back_button = findViewById(R.id.donacionet_button_back);
+        bindViews();
+
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("info", 0);
+        final SharedPreferences.Editor editor = pref.edit();
+
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onBackPressed();
+                Intent intent = new Intent(TakvimiSettingsActivity.this,TakvimiActivity.class);
+                startActivity(intent);
             }
         });
-        imgAlb = findViewById(R.id.img_alb);
-        txt_alb = findViewById(R.id.txt_alb);
-        imgSwitch = findViewById(R.id.img_switch);
-        txt_hour = findViewById(R.id.txt_hour);
-        ic_plus = findViewById(R.id.img_plus);
-        ic_minus = findViewById(R.id.img_minus);
-        txtMinutes = findViewById(R.id.txtMinutes);
 
-        imgAlb.setOnClickListener(new View.OnClickListener() {
+        if (pref.getString("language", "SQ").equals("DE")) {
+            imgAlb.setImageDrawable(getResources().getDrawable(R.drawable.flag_de));
+            clickedAlb = false;
+        }
+
+        if (pref.getString("hour", "12").equals("24")) {
+            txt_hour.setText("24");
+            hourClicked = false;
+        }
+
+
+
+            imgAlb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (clickedAlb) {
                     imgAlb.setImageDrawable(getResources().getDrawable(R.drawable.flag_de));
                     txt_alb.setText("DE");
+                    editor.putString("language", "DE");
+                    editor.commit();
                 } else {
                     imgAlb.setImageDrawable(getResources().getDrawable(R.drawable.flag_alb));
                     txt_alb.setText("AL");
+                    editor.putString("language", "SQ");
+                    editor.commit();
                 }
                 clickedAlb = !clickedAlb;
             }
@@ -81,8 +97,12 @@ public class TakvimiSettingsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (hourClicked) {
                     txt_hour.setText("24");
+                    editor.putString("hour", "24");
+                    editor.commit();
                 } else {
                     txt_hour.setText("12");
+                    editor.putString("hour", "12");
+                    editor.commit();
                 }
                 hourClicked = !hourClicked;
             }
@@ -106,6 +126,17 @@ public class TakvimiSettingsActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void bindViews(){
+        back_button = findViewById(R.id.donacionet_button_back);
+        imgAlb = findViewById(R.id.img_alb);
+        txt_alb = findViewById(R.id.txt_alb);
+        imgSwitch = findViewById(R.id.img_switch);
+        txt_hour = findViewById(R.id.txt_hour);
+        ic_plus = findViewById(R.id.img_plus);
+        ic_minus = findViewById(R.id.img_minus);
+        txtMinutes = findViewById(R.id.txtMinutes);
     }
 
 }
