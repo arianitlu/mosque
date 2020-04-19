@@ -63,7 +63,9 @@ public class TakvimiActivity extends AppCompatActivity {
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onBackPressed();
+//                onBackPressed();
+                Intent intent = new Intent(TakvimiActivity.this,NavigationActivity.class);
+                startActivity(intent);
             }
         });
 
