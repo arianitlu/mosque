@@ -3,10 +3,10 @@ package com.rrokullia.pluscomputers.mosque;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
-import android.support.annotation.RequiresApi;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -14,13 +14,13 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+
 import com.rrokullia.pluscomputers.mosque.model.takvimi.Namazi;
 import com.rrokullia.pluscomputers.mosque.model.takvimi.Welcome;
 import com.rrokullia.pluscomputers.mosque.utilities.Helper;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Calendar;
 import java.util.List;
 
 import static com.rrokullia.pluscomputers.mosque.utilities.Helper.convert24HourTimeTo12Hour;
@@ -63,7 +63,8 @@ public class TakvimiActivity extends AppCompatActivity {
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onBackPressed();
+                Intent intent = new Intent(TakvimiActivity.this,NavigationActivity.class);
+                startActivity(intent);
             }
         });
 

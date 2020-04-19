@@ -2,13 +2,14 @@ package com.rrokullia.pluscomputers.mosque;
 
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageButton;
+
 
 public class LiveStreamActivity extends AppCompatActivity {
 

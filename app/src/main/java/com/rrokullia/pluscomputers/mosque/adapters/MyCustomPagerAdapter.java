@@ -1,7 +1,7 @@
 package com.rrokullia.pluscomputers.mosque.adapters;
 
 import android.content.Context;
-import android.support.v4.view.PagerAdapter;
+import androidx.viewpager.widget.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,9 +9,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+
 import com.rrokullia.pluscomputers.mosque.R;
 
-public class MyCustomPagerAdapter extends PagerAdapter{
+public class MyCustomPagerAdapter extends PagerAdapter {
     Context context;
     int images[];
     LayoutInflater layoutInflater;

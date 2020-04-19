@@ -1,6 +1,5 @@
 package com.rrokullia.pluscomputers.mosque.utilities;
 
-
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.util.LruCache;

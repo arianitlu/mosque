@@ -2,20 +2,27 @@ package com.rrokullia.pluscomputers.mosque;
 
 import android.content.Intent;
 import android.os.Build;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageButton;
 
-import com.rrokullia.pluscomputers.mosque.model.takvimi.Welcome;
-import com.rrokullia.pluscomputers.mosque.utilities.Helper;
+
+import androidx.work.OneTimeWorkRequest;
+import androidx.work.WorkManager;
+
+import com.rrokullia.pluscomputers.mosque.workManager.NotifyWorker;
 
 public class LoginActivity extends AppCompatActivity {
 
     private ImageButton btnLogin;
+
+    WorkManager mWorkManager;
+    OneTimeWorkRequest mRequest;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +44,17 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        mWorkManager = WorkManager.getInstance(this);
+        mRequest = new OneTimeWorkRequest.Builder(NotifyWorker.class).build();
+
+//        btnLogin.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                mWorkManager.enqueue(mRequest);
+//            }
+//        });
+
 
 
     }
