@@ -11,16 +11,14 @@ import android.view.WindowManager;
 import android.widget.ImageButton;
 
 import androidx.work.OneTimeWorkRequest;
+import androidx.work.PeriodicWorkRequest;
 import androidx.work.WorkManager;
 
-import com.rrokullia.pluscomputers.mosque.model.takvimi.Welcome;
-import com.rrokullia.pluscomputers.mosque.utilities.Helper;
 import com.rrokullia.pluscomputers.mosque.worker.MyWorker;
 
-public class LoginActivity extends AppCompatActivity {
+import java.util.concurrent.TimeUnit;
 
-    WorkManager mWorkManager;
-    OneTimeWorkRequest mRequest;
+public class LoginActivity extends AppCompatActivity {
 
     private ImageButton btnLogin;
 
@@ -37,23 +35,20 @@ public class LoginActivity extends AppCompatActivity {
 
         btnLogin = findViewById(R.id.login_button);
 
-//        btnLogin.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(LoginActivity.this,NavigationActivity.class);
-//                startActivity(intent);
-//            }
-//        });
-
-        mWorkManager = WorkManager.getInstance();
-        mRequest = new OneTimeWorkRequest.Builder(MyWorker.class).build();
-
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mWorkManager.enqueue(mRequest);
+                Intent intent = new Intent(LoginActivity.this,NavigationActivity.class);
+                startActivity(intent);
             }
         });
+
+//        mRequest = new OneTimeWorkRequest.Builder(MyWorker.class).build();
+
+
+//        PeriodicWorkRequest periodicWorkRequest = new PeriodicWorkRequest.Builder(MyWorker.class,
+//                20, TimeUnit.MINUTES).build();
+//        WorkManager.getInstance().enqueue(periodicWorkRequest);
 
 
     }

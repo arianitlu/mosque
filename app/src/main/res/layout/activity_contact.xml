@@ -58,21 +58,183 @@
         app:layout_constraintTop_toTopOf="@+id/text_view_don"
         app:srcCompat="@drawable/don_back_btn" />
 
-    <ScrollView
+    <ImageView
+        android:id="@+id/imageView4"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/background_rectangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_view_donation_backg">
+        app:layout_constraintTop_toBottomOf="@+id/image_view_donation_backg"></ImageView>
 
-        <include
-            layout="@layout/layout_contact_buttons"/>
+    <TextView
+        android:id="@+id/lbl_kontakt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Na Kontaktoni"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imageView4" />
 
-    </ScrollView>
+    <EditText
+        android:id="@+id/edt_name"
+        android:layout_width="286dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_edittext"
+        android:hint="Emri dhe mbiemri"
+        android:paddingLeft="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_kontakt" />
 
-</android.support.constraint.ConstraintLayout>
+    <EditText
+        android:id="@+id/edt_email"
+        android:layout_width="286dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_edittext"
+        android:hint="Email"
+        android:paddingLeft="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/edt_name"
+        app:layout_constraintStart_toStartOf="@+id/edt_name"
+        app:layout_constraintTop_toBottomOf="@+id/edt_name" />
+
+    <EditText
+        android:id="@+id/edt_message"
+        android:layout_width="286dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_edittext"
+        android:gravity="top|left"
+        android:hint="Mesazhi juaj"
+        android:lines="8"
+        android:maxLines="10"
+        android:minLines="6"
+        android:paddingLeft="8dp"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/edt_email"
+        app:layout_constraintStart_toStartOf="@+id/edt_email"
+        app:layout_constraintTop_toBottomOf="@+id/edt_email" />
+
+    <Button
+        android:id="@+id/btn_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Dërgo porosinë"
+        android:textColor="#fff"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:background="@drawable/button_press"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintEnd_toEndOf="@+id/edt_message"
+        app:layout_constraintStart_toStartOf="@+id/edt_message"
+        app:layout_constraintTop_toBottomOf="@+id/edt_message" />
+
+    <ImageView
+        android:id="@+id/img_facebook"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/fbicon1"
+        app:layout_constraintBottom_toBottomOf="@+id/img_instagram"
+        app:layout_constraintEnd_toStartOf="@+id/img_instagram"
+        app:layout_constraintTop_toTopOf="@+id/img_instagram" />
+
+    <ImageView
+        android:id="@+id/img_instagram"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/instaicon1"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="@+id/imageView4" />
+
+    <ImageView
+        android:id="@+id/img_youtube"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/icon_youtube"
+        app:layout_constraintBottom_toBottomOf="@+id/img_instagram"
+        app:layout_constraintStart_toEndOf="@+id/img_instagram"
+        app:layout_constraintTop_toTopOf="@+id/img_instagram" />
+
+    <TextView
+        android:id="@+id/textview_contact2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:gravity="center_horizontal"
+        android:letterSpacing="0.01"
+        android:text="Tel. +41 (0) 58 523 45 45"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_openWeb"
+        app:layout_constraintStart_toStartOf="@+id/txt_openWeb" />
+
+    <TextView
+        android:id="@+id/txt_openWeb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:gravity="center_horizontal"
+        android:letterSpacing="0.01"
+        android:text="www.moschee-wil.ch"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/img_instagram"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="@+id/imageView4" />
+
+    <TextView
+        android:id="@+id/txt_open_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:gravity="center_horizontal"
+        android:letterSpacing="0.01"
+        android:text="info@moschee-wil.ch"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/textview_contact2"
+        app:layout_constraintStart_toStartOf="@+id/textview_contact2" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="Rosenstrasse 45, 9500 Wil SG"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_open_email"
+        app:layout_constraintStart_toStartOf="@+id/txt_open_email" />
+
+    w</android.support.constraint.ConstraintLayout>

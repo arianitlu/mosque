@@ -47,7 +47,7 @@ dependencies {
     implementation 'org.jsoup:jsoup:1.10.3'
     implementation 'com.google.code.gson:gson:2.8.2'
 
-    implementation "android.arch.work:work-runtime:1.0.0-alpha04"
+    implementation "android.arch.work:work-runtime:1.0.1"
 
 
 }

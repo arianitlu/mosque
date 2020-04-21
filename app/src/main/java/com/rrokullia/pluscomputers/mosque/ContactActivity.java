@@ -12,6 +12,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -21,7 +23,9 @@ public class ContactActivity extends AppCompatActivity {
 
     ImageButton buttonBack;
     ImageView imgFcb,imgInsta,imgYoutube;
-    TextView textViewContact1,txtEmailContact,txtOpenEmail,txtOpenWeb;
+    TextView textViewContact1,txtOpenEmail,txtOpenWeb;
+    EditText edtName, edtEmail, edtMessage;
+    Button btnSend;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +38,6 @@ public class ContactActivity extends AppCompatActivity {
             w.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         }
 
-        txtEmailContact = findViewById(R.id.textview_email_contact);
         textViewContact1 = findViewById(R.id.textview_contact2);
         txtOpenEmail = findViewById(R.id.txt_open_email);
         txtOpenWeb = findViewById(R.id.txt_openWeb);
@@ -42,6 +45,35 @@ public class ContactActivity extends AppCompatActivity {
         imgFcb = findViewById(R.id.img_facebook);
         imgInsta = findViewById(R.id.img_instagram);
         imgYoutube = findViewById(R.id.img_youtube);
+
+        edtName = findViewById(R.id.edt_name);
+        edtEmail = findViewById(R.id.edt_email);
+        edtMessage = findViewById(R.id.edt_message);
+        btnSend = findViewById(R.id.btn_send);
+
+        btnSend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String name = "" + edtName.getText();
+                String email = "" + edtEmail.getText();
+                String message = "" + edtMessage.getText();
+
+                Intent emailIntent = new Intent(Intent.ACTION_SEND);
+
+                emailIntent.setData(Uri.parse("mailto:"));
+                emailIntent.setType("text/plain");
+                emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{email});
+                emailIntent.putExtra(Intent.EXTRA_SUBJECT, name);
+                emailIntent.putExtra(Intent.EXTRA_TEXT, message);
+                emailIntent.setType("message/rfc822");
+
+                try {
+                    startActivity(Intent.createChooser(emailIntent, "Dërgo email..."));
+                    finish();
+                } catch (android.content.ActivityNotFoundException ex) {
+                }
+            }
+        });
 
         imgInsta.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -116,13 +148,6 @@ public class ContactActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 onBackPressed();
-            }
-        });
-
-        txtEmailContact.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openEmail();
             }
         });
 

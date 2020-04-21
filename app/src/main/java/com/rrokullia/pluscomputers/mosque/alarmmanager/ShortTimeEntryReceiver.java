@@ -1,32 +1,25 @@
-package com.rrokullia.pluscomputers.mosque.worker;
+package com.rrokullia.pluscomputers.mosque.alarmmanager;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.support.annotation.NonNull;
+import android.content.Intent;
 import android.support.v4.app.NotificationCompat;
-import android.util.Log;
-
-import androidx.work.Worker;
-import androidx.work.WorkerParameters;
 
 import com.rrokullia.pluscomputers.mosque.R;
 
-public class MyWorker extends Worker {
+public class ShortTimeEntryReceiver extends BroadcastReceiver {
 
-    public MyWorker(@NonNull Context context, @NonNull WorkerParameters workerParams) {
-        super(context, workerParams);
-    }
-
-    @NonNull
     @Override
-    public Result doWork() {
-        sendNotification();
-        return Result.success();
+    public void onReceive(Context context, Intent intent) {
+        sendNotification(context);
+        context.startService(new Intent(context,MyService.class));
+
     }
 
-    public void sendNotification() {
-        NotificationManager notificationManager = (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
+    public void sendNotification(Context context) {
+        NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
 
         //If on Oreo then notification required a notification channel.
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
@@ -34,7 +27,7 @@ public class MyWorker extends Worker {
             notificationManager.createNotificationChannel(channel);
         }
 
-        NotificationCompat.Builder notification = new NotificationCompat.Builder(getApplicationContext(), "default")
+        NotificationCompat.Builder notification = new NotificationCompat.Builder(context, "default")
                 .setContentTitle("Hello")
                 .setContentText("there")
                 .setSmallIcon(R.mipmap.ic_launcher);
@@ -42,3 +35,4 @@ public class MyWorker extends Worker {
         notificationManager.notify(1, notification.build());
     }
 }
+

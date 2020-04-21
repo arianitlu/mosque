@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:padding="20dp"
     android:orientation="vertical">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="20dp">
+        android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/nav_button_islamiNeWil"
             android:layout_width="match_parent"
-            android:layout_height="350dp"
-            android:background="@drawable/rectangle_gradient"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_rectangle"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -32,14 +31,14 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
             android:gravity="center_horizontal"
             android:letterSpacing="0.01"
             android:text="www.moschee-wil.ch"
             android:textAlignment="center"
             android:textColor="#ffffff"
             android:textSize="17sp"
-            android:foreground="?attr/selectableItemBackgroundBorderless"
-            android:clickable="true"
             app:layout_constraintBottom_toTopOf="@+id/textview_email_contact"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -53,14 +52,14 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
             android:gravity="center_horizontal"
             android:letterSpacing="0.01"
             android:text="Tel. +41 (0) 58 523 45 45"
             android:textAlignment="center"
             android:textColor="#ffffff"
             android:textSize="17sp"
-            android:foreground="?attr/selectableItemBackgroundBorderless"
-            android:clickable="true"
             app:layout_constraintBottom_toTopOf="@+id/txt_open_email"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -74,14 +73,14 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
             android:gravity="center_horizontal"
             android:letterSpacing="0.01"
             android:text="info@moschee-wil.ch"
             android:textAlignment="center"
             android:textColor="#ffffff"
             android:textSize="17sp"
-            android:foreground="?attr/selectableItemBackgroundBorderless"
-            android:clickable="true"
             app:layout_constraintBottom_toTopOf="@+id/txt_openWeb"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -94,8 +93,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:foreground="?attr/selectableItemBackgroundBorderless"
             android:clickable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
             android:text="\nImam Bekim Alimi:\nimam@moschee-wil.ch"
             android:textAlignment="center"
             android:textColor="#ffffff"
@@ -111,21 +110,19 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginEnd="20dp"
-            android:layout_marginTop="48dp"
-            android:src="@drawable/fbicon1"
-            android:foreground="?attr/selectableItemBackgroundBorderless"
             android:clickable="true"
-            app:layout_constraintBottom_toTopOf="@+id/nav_button_islamiNeWil"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/fbicon1"
             app:layout_constraintEnd_toStartOf="@+id/img_instagram"
-            app:layout_constraintTop_toBottomOf="@+id/textview_email_contact" />
+            tools:layout_editor_absoluteY="156dp" />
 
         <ImageView
             android:id="@+id/img_instagram"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/instaicon1"
-            android:foreground="?attr/selectableItemBackgroundBorderless"
             android:clickable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/instaicon1"
             app:layout_constraintBottom_toBottomOf="@+id/img_facebook"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -137,49 +134,13 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="20dp"
-            android:foreground="?attr/selectableItemBackgroundBorderless"
             android:clickable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/icon_youtube"
             app:layout_constraintBottom_toBottomOf="@+id/img_facebook"
             app:layout_constraintStart_toEndOf="@+id/img_instagram"
             app:layout_constraintTop_toTopOf="@+id/img_facebook"
             app:layout_constraintVertical_bias="0.0" />
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            app:layout_constraintBottom_toBottomOf="@+id/txt_open_email"
-            app:layout_constraintStart_toStartOf="@+id/imageView5"
-            app:layout_constraintTop_toTopOf="@+id/txt_open_email"
-            app:srcCompat="@drawable/ic_email2" />
-
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:layout_marginBottom="3dp"
-            app:layout_constraintBottom_toBottomOf="@+id/textview_contact2"
-            app:layout_constraintStart_toStartOf="@+id/imageView18"
-            app:srcCompat="@drawable/ic_phone2" />
-
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            app:layout_constraintBottom_toBottomOf="@+id/txt_openWeb"
-            app:layout_constraintStart_toStartOf="@+id/imageView4"
-            app:layout_constraintTop_toTopOf="@+id/txt_openWeb"
-            app:srcCompat="@drawable/ic_website2" />
-
-        <ImageView
-            android:id="@+id/imageView7"
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:layout_marginBottom="3dp"
-            app:layout_constraintBottom_toBottomOf="@+id/textview_email_contact"
-            app:layout_constraintStart_toStartOf="@+id/imageView6"
-            app:srcCompat="@drawable/ic_email2" />
 
         <TextView
             android:id="@+id/textView19"
@@ -195,17 +156,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/nav_button_islamiNeWil" />
-
-        <ImageView
-            android:id="@+id/imageView18"
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:layout_marginEnd="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/textview_contact2"
-            app:layout_constraintEnd_toStartOf="@+id/textView19"
-            app:layout_constraintTop_toTopOf="@+id/textView19"
-            app:layout_constraintVertical_bias="0.4"
-            app:srcCompat="@drawable/placeholder" />
 
     </android.support.constraint.ConstraintLayout>
 

@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SET_ALARM"/>
 
     <application
         android:allowBackup="true"
@@ -68,6 +69,14 @@
             android:screenOrientation="portrait"/>
         <activity android:name="com.rrokullia.pluscomputers.mosque.LiveStreamActivity"
             android:screenOrientation="portrait"/>
+
+        <!--<receiver android:name=".alarmmanager.ShortTimeEntryReceiver">-->
+        <!--</receiver>-->
+
+        <!--<service android:name=".alarmmanager.MyService"-->
+            <!--android:enabled="true"-->
+            <!--android:launchMode="singleTop" />-->
+
     </application>
 
 </manifest>
