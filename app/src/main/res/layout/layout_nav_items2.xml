@@ -136,7 +136,7 @@
             app:layout_constraintEnd_toEndOf="@+id/nav_button_islamiNeWil_frame"
             app:layout_constraintStart_toStartOf="@+id/nav_button_islamiNeWil_frame"
             app:layout_constraintTop_toTopOf="@+id/nav_button_islamiNeWil_frame"
-            app:srcCompat="@drawable/ic_hourglass" />
+            app:srcCompat="@drawable/nav_kalender" />
 
         <TextView
             android:id="@+id/text_view_3"
@@ -339,7 +339,7 @@
             app:layout_constraintEnd_toEndOf="@+id/nav_button_meetings_frame"
             app:layout_constraintStart_toStartOf="@+id/nav_button_meetings_frame"
             app:layout_constraintTop_toTopOf="@+id/nav_button_meetings_frame"
-            app:srcCompat="@drawable/ic_live_news" />
+            app:srcCompat="@drawable/ic_playlist_folder" />
 
         <TextView
             android:id="@+id/text_view_4"

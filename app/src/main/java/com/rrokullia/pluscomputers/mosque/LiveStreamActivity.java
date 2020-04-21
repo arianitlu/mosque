@@ -43,9 +43,6 @@ public class LiveStreamActivity extends AppCompatActivity {
         webview.setOverScrollMode(webview.OVER_SCROLL_NEVER);
         webview.loadUrl("https://www.facebook.com/XhamiaWil/videos");
 
-
-
-
     }
 
 }

@@ -5,9 +5,12 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.media.MediaPlayer;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.util.Log;
 import android.widget.TextView;
 
+import com.android.volley.toolbox.StringRequest;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.rrokullia.pluscomputers.mosque.model.takvimi.Welcome;
@@ -17,6 +20,8 @@ import java.io.InputStream;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.Locale;
 
@@ -149,16 +154,14 @@ public class Helper {
         setLocale(language, context);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public static String convert24HourTimeTo12Hour(String time) {
 
         String[] timeNow = time.split(":");
         int hour = Integer.parseInt(timeNow[0]);
         int minutes = Integer.parseInt(timeNow[1]);
-
         String meridiem = hour > 11 ? "PM" : "AM";
-
         hour = (hour %= 12) == 0 ? 12 : hour;
-
         String convertedTime = String.format("%02d:%02d %s", hour, minutes, meridiem );
 
         return convertedTime;

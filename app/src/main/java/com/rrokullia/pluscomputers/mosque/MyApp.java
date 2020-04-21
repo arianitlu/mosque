@@ -10,9 +10,6 @@ import androidx.work.PeriodicWorkRequest;
 import androidx.work.WorkManager;
 
 import com.onesignal.OneSignal;
-import com.rrokullia.pluscomputers.mosque.alarmmanager.MyService;
-import com.rrokullia.pluscomputers.mosque.alarmmanager.ShortTimeEntryReceiver;
-import com.rrokullia.pluscomputers.mosque.worker.MyWorker;
 
 import java.util.Calendar;
 import java.util.concurrent.TimeUnit;

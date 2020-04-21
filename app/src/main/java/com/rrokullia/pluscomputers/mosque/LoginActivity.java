@@ -14,8 +14,6 @@ import androidx.work.OneTimeWorkRequest;
 import androidx.work.PeriodicWorkRequest;
 import androidx.work.WorkManager;
 
-import com.rrokullia.pluscomputers.mosque.worker.MyWorker;
-
 import java.util.concurrent.TimeUnit;
 
 public class LoginActivity extends AppCompatActivity {
