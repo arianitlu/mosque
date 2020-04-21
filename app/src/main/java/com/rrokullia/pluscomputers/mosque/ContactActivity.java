@@ -64,7 +64,7 @@ public class ContactActivity extends AppCompatActivity {
         webview.getSettings().setJavaScriptEnabled(true);
         webview.getSettings().setDomStorageEnabled(true);
         webview.setOverScrollMode(webview.OVER_SCROLL_NEVER);
-        webview.loadUrl("https://moschee-wil.ch/app-contact/");
+        webview.loadUrl("https://rahimi-keramik.ch/app/");
 
 //
 //        edtName = findViewById(R.id.edt_name);
