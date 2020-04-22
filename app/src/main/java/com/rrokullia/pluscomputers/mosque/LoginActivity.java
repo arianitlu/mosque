@@ -4,17 +4,10 @@ import android.content.Intent;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageButton;
-
-import androidx.work.OneTimeWorkRequest;
-import androidx.work.PeriodicWorkRequest;
-import androidx.work.WorkManager;
-
-import java.util.concurrent.TimeUnit;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -41,12 +34,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-//        mRequest = new OneTimeWorkRequest.Builder(MyWorker.class).build();
-
-
-//        PeriodicWorkRequest periodicWorkRequest = new PeriodicWorkRequest.Builder(MyWorker.class,
-//                20, TimeUnit.MINUTES).build();
-//        WorkManager.getInstance().enqueue(periodicWorkRequest);
 
 
     }
