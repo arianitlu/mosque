@@ -104,13 +104,13 @@ public class TakvimiActivity extends AppCompatActivity {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         now = LocalDateTime.now().plusDays(id);
         String dateNowWithSlash = dtf.format(now);
-//        String dateNowWithPoints = dateNowWithSlash.replace("/", ".");
+        String dateNowWithPoints = dateNowWithSlash.replace("/", ".");
 
         Welcome welcome = Helper.getNamazFromJson(getApplicationContext());
 
         List<Namazi> namaziList = welcome.getNamazi();
         for (Namazi namazi : namaziList) {
-            if (namazi.getDate().equals(dateNowWithSlash)) {
+            if (namazi.getDate().equals(dateNowWithPoints)) {
 
                 // Change weekDay from SQ to DE and vica versa
                 if (pref.getString("language", "SQ").equals("DE")) {
@@ -123,7 +123,7 @@ public class TakvimiActivity extends AppCompatActivity {
                 // Set time taken from json
 
                 if (pref.getString("hour", "12").equals("24")) {
-                    txtData.setText(namazi.getDate().replace("/","."));
+                    txtData.setText(namazi.getDate());
                     txtImsaku.setText(namazi.getImsaku());
                     txtSabahi.setText(namazi.getSabahu());
                     txtLindjaDiellit.setText(namazi.getDielli());
@@ -132,7 +132,7 @@ public class TakvimiActivity extends AppCompatActivity {
                     txtAkshami.setText(namazi.getAkshami());
                     txtJacia.setText(namazi.getJacija());
                 } else {
-                    txtData.setText(namazi.getDate().replace("/","."));
+                    txtData.setText(namazi.getDate());
                     txtImsaku.setText(convert24HourTimeTo12Hour(namazi.getImsaku()));
                     txtSabahi.setText(convert24HourTimeTo12Hour(namazi.getSabahu()));
                     txtLindjaDiellit.setText(convert24HourTimeTo12Hour(namazi.getDielli()));
