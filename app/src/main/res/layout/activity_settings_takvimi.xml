@@ -121,84 +121,15 @@
         app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
     <TextView
-        android:id="@+id/textView22"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:text="NJOFTIMET"
-        android:textColor="#fff"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/textView21"
-        app:layout_constraintTop_toBottomOf="@+id/view_2" />
-
-    <View
-        android:id="@+id/view_3"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginTop="4dp"
-        android:background="#fff"
-        app:layout_constraintEnd_toEndOf="@+id/scrollView2"
-        app:layout_constraintStart_toStartOf="@+id/scrollView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView22" />
-
-    <TextView
-        android:id="@+id/textView23"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="Aktivizo njoftimet"
-        android:textColor="#fff"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/view_3"
-        app:layout_constraintTop_toBottomOf="@+id/view_3" />
-
-    <View
-        android:id="@+id/view_4"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginTop="4dp"
-        android:background="#fff"
-        app:layout_constraintEnd_toEndOf="@+id/scrollView2"
-        app:layout_constraintStart_toStartOf="@+id/scrollView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView23" />
-
-    <TextView
-        android:id="@+id/textView24"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="Njoftohu paraprak(min)"
-        android:textColor="#fff"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/view_4"
-        app:layout_constraintTop_toBottomOf="@+id/view_4" />
-
-    <View
-        android:id="@+id/view_5"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginTop="4dp"
-        android:background="#fff"
-        app:layout_constraintEnd_toEndOf="@+id/scrollView2"
-        app:layout_constraintStart_toStartOf="@+id/scrollView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView24" />
-
-    <TextView
         android:id="@+id/textView25"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="64dp"
         android:text="FORMATI ORËS"
         android:textColor="#fff"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/view_5"
-        app:layout_constraintTop_toBottomOf="@+id/view_5" />
+        app:layout_constraintStart_toStartOf="@+id/view_2"
+        app:layout_constraintTop_toBottomOf="@+id/view_2" />
 
     <View
         android:id="@+id/view_6"
@@ -239,72 +170,64 @@
         android:id="@+id/img_alb"
         android:layout_width="43dp"
         android:layout_height="19dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/view_2"
-        app:layout_constraintEnd_toEndOf="@+id/view_2"
+        app:layout_constraintEnd_toStartOf="@+id/textView22"
         app:srcCompat="@drawable/flag_alb" />
 
     <TextView
         android:id="@+id/txt_alb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="4dp"
         android:text="ALB"
         android:textColor="#fff"
         app:layout_constraintBottom_toBottomOf="@+id/img_alb"
         app:layout_constraintEnd_toStartOf="@+id/img_alb"
         app:layout_constraintTop_toTopOf="@+id/img_alb" />
 
-    <ImageView
-        android:id="@+id/img_switch"
-        android:layout_width="50dp"
-        android:layout_height="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/view_4"
-        app:layout_constraintEnd_toEndOf="@+id/view_4"
-        app:srcCompat="@drawable/ic_switch_on" />
-
     <TextView
         android:id="@+id/txt_hour"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="12"
+        android:text="24"
         android:textColor="#fff"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/view_7"
         app:layout_constraintEnd_toEndOf="@+id/view_6" />
 
-    <ImageView
-        android:id="@+id/img_minus"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/img_plus"
-        app:layout_constraintEnd_toStartOf="@+id/img_plus"
-        app:layout_constraintTop_toTopOf="@+id/img_plus"
-        app:srcCompat="@drawable/ic_minus" />
-
-    <ImageView
-        android:id="@+id/img_plus"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginBottom="4dp"
-        app:layout_constraintBottom_toTopOf="@+id/view_5"
-        app:layout_constraintEnd_toEndOf="@+id/view_5"
-        app:srcCompat="@drawable/ic_plus" />
-
     <TextView
-        android:id="@+id/txtMinutes"
+        android:id="@+id/textView22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:text="15"
+        android:layout_marginEnd="4dp"
+        android:text="DE"
         android:textColor="#fff"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/img_minus"
-        app:layout_constraintEnd_toStartOf="@+id/img_minus"
-        app:layout_constraintTop_toTopOf="@+id/img_minus" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="43dp"
+        android:layout_height="19dp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_alb"
+        app:layout_constraintEnd_toEndOf="@+id/view_2"
+        app:layout_constraintTop_toTopOf="@+id/img_alb"
+        app:srcCompat="@drawable/flag_de" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="12"
+        android:textColor="#fff"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_hour"
+        app:layout_constraintEnd_toStartOf="@+id/txt_hour"
+        app:layout_constraintTop_toTopOf="@+id/txt_hour" />
 
 
 </android.support.constraint.ConstraintLayout>

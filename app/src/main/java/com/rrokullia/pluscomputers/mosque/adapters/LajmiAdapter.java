@@ -2,6 +2,7 @@ package com.rrokullia.pluscomputers.mosque.adapters;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -50,16 +51,19 @@ public class LajmiAdapter extends RecyclerView.Adapter<LajmiAdapter.MyViewHolder
 
             Lajmi lajmi = mLajmiList.get(position);
 
-            Intent intent = new Intent(ctx, SinglenewsActivity.class);
+//            Intent intent = new Intent(ctx, SinglenewsActivity.class);
+//
+//            intent.putExtra("title", lajmi.getTitle());
+//            intent.putExtra("category", lajmi.getCategory());
+//            intent.putExtra("image", lajmi.getImage());
+//            intent.putExtra("color",lajmi.getColor());
+//            intent.putExtra("description",lajmi.getDescription());
+//            intent.putExtra("link",lajmi.getLink());
 
-            intent.putExtra("title", lajmi.getTitle());
-            intent.putExtra("category", lajmi.getCategory());
-            intent.putExtra("image", lajmi.getImage());
-            intent.putExtra("color",lajmi.getColor());
-            intent.putExtra("description",lajmi.getDescription());
-            intent.putExtra("link",lajmi.getLink());
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(lajmi.getLink()));
+            ctx.startActivity(browserIntent);
 
-            ctx.startActivity(intent);
+//            ctx.startActivity(intent);
         }
     }
 

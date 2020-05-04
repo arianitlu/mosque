@@ -17,14 +17,8 @@ public class TakvimiSettingsActivity extends AppCompatActivity {
 
     private ImageButton back_button;
     private ImageView imgAlb, imgDe;
-    private ImageView imgSwitch;
-    private TextView txt_hour;
+    private TextView txt_12hour, txt_24hour;
     private TextView txt_alb, txt_de;
-    private ImageView ic_plus, ic_minus;
-    private TextView txtMinutes;
-    int i = 15;
-
-    boolean clickedAlb = true, clickedDe = true, clickedSwitch = true, hourClicked = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,98 +39,87 @@ public class TakvimiSettingsActivity extends AppCompatActivity {
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(TakvimiSettingsActivity.this,TakvimiActivity.class);
+                Intent intent = new Intent(TakvimiSettingsActivity.this, TakvimiActivity.class);
                 startActivity(intent);
             }
         });
 
+
         if (pref.getString("language", "SQ").equals("DE")) {
-            imgAlb.setImageDrawable(getResources().getDrawable(R.drawable.flag_de));
-            clickedAlb = false;
+            imgAlb.setAlpha(0.5f);
+            txt_alb.setAlpha(0.5f);
+        } else {
+            imgDe.setAlpha(0.5f);
+            txt_de.setAlpha(0.5f);
         }
 
         if (pref.getString("hour", "12").equals("24")) {
-            txt_hour.setText("24");
-            hourClicked = false;
+            txt_12hour.setAlpha(0.5f);
+        } else {
+            txt_24hour.setAlpha(0.5f);
         }
 
 
-
-            imgAlb.setOnClickListener(new View.OnClickListener() {
+        imgAlb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (clickedAlb) {
-                    imgAlb.setImageDrawable(getResources().getDrawable(R.drawable.flag_de));
-                    txt_alb.setText("DE");
-                    editor.putString("language", "DE");
-                    editor.commit();
-                } else {
-                    imgAlb.setImageDrawable(getResources().getDrawable(R.drawable.flag_alb));
-                    txt_alb.setText("AL");
-                    editor.putString("language", "SQ");
-                    editor.commit();
-                }
-                clickedAlb = !clickedAlb;
+
+                imgAlb.setAlpha(1f);
+                txt_alb.setAlpha(1f);
+
+                imgDe.setAlpha(0.5f);
+                txt_de.setAlpha(0.5f);
+
+                editor.putString("language", "AL");
+                editor.commit();
             }
         });
 
-        imgSwitch.setOnClickListener(new View.OnClickListener() {
+        imgDe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (clickedSwitch) {
-                    imgSwitch.setImageDrawable(getResources().getDrawable(R.drawable.ic_switch_off));
-                } else {
-                    imgSwitch.setImageDrawable(getResources().getDrawable(R.drawable.ic_switch_on));
-                }
-                clickedSwitch = !clickedSwitch;
+
+                imgDe.setAlpha(1f);
+                txt_de.setAlpha(1f);
+
+                imgAlb.setAlpha(0.5f);
+                txt_alb.setAlpha(0.5f);
+
+                editor.putString("language", "DE");
+                editor.commit();
             }
         });
 
-        txt_hour.setOnClickListener(new View.OnClickListener() {
+        txt_12hour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (hourClicked) {
-                    txt_hour.setText("24");
-                    editor.putString("hour", "24");
-                    editor.commit();
-                } else {
-                    txt_hour.setText("12");
-                    editor.putString("hour", "12");
-                    editor.commit();
-                }
-                hourClicked = !hourClicked;
+                txt_12hour.setAlpha(1f);
+                txt_24hour.setAlpha(0.5f);
+                editor.putString("hour", "12");
+                editor.commit();
             }
         });
 
-        ic_plus.setOnClickListener(new View.OnClickListener() {
+        txt_24hour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i++;
-                txtMinutes.setText(String.valueOf(i));
-            }
-        });
-
-        ic_minus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(i!=0){
-                    i--;
-                }
-                txtMinutes.setText(String.valueOf(i));
+                txt_24hour.setAlpha(1f);
+                txt_12hour.setAlpha(0.5f);
+                editor.putString("hour", "24");
+                editor.commit();
             }
         });
 
     }
 
-    public void bindViews(){
+    public void bindViews() {
         back_button = findViewById(R.id.donacionet_button_back);
         imgAlb = findViewById(R.id.img_alb);
+        imgDe = findViewById(R.id.imageView4);
         txt_alb = findViewById(R.id.txt_alb);
-        imgSwitch = findViewById(R.id.img_switch);
-        txt_hour = findViewById(R.id.txt_hour);
-        ic_plus = findViewById(R.id.img_plus);
-        ic_minus = findViewById(R.id.img_minus);
-        txtMinutes = findViewById(R.id.txtMinutes);
+        txt_de = findViewById(R.id.textView22);
+        txt_12hour = findViewById(R.id.textView23);
+        txt_24hour = findViewById(R.id.txt_hour);
     }
 
 }
